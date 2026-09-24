@@ -1,0 +1,2128 @@
+Hand Wraps | Spruce DDPAT,gold,leather_handwraps__handwrap_camo_grey
+Hand Wraps | Desert Shamagh,gold,leather_handwraps__handwrap_fabric_houndstooth_orange
+Hand Wraps | Badlands,gold,leather_handwraps__handwrap_fabric_orange_camo
+Hand Wraps | Leather,gold,leather_handwraps__handwrap_leathery
+Hand Wraps | CAUTION!,gold,leather_handwraps__handwrap_leathery_caution
+Hand Wraps | Duct Tape,gold,leather_handwraps__handwrap_leathery_ducttape
+Hand Wraps | Cobalt Skulls,gold,leather_handwraps__handwrap_leathery_fabric_blue_skulls
+Hand Wraps | Overprint,gold,leather_handwraps__handwrap_leathery_fabric_geometric_blue
+Hand Wraps | Giraffe,gold,leather_handwraps__handwrap_leathery_fabric_giraffe
+Hand Wraps | Arboreal,gold,leather_handwraps__handwrap_leathery_fabric_green_camo
+Hand Wraps | Constrictor,gold,leather_handwraps__handwrap_leathery_snakeskin_orange
+Hand Wraps | Slaughter,gold,leather_handwraps__handwrap_red_slaughter
+Moto Gloves | Eclipse,gold,motorcycle_gloves__motorcycle_basic_black
+Moto Gloves | Turtle,gold,motorcycle_gloves__motorcycle_basic_green_orange
+Moto Gloves | Blood Pressure,gold,motorcycle_gloves__motorcycle_carbonfiber_red
+Moto Gloves | Finish Line,gold,motorcycle_gloves__motorcycle_checker_flag_blue_green
+Moto Gloves | POW!,gold,motorcycle_gloves__motorcycle_choco_boom
+Moto Gloves | 3rd Commando Company,gold,motorcycle_gloves__motorcycle_commando_ksk
+Moto Gloves | Spearmint,gold,motorcycle_gloves__motorcycle_mint_triangle
+Moto Gloves | Boom!,gold,motorcycle_gloves__motorcycle_mono_boom
+Moto Gloves | Smoke Out,gold,motorcycle_gloves__motorcycle_smoke
+Moto Gloves | Cool Mint,gold,motorcycle_gloves__motorcycle_triangle_blue
+Moto Gloves | Polygon,gold,motorcycle_gloves__motorcycle_trigrid_blue
+Moto Gloves | Transport,gold,motorcycle_gloves__motorcycle_yellow_camo
+Driver Gloves | Brocade Crane,gold,slick_gloves__glove_driver_brocade_crane_red
+Driver Gloves | Brocade Flowers,gold,slick_gloves__glove_driver_brocade_flower_red
+Driver Gloves | Dragon Fists,gold,slick_gloves__glove_driver_dragon_scale_red
+Driver Gloves | Garden,gold,slick_gloves__glove_driver_embroidered_flowers_teal
+Driver Gloves | Hand Sweaters,gold,slick_gloves__glove_driver_knit_argyle_green
+Driver Gloves | Plum Quill,gold,slick_gloves__glove_driver_ostrich_purple
+Driver Gloves | Seigaiha,gold,slick_gloves__glove_driver_scallop_metallic_blue
+Driver Gloves | Wave Chaser,gold,slick_gloves__glove_driver_silk_dragon_white
+Driver Gloves | Lunar Weave,gold,slick_gloves__slick_black
+Driver Gloves | Snow Leopard,gold,slick_gloves__slick_jaguar_white
+Driver Gloves | Queen Jaguar,gold,slick_gloves__slick_jaguar_yellow
+Driver Gloves | Convoy,gold,slick_gloves__slick_military
+Driver Gloves | Imperial Plaid,gold,slick_gloves__slick_plaid_purple
+Driver Gloves | Crimson Weave,gold,slick_gloves__slick_red
+Driver Gloves | Rezan the Red,gold,slick_gloves__slick_rezan
+Driver Gloves | King Snake,gold,slick_gloves__slick_snakeskin_white
+Driver Gloves | Diamondback,gold,slick_gloves__slick_snakeskin_yellow
+Driver Gloves | Overtake,gold,slick_gloves__slick_stitched_black_orange
+Driver Gloves | Black Tie,gold,slick_gloves__slick_stitched_black_white
+Driver Gloves | Racing Green,gold,slick_gloves__slick_stitched_green_grey
+Specialist Gloves | Lime Polycam,gold,specialist_gloves__glove_specialist_abstract_green
+Specialist Gloves | Cloud Chaser,gold,specialist_gloves__glove_specialist_dragon_blue
+Specialist Gloves | Blackbook,gold,specialist_gloves__glove_specialist_graffiti_black
+Specialist Gloves | Chocolate Chesterfield,gold,specialist_gloves__glove_specialist_quilted_black
+Specialist Gloves | Pillow Punchers,gold,specialist_gloves__glove_specialist_quilted_white
+Specialist Gloves | Sunburst,gold,specialist_gloves__glove_specialist_sunburst_red
+Specialist Gloves | Big Swell,gold,specialist_gloves__glove_specialist_wave_blue
+Specialist Gloves | Forest DDPAT,gold,specialist_gloves__specialist_ddpat_green_camo
+Specialist Gloves | Emerald Web (Emerald),gold,specialist_gloves__specialist_emerald_web
+Specialist Gloves | Fade,gold,specialist_gloves__specialist_fade
+Specialist Gloves | Field Agent,gold,specialist_gloves__specialist_fbi
+Specialist Gloves | Buckshot,gold,specialist_gloves__specialist_forest_brown
+Specialist Gloves | Crimson Kimono,gold,specialist_gloves__specialist_kimono_diamonds_red
+Specialist Gloves | Marble Fade,gold,specialist_gloves__specialist_marble_fade
+Specialist Gloves | Foundation,gold,specialist_gloves__specialist_orange_white
+Specialist Gloves | Lt. Commander,gold,specialist_gloves__specialist_ricksaw_camo
+Specialist Gloves | Tiger Strike,gold,specialist_gloves__specialist_tiger_orange
+Specialist Gloves | Crimson Web,gold,specialist_gloves__specialist_webs_red
+Specialist Gloves | Mogul,gold,specialist_gloves__specialist_winterhex
+Sport Gloves | Violet Beadwork,gold,sporty_gloves__glove_sport_beadwork_diamonds_purple
+Sport Gloves | Frosty,gold,sporty_gloves__glove_sport_camo_winter
+Sport Gloves | Blaze,gold,sporty_gloves__glove_sport_flames_orange
+Sport Gloves | Creme Pinstripe,gold,sporty_gloves__glove_sport_pinstripe_black
+Sport Gloves | Red Racer,gold,sporty_gloves__glove_sport_racer_red
+Sport Gloves | Ultra Violent,gold,sporty_gloves__glove_sport_tech_gradient_bright
+Sport Gloves | Occult,gold,sporty_gloves__glove_sport_velvet_red
+Sport Gloves | Omega,gold,sporty_gloves__sporty_black_webbing_yellow
+Sport Gloves | Vice,gold,sporty_gloves__sporty_blue_pink
+Sport Gloves | Hedge Maze,gold,sporty_gloves__sporty_green
+Sport Gloves | Scarlet Shamagh,gold,sporty_gloves__sporty_houndstooth_red
+Sport Gloves | Big Game,gold,sporty_gloves__sporty_hunter
+Sport Gloves | Nocts,gold,sporty_gloves__sporty_jaguar
+Sport Gloves | Superconductor,gold,sporty_gloves__sporty_light_blue
+Sport Gloves | Arid,gold,sporty_gloves__sporty_military
+Sport Gloves | Amphibious,gold,sporty_gloves__sporty_poison_frog_blue_white
+Sport Gloves | Bronze Morph,gold,sporty_gloves__sporty_poison_frog_red_green
+Sport Gloves | Pandora's Box,gold,sporty_gloves__sporty_purple
+Sport Gloves | Slingshot,gold,sporty_gloves__sporty_slingshot
+Bloodhound Gloves | Charred,gold,studded_bloodhound_gloves__bloodhound_black_silver
+Bloodhound Gloves | Guerrilla,gold,studded_bloodhound_gloves__bloodhound_guerrilla
+Bloodhound Gloves | Bronzed,gold,studded_bloodhound_gloves__bloodhound_metallic
+Bloodhound Gloves | Snakebite,gold,studded_bloodhound_gloves__bloodhound_snakeskin_brass
+Broken Fang Gloves | Needle Point,gold,studded_brokenfang_gloves__operation10_floral
+Broken Fang Gloves | Jade,gold,studded_brokenfang_gloves__operation10_metalic_green
+Broken Fang Gloves | Yellow-banded,gold,studded_brokenfang_gloves__operation10_poison_frog_black_yellow
+Broken Fang Gloves | Unhinged,gold,studded_brokenfang_gloves__operation10_snakeskin_black
+Hydra Gloves | Emerald,gold,studded_hydra_gloves__bloodhound_hydra_black_green
+Hydra Gloves | Case Hardened,gold,studded_hydra_gloves__bloodhound_hydra_case_hardened
+Hydra Gloves | Mangrove,gold,studded_hydra_gloves__bloodhound_hydra_green_leather_mesh_brass
+Hydra Gloves | Rattler,gold,studded_hydra_gloves__bloodhound_hydra_snakeskin_brass
+AK-47 | AUTOEXEC,covert,weapon_ak47__ak47_autoexec_camo
+AK-47 | Crane Flight,classified,weapon_ak47__ak47_crane_flight
+AK-47 | Searing Rage,classified,weapon_ak47__ak47_explosive
+AK-47 | Consequence of the Jinn,covert,weapon_ak47__ak47_jinn_consequence
+AK-47 | The Oligarch,covert,weapon_ak47__ak47_puffer_custom
+AK-47 | The Outsiders,classified,weapon_ak47__ak47_t_bus
+AK-47 | Inheritance,covert,weapon_ak47__ak_porcelain
+AK-47 | Hydroponic,classified,weapon_ak47__am_bamboo_jungle
+AK-47 | Cartel,classified,weapon_ak47__aq_ak47_cartel
+AK-47 | Case Hardened,classified,weapon_ak47__aq_oiled
+AK-47 | Phantom Disruptor,restricted,weapon_ak47__cu_ak-47_phantom_disruptor
+AK-47 | Neon Revolution,covert,weapon_ak47__cu_ak47_anarchy
+AK-47 | Legion of Anubis,covert,weapon_ak47__cu_ak47_anubis
+AK-47 | Asiimov,covert,weapon_ak47__cu_ak47_asiimov
+AK-47 | Uncharted,milspec,weapon_ak47__cu_ak47_aztec
+AK-47 | Redline,classified,weapon_ak47__cu_ak47_cobra
+AK-47 | Ice Coaled,classified,weapon_ak47__cu_ak47_cogthings
+AK-47 | Aquamarine Revenge,covert,weapon_ak47__cu_ak47_courage_alt
+AK-47 | Elite Build,milspec,weapon_ak47__cu_ak47_mastery
+AK-47 | Nightwish,covert,weapon_ak47__cu_ak47_nightwish
+AK-47 | Point Disarray,classified,weapon_ak47__cu_ak47_point_disarray
+AK-47 | Vulcan,covert,weapon_ak47__cu_ak47_rubber
+AK-47 | Frontside Misty,classified,weapon_ak47__cu_ak47_winter_sport
+AK-47 | Head Shot,covert,weapon_ak47__cu_ak_head_shot_holo
+AK-47 | Wild Lotus,covert,weapon_ak47__cu_ak_island_floral
+AK-47 | Panthera onca,covert,weapon_ak47__cu_ak_jaguar
+AK-47 | Neon Rider,covert,weapon_ak47__cu_ak_neon_rider
+AK-47 | X-Ray,covert,weapon_ak47__cu_ak_xray
+AK-47 | Fire Serpent,covert,weapon_ak47__cu_fireserpent_ak47_bravo
+AK-47 | Crossfade,milspec,weapon_ak47__cu_graphic_overlay_ak47
+AK-47 | First Class,restricted,weapon_ak47__cu_green_leather_ak47
+AK-47 | B the Monster,covert,weapon_ak47__cu_overpass_monster_ak47
+AK-47 | Jaguar,covert,weapon_ak47__cu_panther_ak47
+AK-47 | Emerald Pinstripe,restricted,weapon_ak47__cu_pinstripe_ak47
+AK-47 | Wasteland Rebel,covert,weapon_ak47__cu_tribute_ak47
+AK-47 | Jet Set,classified,weapon_ak47__cu_well_traveled_ak47
+AK-47 | Leet Museo,covert,weapon_ak47__gs_ak47_abstract
+AK-47 | Bloodsport,covert,weapon_ak47__gs_ak47_bloodsport
+AK-47 | The Empress,covert,weapon_ak47__gs_ak47_empress
+AK-47 | Gold Arabesque,covert,weapon_ak47__gs_ak47_gold_arabesque
+AK-47 | Rat Rod,restricted,weapon_ak47__gs_ak47_nibbler
+AK-47 | Slate,restricted,weapon_ak47__gs_ak47_professional
+AK-47 | Steel Delta,milspec,weapon_ak47__gs_ak47_strone
+AK-47 | Fuel Injector,covert,weapon_ak47__gs_ak47_supercharged
+AK-47 | Orbit Mk01,restricted,weapon_ak47__gs_ak_colony01_red
+AK-47 | Aphrodite,covert,weapon_ak47__gsch_ak_djiin
+AK-47 | Olive Polycam,milspec,weapon_ak47__ht_poly_camo_ak47
+AK-47 | Red Laminate,classified,weapon_ak47__hy_ak47lam
+AK-47 | Blue Laminate,restricted,weapon_ak47__hy_ak47lam_blue
+AK-47 | Black Laminate,milspec,weapon_ak47__hy_ak47lam_bw
+AK-47 | Green Laminate,milspec,weapon_ak47__hy_ak47lam_green
+AK-47 | Safety Net,restricted,weapon_ak47__hy_mesh_safetyorange
+AK-47 | Baroque Purple,milspec,weapon_ak47__hy_veneto_purple
+AK-47 | Nouveau Rouge,classified,weapon_ak47__hye_ak47_nouveau
+AK-47 | Breakthrough,restricted,weapon_ak47__hye_zeds
+AK-47 | Midnight Laminate,restricted,weapon_ak47__soe_iridescent_purple
+AK-47 | Wintergreen,milspec,weapon_ak47__soe_metallic_green_2
+AK-47 | VariCamo Grey,milspec,weapon_ak47__soe_varicamo
+AK-47 | Safari Mesh,milspec,weapon_ak47__sp_mesh_tan
+AK-47 | Jungle Spray,milspec,weapon_ak47__sp_spray_jungle
+AK-47 | Predator,milspec,weapon_ak47__sp_zebracam
+AUG | Amber Fade,milspec,weapon_aug__aa_fade_metallic
+AUG | Death by Puppy,classified,weapon_aug__am_aug_death_by_doggy
+AUG | Ricochet,milspec,weapon_aug__am_aug_jumble
+AUG | Midnight Lily,restricted,weapon_aug__am_bloom_blue
+AUG | Carbon Fiber,milspec,weapon_aug__am_carbon_fiber
+AUG | Random Access,restricted,weapon_aug__am_circuitboard_orange
+AUG | Surveillance,milspec,weapon_aug__am_intelligence_grey
+AUG | Carved Jade,covert,weapon_aug__am_jade
+AUG | Flame Jörmungandr,restricted,weapon_aug__am_jorm_orange
+AUG | Anodized Navy,milspec,weapon_aug__an_navy_bravo
+AUG | Hot Rod,milspec,weapon_aug__an_red
+AUG | Steel Sentinel,milspec,weapon_aug__aug_cold_sentinel
+AUG | Signal Scanner,milspec,weapon_aug__aug_ghost_signal
+AUG | Lapis Lazuli,restricted,weapon_aug__aug_lapis_lazuli
+AUG | Luxe Trim,milspec,weapon_aug__aug_puffer
+AUG | Trigger Discipline,milspec,weapon_aug__aug_trigger_discipline_velco
+AUG | Akihabara Accept,covert,weapon_aug__cu_anime_aug
+AUG | Chameleon,covert,weapon_aug__cu_aug_chameleonaire
+AUG | Momentum,classified,weapon_aug__cu_aug_momentum
+AUG | Triqua,milspec,weapon_aug__cu_aug_orange_triangle
+AUG | Torque,restricted,weapon_aug__cu_aug_progressiv
+AUG | Fleet Flock,classified,weapon_aug__cu_aug_swallows
+AUG | Arctic Wolf,restricted,weapon_aug__cu_aug_whitefang
+AUG | Eye of Zapems,restricted,weapon_aug__cu_overpass_graf_aug
+AUG | Aristocrat,restricted,weapon_aug__gs_aug_aristocrat
+AUG | Plague,milspec,weapon_aug__gs_aug_plague
+AUG | Sand Storm,restricted,weapon_aug__gs_aug_sand_storm
+AUG | Stymphalian,classified,weapon_aug__gs_aug_stymphalian_birds
+AUG | Syd Mead,classified,weapon_aug__gs_aug_syd_mead
+AUG | Tom Cat,milspec,weapon_aug__gs_aug_thunderstorm
+AUG | Lil' Pig,classified,weapon_aug__gs_lilpig_aug
+AUG | Amber Slipstream,milspec,weapon_aug__hy_aug_torn_orange
+AUG | Copperhead,milspec,weapon_aug__hy_copperhead
+AUG | Spalted Wood,milspec,weapon_aug__hy_dry_wood
+AUG | Snake Pit,milspec,weapon_aug__hy_dune_trap
+AUG | Wings,milspec,weapon_aug__hy_feathers_aug
+AUG | Commando Company,milspec,weapon_aug__hy_flecktarn
+AUG | Navy Murano,milspec,weapon_aug__hy_murano_blue
+AUG | Bengal Tiger,classified,weapon_aug__hy_tiger
+AUG | Contractor,milspec,weapon_aug__so_pmc
+AUG | Colony,milspec,weapon_aug__so_space_marine
+AUG | Storm,milspec,weapon_aug__so_stormfront
+AUG | Creep,milspec,weapon_aug__soe_aug_creep
+AUG | Daedalus,milspec,weapon_aug__sp_labyrinth3
+AUG | Condemned,milspec,weapon_aug__sp_mesh_forest_fire
+AUG | Sweeper,milspec,weapon_aug__sp_mesh_safetyblack
+AUG | Radiation Hazard,milspec,weapon_aug__sp_nukestripe_orange_aug
+AWP | Fade,covert,weapon_awp__aa_awp_fade
+AWP | Man-o'-war,covert,weapon_awp__am_awp_glory
+AWP | PAW,restricted,weapon_awp__am_awp_pawpaw
+AWP | Graphite,classified,weapon_awp__am_crumple_bravo
+AWP | Lightning Strike,covert,weapon_awp__am_lightning_awp
+AWP | Silk Tiger,classified,weapon_awp__am_tigers_blue
+AWP | Worm God,restricted,weapon_awp__aq_awp_twine
+AWP | Black Box,restricted,weapon_awp__awp_black_box
+AWP | Ice Coaled,classified,weapon_awp__awp_ice_coaled
+AWP | LongDog,covert,weapon_awp__awp_longdog
+AWP | Printstream,covert,weapon_awp__awp_printstream
+AWP | Queen's Gambit,covert,weapon_awp__awp_queens_gambit
+AWP | Sovereign Flame,covert,weapon_awp__awp_sovereign_flame
+AWP | Chrome Cannon,covert,weapon_awp__awp_tempered
+AWP | Asiimov,covert,weapon_awp__cu_awp_asimov
+AWP | Chromatic Aberration,covert,weapon_awp__cu_awp_chroma_pink
+AWP | Redline,classified,weapon_awp__cu_awp_cobra
+AWP | Oni Taiji,covert,weapon_awp__cu_awp_hannya
+AWP | Hyper Beast,covert,weapon_awp__cu_awp_hyper_beast
+AWP | Elite Build,classified,weapon_awp__cu_awp_mastery
+AWP | Neo-Noir,covert,weapon_awp__cu_awp_neonoir
+AWP | Fever Dream,classified,weapon_awp__cu_awp_psychopath
+AWP | Capillary,milspec,weapon_awp__cu_awp_vein
+AWP | Atheris,restricted,weapon_awp__cu_awp_viper
+AWP | Containment Breach,covert,weapon_awp__cu_awp_virus
+AWP | Wildfire,covert,weapon_awp__cu_awp_wildfire
+AWP | Corticera,classified,weapon_awp__cu_favela_awp
+AWP | Dragon Lore,covert,weapon_awp__cu_medieval_dragon_awp
+AWP | Medusa,covert,weapon_awp__cu_medusa_awp
+AWP | Crakow!,classified,weapon_awp__cu_overpass_crakow_awp
+AWP | Green Energy,classified,weapon_awp__cue_jump_line
+AWP | Mortis,classified,weapon_awp__gs_awp_death
+AWP | The Prince,covert,weapon_awp__gs_awp_enamel
+AWP | Exoskeleton,restricted,weapon_awp__gs_awp_exoskeleton
+AWP | Gungnir,covert,weapon_awp__gs_awp_gungnir
+AWP | Desert Hydra,covert,weapon_awp__gs_awp_hydra
+AWP | Duality,classified,weapon_awp__gs_awp_limbo_snake
+AWP | Phobos,restricted,weapon_awp__gs_awp_phobos
+AWP | Black Nile,milspec,weapon_awp__gs_awp_strone
+AWP | CMYK,covert,weapon_awp__gs_independe_awp
+AWP | BOOM,classified,weapon_awp__hy_blam_simple
+AWP | Pink DDPAT,restricted,weapon_awp__hy_ddpat_pink
+AWP | Electric Hive,classified,weapon_awp__hy_hive
+AWP | Acheron,milspec,weapon_awp__hy_nuclear_skulls_redblue
+AWP | Pit Viper,restricted,weapon_awp__hy_snakeskin
+AWP | POP AWP,restricted,weapon_awp__hy_technowar_rwb
+AWP | Full Stop,milspec,weapon_awp__hy_varicamo_red
+AWP | Arsenic Spill,milspec,weapon_awp__hy_varicamo_simple_yellow
+AWP | Sun in Leo,milspec,weapon_awp__hy_zodiac2
+AWP | Exothermic,restricted,weapon_awp__hye_firework_patches
+AWP | The End,classified,weapon_awp__soe_bw_the_end_awp
+AWP | Safari Mesh,milspec,weapon_awp__sp_mesh_tan
+AWP | Snake Camo,milspec,weapon_awp__sp_snake
+Bayonet | Fade,gold,weapon_bayonet__aa_fade
+Bayonet | Doppler (Black Pearl),gold,weapon_bayonet__am_blackpearl_marbleized
+Bayonet | Doppler (Phase 1),gold,weapon_bayonet__am_doppler_phase1
+Bayonet | Doppler (Phase 2),gold,weapon_bayonet__am_doppler_phase2
+Bayonet | Doppler (Phase 3),gold,weapon_bayonet__am_doppler_phase3
+Bayonet | Doppler (Phase 4),gold,weapon_bayonet__am_doppler_phase4
+Bayonet | Gamma Doppler (Emerald),gold,weapon_bayonet__am_emerald_marbleized
+Bayonet | Gamma Doppler (Phase 1),gold,weapon_bayonet__am_gamma_doppler_phase1
+Bayonet | Gamma Doppler (Phase 2),gold,weapon_bayonet__am_gamma_doppler_phase2
+Bayonet | Gamma Doppler (Phase 3),gold,weapon_bayonet__am_gamma_doppler_phase3
+Bayonet | Gamma Doppler (Phase 4),gold,weapon_bayonet__am_gamma_doppler_phase4
+Bayonet | Marble Fade,gold,weapon_bayonet__am_marble_fade
+Bayonet | Freehand,gold,weapon_bayonet__am_marked_up
+Bayonet | Doppler (Ruby),gold,weapon_bayonet__am_ruby_marbleized
+Bayonet | Doppler (Sapphire),gold,weapon_bayonet__am_sapphire_marbleized
+Bayonet | Slaughter,gold,weapon_bayonet__am_zebra
+Bayonet | Tiger Tooth,gold,weapon_bayonet__an_tiger_orange
+Bayonet | Blue Steel,gold,weapon_bayonet__aq_blued
+Bayonet | Damascus Steel,gold,weapon_bayonet__aq_damascus
+Bayonet | Stained,gold,weapon_bayonet__aq_forced
+Bayonet | Case Hardened,gold,weapon_bayonet__aq_oiled
+Bayonet | Rust Coat,gold,weapon_bayonet__aq_steel_knife
+Bayonet | Lore,gold,weapon_bayonet__cu_bayonet_lore
+Bayonet | Black Laminate,gold,weapon_bayonet__cu_bayonet_stonewash
+Bayonet | Autotronic,gold,weapon_bayonet__gs_bayonet_autotronic
+Bayonet | Forest DDPAT,gold,weapon_bayonet__hy_ddpat
+Bayonet | Boreal Forest,gold,weapon_bayonet__hy_forest_boreal
+Bayonet | Bright Water,gold,weapon_bayonet__hy_ocean_knife
+Bayonet | Crimson Web,gold,weapon_bayonet__hy_webs
+Bayonet | Night,gold,weapon_bayonet__so_night
+Bayonet | Ultraviolet,gold,weapon_bayonet__so_purple
+Bayonet | Scorched,gold,weapon_bayonet__sp_dapple
+Bayonet | Safari Mesh,gold,weapon_bayonet__sp_mesh_tan
+Bayonet | Urban Masked,gold,weapon_bayonet__sp_tape_urban
+PP-Bizon | Breaker Box,milspec,weapon_bizon__aa_wiring
+PP-Bizon | Carbon Fiber,milspec,weapon_bizon__am_carbon_fiber
+PP-Bizon | Cobalt Halftone,milspec,weapon_bizon__am_turqoise_halftone
+PP-Bizon | Brass,milspec,weapon_bizon__aq_brass
+PP-Bizon | Rust Coat,milspec,weapon_bizon__aq_steel_bravo
+PP-Bizon | RMX,milspec,weapon_bizon__bizon_rmx
+PP-Bizon | Traitor,milspec,weapon_bizon__bizon_traitor
+PP-Bizon | Osiris,restricted,weapon_bizon__cu_bizon-osiris
+PP-Bizon | Judgement of Anubis,covert,weapon_bizon__cu_bizon_Curse
+PP-Bizon | High Roller,classified,weapon_bizon__cu_bizon_all_in
+PP-Bizon | Antique,restricted,weapon_bizon__cu_bizon_antique
+PP-Bizon | Photic Zone,milspec,weapon_bizon__cu_bizon_citizen
+PP-Bizon | Fuel Rod,restricted,weapon_bizon__cu_bizon_noxious
+PP-Bizon | Night Riot,milspec,weapon_bizon__cu_bizon_riot
+PP-Bizon | Embargo,restricted,weapon_bizon__cu_bizon_road_warrior
+PP-Bizon | Space Cat,restricted,weapon_bizon__cu_bizon_spacecat
+PP-Bizon | Lumen,milspec,weapon_bizon__gs_bizon_flasher
+PP-Bizon | Runic,milspec,weapon_bizon__gs_bizon_hellraider
+PP-Bizon | Harvester,milspec,weapon_bizon__gs_pp_bizon_harvester
+PP-Bizon | Bamboo Print,milspec,weapon_bizon__hy_bamboo_jungle_ink
+PP-Bizon | Jungle Slipstream,milspec,weapon_bizon__hy_bizon_torn_green
+PP-Bizon | Facility Sketch,milspec,weapon_bizon__hy_blueprint_white
+PP-Bizon | Modern Hunter,milspec,weapon_bizon__hy_hunter_modern
+PP-Bizon | Anolis,milspec,weapon_bizon__hy_lizard_skin
+PP-Bizon | Death Rattle,milspec,weapon_bizon__hy_nerodia
+PP-Bizon | Blue Streak,restricted,weapon_bizon__hy_splatter
+PP-Bizon | Night Ops,milspec,weapon_bizon__hy_varicamo_night
+PP-Bizon | Water Sigil,milspec,weapon_bizon__hy_water_crest
+PP-Bizon | Wood Block Camo,milspec,weapon_bizon__hy_wood_grain_camo_red
+PP-Bizon | Bizoom,milspec,weapon_bizon__hye_car_wrap_bizon
+PP-Bizon | Thermal Currents,milspec,weapon_bizon__hye_geobirds_sunrise
+PP-Bizon | Seabird,milspec,weapon_bizon__so_aqua_stmarc
+PP-Bizon | Chemical Green,milspec,weapon_bizon__so_grey_nuclear_green_bizon
+PP-Bizon | Tuxedo,milspec,weapon_bizon__so_orca
+PP-Bizon | Candy Apple,milspec,weapon_bizon__so_red
+PP-Bizon | Forest Leaves,milspec,weapon_bizon__sp_leaves
+PP-Bizon | Irradiated Alert,milspec,weapon_bizon__sp_nukestripe_brown
+PP-Bizon | Sand Dashed,milspec,weapon_bizon__sp_tape_short_sand
+PP-Bizon | Urban Dashed,milspec,weapon_bizon__sp_tape_short_urban
+PP-Bizon | Cold Cell,milspec,weapon_bizon__sp_wax_rub_bizon
+CZ75-Auto | Army Sheen,milspec,weapon_cz75a__am_army_shine
+CZ75-Auto | Copper Fiber,milspec,weapon_cz75a__am_carbon_fiber_cz75
+CZ75-Auto | Emerald Quartz,milspec,weapon_cz75a__am_crystallized_green
+CZ75-Auto | Polymer,milspec,weapon_cz75a__am_czv2_mf
+CZ75-Auto | Tread Plate,restricted,weapon_cz75a__am_diamond_plate
+CZ75-Auto | The Fuschia Is Now,classified,weapon_cz75a__am_fuschia
+CZ75-Auto | Twist,milspec,weapon_cz75a__am_gyrate
+CZ75-Auto | Poison Dart,milspec,weapon_cz75a__am_nitrogen
+CZ75-Auto | Chalice,restricted,weapon_cz75a__am_royal
+CZ75-Auto | Emerald (Emerald),milspec,weapon_cz75a__an_emerald
+CZ75-Auto | Silver,covert,weapon_cz75a__an_silver
+CZ75-Auto | Victoria,covert,weapon_cz75a__aq_etched_cz75
+CZ75-Auto | Slalom,restricted,weapon_cz75a__cu_abstract_white_cz
+CZ75-Auto | Tigris,restricted,weapon_cz75a__cu_c75a-tiger
+CZ75-Auto | Distressed,milspec,weapon_cz75a__cu_cz75_cerakote
+CZ75-Auto | Eco,restricted,weapon_cz75a__cu_cz75_eco
+CZ75-Auto | Pole Position,restricted,weapon_cz75a__cu_cz75_precision
+CZ75-Auto | Circaetus,milspec,weapon_cz75a__cu_cz75_whirlwind
+CZ75-Auto | Yellow Jacket,classified,weapon_cz75a__cu_cz75a_chastizer
+CZ75-Auto | Hydraulics,restricted,weapon_cz75a__cz75_hydraulics
+CZ75-Auto | Tacticat,restricted,weapon_cz75a__gs_cz75_tacticat
+CZ75-Auto | Imprint,milspec,weapon_cz75a__gs_cz75_tread
+CZ75-Auto | Vendetta,milspec,weapon_cz75a__gs_cz75_vendetta
+CZ75-Auto | Red Astor,restricted,weapon_cz75a__gs_cz75a_redastor
+CZ75-Auto | Xiangliu,classified,weapon_cz75a__gs_cz_snakes_purple
+CZ75-Auto | Syndicate,restricted,weapon_cz75a__gs_train_cz75
+CZ75-Auto | Hexane,milspec,weapon_cz75a__hy_bluehex
+CZ75-Auto | Green Plaid,milspec,weapon_cz75a__hy_plaid2
+CZ75-Auto | Framework,milspec,weapon_cz75a__hy_vertigoillusion
+CZ75-Auto | Crimson Web,milspec,weapon_cz75a__hy_webs
+CZ75-Auto | Honey Paisley,milspec,weapon_cz75a__hye_paisley_desat
+CZ75-Auto | Indigo,milspec,weapon_cz75a__so_indigo_and_grey
+CZ75-Auto | Nitro,milspec,weapon_cz75a__so_orange_accents2
+CZ75-Auto | Tuxedo,milspec,weapon_cz75a__so_orca
+CZ75-Auto | Pink Pearl,milspec,weapon_cz75a__soe_pink_pearl
+CZ75-Auto | Midnight Palm,milspec,weapon_cz75a__sp_palm_night
+CZ75-Auto | Jungle Dashed,milspec,weapon_cz75a__sp_tape_short_jungle
+Desert Eagle | Blaze,restricted,weapon_deagle__aa_flames
+Desert Eagle | Hypnotic,classified,weapon_deagle__aa_vertigo
+Desert Eagle | Bronze Deco,milspec,weapon_deagle__am_bronze_sparkle
+Desert Eagle | Random Access,restricted,weapon_deagle__am_circuitboard_orange
+Desert Eagle | Meteorite,milspec,weapon_deagle__am_crystallized_dark
+Desert Eagle | Cobalt Disruption,classified,weapon_deagle__am_ddpatdense_peacock
+Desert Eagle | Night Heist,milspec,weapon_deagle__am_heist_plans_purple
+Desert Eagle | Emerald Jörmungandr,restricted,weapon_deagle__am_jorm_green
+Desert Eagle | The Bronze,milspec,weapon_deagle__am_numbers_bronze
+Desert Eagle | Golden Koi,covert,weapon_deagle__am_scales_bravo
+Desert Eagle | Midnight Storm,milspec,weapon_deagle__am_seastorm
+Desert Eagle | Sunset Storm 壱,restricted,weapon_deagle__am_seastorm_blood
+Desert Eagle | Sunset Storm 弐,restricted,weapon_deagle__am_seastorm_shojo
+Desert Eagle | Heat Treated,classified,weapon_deagle__aq_deagle_case_hardened_2
+Desert Eagle | Corinthian,milspec,weapon_deagle__aq_deagle_corinthian
+Desert Eagle | Naga,restricted,weapon_deagle__aq_deagle_naga
+Desert Eagle | Directive,restricted,weapon_deagle__aq_desert_eagle_constable
+Desert Eagle | Kumicho Dragon,classified,weapon_deagle__aq_deserteagle_kumichodragon
+Desert Eagle | Heirloom,restricted,weapon_deagle__aq_engraved_deagle
+Desert Eagle | Hand Cannon,restricted,weapon_deagle__aq_handcannon
+Desert Eagle | Pilot,restricted,weapon_deagle__aq_pilot_deagle
+Desert Eagle | Printstream,covert,weapon_deagle__cu_deag_printstream
+Desert Eagle | Trigger Discipline,restricted,weapon_deagle__cu_deag_trigger_discipline
+Desert Eagle | Conspiracy,classified,weapon_deagle__cu_deagle_aureus
+Desert Eagle | Ocean Drive,covert,weapon_deagle__cu_deagle_kitch
+Desert Eagle | Blue Ply,milspec,weapon_deagle__cu_deagle_replica
+Desert Eagle | Oxide Blaze,milspec,weapon_deagle__cu_desert_eagle_corroden
+Desert Eagle | Starcade,classified,weapon_deagle__cu_glitter_deagle
+Desert Eagle | Tilted,milspec,weapon_deagle__cu_overpass_aqua_deagle
+Desert Eagle | Calligraffiti,milspec,weapon_deagle__deagle_calligraff
+Desert Eagle | Eastern Enigma,classified,weapon_deagle__deagle_eastern_enigma_blue
+Desert Eagle | Firebreathing,restricted,weapon_deagle__deagle_firebreathing
+Desert Eagle | Serpent Strike,restricted,weapon_deagle__deagle_snake_pattern
+Desert Eagle | Code Red,covert,weapon_deagle__gs_deagle_aggressor
+Desert Eagle | Light Rail,restricted,weapon_deagle__gs_deagle_exo
+Desert Eagle | Fennec Fox,classified,weapon_deagle__gs_deagle_fennec
+Desert Eagle | Mecha Industries,classified,weapon_deagle__gs_deagle_mecha
+Desert Eagle | Mint Fan,milspec,weapon_deagle__ht_earth_fans
+Desert Eagle | Urban DDPAT,milspec,weapon_deagle__hy_ddpat_urb
+Desert Eagle | Mudder,milspec,weapon_deagle__hy_mottled_sand
+Desert Eagle | Urban Rubble,milspec,weapon_deagle__hy_varicamo_urban
+Desert Eagle | Crimson Web,restricted,weapon_deagle__hy_webs_darker
+Desert Eagle | The Daily Deagle,milspec,weapon_deagle__hye_car_wrap
+Desert Eagle | Night,milspec,weapon_deagle__so_night
+Desert Eagle | Mulberry,restricted,weapon_deagle__soe_plum
+Desert Eagle | Sputnik,milspec,weapon_deagle__sp_spacerace_blue
+Dual Berettas | Cobalt Quartz,restricted,weapon_elite__am_crystallized_blue
+Dual Berettas | Heist,milspec,weapon_elite__am_heist_plans_green
+Dual Berettas | Hemoglobin,restricted,weapon_elite__am_ossify_red
+Dual Berettas | Emerald (Emerald),milspec,weapon_elite__an_emerald
+Dual Berettas | Anodized Navy,milspec,weapon_elite__an_navy
+Dual Berettas | Cartel,milspec,weapon_elite__aq_dualberettas_cartel
+Dual Berettas | Stained,milspec,weapon_elite__aq_forced
+Dual Berettas | Flora Carnivora,restricted,weapon_elite__cu_dual_elites_evil_flora
+Dual Berettas | Twin Turbo,classified,weapon_elite__cu_dual_elites_rally
+Dual Berettas | Dualing Dragons,milspec,weapon_elite__cu_dualberretta_dragons
+Dual Berettas | Melondrama,classified,weapon_elite__cu_elites_beware
+Dual Berettas | Urban Shock,restricted,weapon_elite__cu_elites_urbanstorm
+Dual Berettas | Sweet Little Angels,restricted,weapon_elite__cu_overpass_baby_dualies
+Dual Berettas | Retribution,milspec,weapon_elite__cu_retribution
+Dual Berettas | Black Limba,milspec,weapon_elite__cu_season_elites_bravo
+Dual Berettas | Hideout,milspec,weapon_elite__dual_berettas_lethal_grin
+Dual Berettas | Angel Eyes,restricted,weapon_elite__dual_elite_biblical_angel
+Dual Berettas | Hydro Strike,restricted,weapon_elite__dual_elite_hydro_strike
+Dual Berettas | Mystic Conjunction,milspec,weapon_elite__dualies_mystic_conjunction_v3
+Dual Berettas | Royal Consorts,restricted,weapon_elite__gs_dual_berettas_golden_venice
+Dual Berettas | Tread,milspec,weapon_elite__gs_dual_berettas_tread
+Dual Berettas | Elite 1.6,milspec,weapon_elite__gs_dual_elites_classic
+Dual Berettas | Dezastre,restricted,weapon_elite__gs_dual_elites_dezastre
+Dual Berettas | Balance,milspec,weapon_elite__gs_dual_elites_rose
+Dual Berettas | Cobra Strike,classified,weapon_elite__gs_dualberettas_cobra
+Dual Berettas | Ventilators,milspec,weapon_elite__gs_dualberettas_ventilators
+Dual Berettas | Duelist,restricted,weapon_elite__gs_mother_of_pearl_elite
+Dual Berettas | Forest Night,milspec,weapon_elite__hy_forest_night
+Dual Berettas | Pyre,milspec,weapon_elite__hy_gelpen_dark
+Dual Berettas | Marina,restricted,weapon_elite__hy_marina_sunrise
+Dual Berettas | Switch Board,milspec,weapon_elite__hy_numbers_green
+Dual Berettas | Briar,milspec,weapon_elite__hy_vines
+Dual Berettas | Moon in Libra,milspec,weapon_elite__hy_zodiac1
+Dual Berettas | Panther,milspec,weapon_elite__so_panther
+Dual Berettas | Contractor,milspec,weapon_elite__so_pmc
+Dual Berettas | Colony,milspec,weapon_elite__so_space_marine
+Dual Berettas | Demolition,restricted,weapon_elite__so_tangerine
+Dual Berettas | BorDeux,milspec,weapon_elite__soch_acrylic_grips
+Dual Berettas | Polished Malachite,milspec,weapon_elite__soch_marble_grips
+Dual Berettas | Silver Pour,milspec,weapon_elite__soe_acrylic_flow3
+Dual Berettas | Rose Nacre,milspec,weapon_elite__soo_rose_gold
+Dual Berettas | Drift Wood,milspec,weapon_elite__sp_dry_wood
+Dual Berettas | Shred,milspec,weapon_elite__sp_elites_winter_raider
+Dual Berettas | Oil Change,milspec,weapon_elite__sp_engine_dirty
+FAMAS | Faulty Wiring,milspec,weapon_famas__aa_wiring_yellow
+FAMAS | Carbon Fiber,milspec,weapon_famas__am_carbon_fiber
+FAMAS | Neural Net,restricted,weapon_famas__am_famas_dots
+FAMAS | Meltdown,classified,weapon_famas__am_nuclear_pattern4_famas
+FAMAS | Styx,restricted,weapon_famas__am_nuclear_skulls2_famas
+FAMAS | Prime Conspiracy,restricted,weapon_famas__am_numbers_magenta
+FAMAS | Dark Water,covert,weapon_famas__am_zebra_dark
+FAMAS | Sergeant,restricted,weapon_famas__an_famas_sgt
+FAMAS | Valence,restricted,weapon_famas__aq_famas_contour
+FAMAS | Djinn,classified,weapon_famas__aq_famas_jinn
+FAMAS | Afterimage,classified,weapon_famas__cu_broken_path_famas
+FAMAS | Waters of Nephthys,classified,weapon_famas__cu_famas_holo_ocean
+FAMAS | Survivor Z,milspec,weapon_famas__cu_famas_lenta
+FAMAS | Decommissioned,milspec,weapon_famas__cu_famas_nuke_tension
+FAMAS | Eye of Athena,classified,weapon_famas__cu_famas_owl_orange
+FAMAS | Pulse,restricted,weapon_famas__cu_famas_pulse
+FAMAS | ZX Spectron,restricted,weapon_famas__cu_famas_spectron
+FAMAS | Bad Trip,covert,weapon_famas__famas_badtrip
+FAMAS | Corp Defense,milspec,weapon_famas__famas_corp_defense
+FAMAS | Snake Song,milspec,weapon_famas__famas_snake_song
+FAMAS | Meow 36,milspec,weapon_famas__gs_famas_corp_meow
+FAMAS | Commemoration,covert,weapon_famas__gs_famas_legacy_gold
+FAMAS | Mecha Industries,classified,weapon_famas__gs_famas_mecha
+FAMAS | Roll Cage,covert,weapon_famas__gs_famas_rally
+FAMAS | Rapid Eye Movement,classified,weapon_famas__gs_famas_rapid_eyes
+FAMAS | Half Sleeve,milspec,weapon_famas__gs_gamebred_famas
+FAMAS | 2A2F,milspec,weapon_famas__gs_train_car_famas
+FAMAS | Halftone Wash,milspec,weapon_famas__ht_splash_famas
+FAMAS | Hexane,milspec,weapon_famas__hy_bluehex
+FAMAS | Doomkitty,milspec,weapon_famas__hy_doomkitty
+FAMAS | Cyanospatter,milspec,weapon_famas__hy_reef
+FAMAS | CaliCamo,milspec,weapon_famas__hy_varicamo_desert
+FAMAS | Byproduct,milspec,weapon_famas__hye_firework_patches_famas
+FAMAS | Colony,milspec,weapon_famas__so_space_marine
+FAMAS | Yeti Camo,milspec,weapon_famas__soe_blue_famas
+FAMAS | Vendetta,milspec,weapon_famas__soe_bw_blast
+FAMAS | Grey Ghost,milspec,weapon_famas__soo_famas_grey_ghost
+FAMAS | Crypsis,milspec,weapon_famas__sp_famas_ghost_insects
+FAMAS | Macabre,milspec,weapon_famas__sp_famas_macabre
+FAMAS | Night Borre,milspec,weapon_famas__sp_knots_blue
+FAMAS | Teardown,milspec,weapon_famas__sp_mesh_hot_and_cold
+FAMAS | Sundown,milspec,weapon_famas__sp_palm_sunset
+FAMAS | Spitfire,restricted,weapon_famas__sp_spitfire_famas_bravo
+FAMAS | Contrast Spray,milspec,weapon_famas__sp_spray
+FAMAS | Palm,milspec,weapon_famas__spo_palm
+Five-SeveN | Amber Fade,milspec,weapon_fiveseven__aa_fade_metallic
+Five-SeveN | Berries And Cherries,restricted,weapon_fiveseven__aa_fade_red_blue
+Five-SeveN | Copper Galaxy,restricted,weapon_fiveseven__am_copper_flecks
+Five-SeveN | Silver Quartz,milspec,weapon_fiveseven__am_crystallized_silver
+Five-SeveN | Anodized Gunmetal,milspec,weapon_fiveseven__an_gunmetal_bravo
+Five-SeveN | Fowl Play,classified,weapon_fiveseven__aq_57_feathers
+Five-SeveN | Heat Treated,restricted,weapon_fiveseven__aq_case_hardened_fiveseven
+Five-SeveN | Scumbria,milspec,weapon_fiveseven__aq_five_seven_scumbria
+Five-SeveN | Case Hardened,restricted,weapon_fiveseven__aq_oiled
+Five-SeveN | Angry Mob,covert,weapon_fiveseven__cu_five_seven_angry
+Five-SeveN | Violent Daimyo,milspec,weapon_fiveseven__cu_five_seven_daimyo
+Five-SeveN | Fairy Tale,classified,weapon_fiveseven__cu_five_seven_diary
+Five-SeveN | Scrawl,milspec,weapon_fiveseven__cu_fiveseven_alpha_omega
+Five-SeveN | Triumvirate,restricted,weapon_fiveseven__cu_fiveseven_augmented
+Five-SeveN | Monkey Business,classified,weapon_fiveseven__cu_fiveseven_banana
+Five-SeveN | Buddy,restricted,weapon_fiveseven__cu_fiveseven_gsg9
+Five-SeveN | Hyper Beast,covert,weapon_fiveseven__cu_fiveseven_hyperbeast
+Five-SeveN | Retrobution,restricted,weapon_fiveseven__cu_fiveseven_retrobution
+Five-SeveN | Urban Hazard,milspec,weapon_fiveseven__cu_fiveseven_urban_hazard
+Five-SeveN | Capillary,milspec,weapon_fiveseven__cu_fiveseven_vein
+Five-SeveN | Fall Hazard,classified,weapon_fiveseven__cu_vertigo_fiveseven
+Five-SeveN | Desert Seal,milspec,weapon_fiveseven__fiveseven_desert_seal
+Five-SeveN | Hybrid,restricted,weapon_fiveseven__fiveseven_hybrid
+Five-SeveN | Dark Polymer,milspec,weapon_fiveseven__fiveseven_polymer_dark
+Five-SeveN | Boost Protocol,restricted,weapon_fiveseven__gs_five_seven_efusion
+Five-SeveN | Flame Test,milspec,weapon_fiveseven__gs_fiveseven_hot_rod_violet
+Five-SeveN | Crimson Blossom,milspec,weapon_fiveseven__hy_bud_red
+Five-SeveN | Coolant,milspec,weapon_fiveseven__hy_ducts_green
+Five-SeveN | Nightshade,milspec,weapon_fiveseven__hy_flowers
+Five-SeveN | Forest Night,milspec,weapon_fiveseven__hy_forest_night
+Five-SeveN | Kami,milspec,weapon_fiveseven__hy_kami
+Five-SeveN | Neon Kimono,restricted,weapon_fiveseven__hy_kimono_diamonds
+Five-SeveN | Midnight Paintover,milspec,weapon_fiveseven__hy_overpass_paintover_teal
+Five-SeveN | Hot Shot,milspec,weapon_fiveseven__so_grey_nuclear_orange_five_seven
+Five-SeveN | Jungle,milspec,weapon_fiveseven__so_jungle
+Five-SeveN | Nitro,milspec,weapon_fiveseven__so_orange_accents
+Five-SeveN | Contractor,milspec,weapon_fiveseven__so_pmc
+Five-SeveN | Candy Apple,milspec,weapon_fiveseven__so_red
+Five-SeveN | Sky Blue,milspec,weapon_fiveseven__soe_blue_and_chrome
+Five-SeveN | Fraise Crane,milspec,weapon_fiveseven__soe_pink_cranes
+Five-SeveN | Autumn Thicket,milspec,weapon_fiveseven__soo_branches
+Five-SeveN | Withered Vine,milspec,weapon_fiveseven__sp_moro_textile_purple_yellow
+Five-SeveN | Orange Peel,milspec,weapon_fiveseven__sp_tape_orange
+G3SG1 | Ancient Ritual,covert,weapon_g3sg1__am_ancient_wine
+G3SG1 | Murky,milspec,weapon_g3sg1__am_g3sg1_murky
+G3SG1 | Violet Murano,milspec,weapon_g3sg1__am_murano_violet
+G3SG1 | Chronos,restricted,weapon_g3sg1__cu_chronos_g3sg1
+G3SG1 | Black Sand,milspec,weapon_g3sg1__cu_g3sg1_blacksand
+G3SG1 | The Executioner,classified,weapon_g3sg1__cu_g3sg1_executioner
+G3SG1 | Dream Glade,restricted,weapon_g3sg1__cu_g3sg1_glade
+G3SG1 | Keeping Tabs,milspec,weapon_g3sg1__cu_g3sg1_tacticalmap
+G3SG1 | High Seas,restricted,weapon_g3sg1__gs_g3sg1_buccaneer
+G3SG1 | Hunter,milspec,weapon_g3sg1__gs_g3sg1_cetme_redux
+G3SG1 | Digital Mesh,milspec,weapon_g3sg1__gs_g3sg1_disrupt
+G3SG1 | Flux,classified,weapon_g3sg1__gs_g3sg1_flux_purple
+G3SG1 | Scavenger,restricted,weapon_g3sg1__gs_g3sg1_savage
+G3SG1 | Ventilator,milspec,weapon_g3sg1__gs_g3sg1_ventilator
+G3SG1 | Stinger,restricted,weapon_g3sg1__gs_g3sg1_viper_yellow
+G3SG1 | Arctic Camo,milspec,weapon_g3sg1__hy_arctic
+G3SG1 | Polar Camo,milspec,weapon_g3sg1__hy_arctic_contrast
+G3SG1 | Demeter,milspec,weapon_g3sg1__hy_bluepolygon_bravo
+G3SG1 | Desert Storm,milspec,weapon_g3sg1__hy_desert
+G3SG1 | Orange Kimono,milspec,weapon_g3sg1__hy_kimono_diamonds_orange
+G3SG1 | VariCamo,milspec,weapon_g3sg1__hy_varicamo
+G3SG1 | Green Apple,milspec,weapon_g3sg1__so_green
+G3SG1 | Contractor,milspec,weapon_g3sg1__so_pmc
+G3SG1 | Red Jasper,milspec,weapon_g3sg1__soo_g3sg1_tomato
+G3SG1 | Orange Crash,milspec,weapon_g3sg1__sp_g3sg1_militiaorange
+G3SG1 | Green Cell,milspec,weapon_g3sg1__sp_khaki_camo
+G3SG1 | Safari Mesh,milspec,weapon_g3sg1__sp_mesh_tan
+G3SG1 | New Roots,milspec,weapon_g3sg1__sp_moro_carving_lightblue
+G3SG1 | Jungle Dashed,milspec,weapon_g3sg1__sp_tape_short_jungle
+G3SG1 | Azure Zebra,milspec,weapon_g3sg1__sp_zebracam_blue
+Galil AR | Amber Fade,milspec,weapon_galilar__aa_fade_metallic
+Galil AR | Aqua Terrace,milspec,weapon_galilar__am_geometric_steps
+Galil AR | Blue Titanium,milspec,weapon_galilar__an_titanium30v
+Galil AR | Rainbow Spoon,classified,weapon_galilar__aq_titanium_rainbow_galilar
+Galil AR | Cerberus,restricted,weapon_galilar__cu_cerbrus_galil
+Galil AR | Chatterbox,covert,weapon_galilar__cu_galil_abrasion
+Galil AR | Black Sand,milspec,weapon_galilar__cu_galil_ar-camo
+Galil AR | Sugar Rush,classified,weapon_galilar__cu_galil_candychaos
+Galil AR | Chromatic Aberration,classified,weapon_galilar__cu_galil_chroma_pink
+Galil AR | Destroyer,milspec,weapon_galilar__cu_galil_destroyer
+Galil AR | Eco,classified,weapon_galilar__cu_galil_eco
+Galil AR | Rocket Pop,milspec,weapon_galilar__cu_galilar_particles
+Galil AR | NV,milspec,weapon_galilar__cu_poly_green_galil
+Galil AR | Sandstorm,milspec,weapon_galilar__cu_sandstorm
+Galil AR | Control,restricted,weapon_galilar__galil_control_strike
+Galil AR | Galigator,restricted,weapon_galilar__galil_galigator
+Galil AR | Stone Cold,restricted,weapon_galilar__gs_galil_nightwing
+Galil AR | Connexion,restricted,weapon_galilar__gs_galil_phoenix
+Galil AR | Vandal,milspec,weapon_galilar__gs_galil_vandal
+Galil AR | Firefight,restricted,weapon_galilar__gs_galilar_incenerator
+Galil AR | Shattered,milspec,weapon_galilar__hy_crumple_bravo
+Galil AR | Orange DDPAT,restricted,weapon_galilar__hy_ddpat_orange
+Galil AR | Winter Forest,milspec,weapon_galilar__hy_forest_winter
+Galil AR | Kami,milspec,weapon_galilar__hy_galil_kami
+Galil AR | Signal,restricted,weapon_galilar__hy_galil_signal_red
+Galil AR | Cold Fusion,milspec,weapon_galilar__hy_nuclear_skulls_aqua
+Galil AR | Dusk Ruins,covert,weapon_galilar__hy_ruins_red
+Galil AR | VariCamo,milspec,weapon_galilar__hy_varicamo
+Galil AR | Urban Rubble,milspec,weapon_galilar__hy_varicamo_urban
+Galil AR | Sky Mandala,milspec,weapon_galilar__hye_earth_mandala
+Galil AR | Acid Dart,milspec,weapon_galilar__hye_yellow_usaf
+Galil AR | Green Apple,milspec,weapon_galilar__so_green
+Galil AR | Tuxedo,milspec,weapon_galilar__so_orca
+Galil AR | Tornado,milspec,weapon_galilar__so_tornado
+Galil AR | Grey Smoke,milspec,weapon_galilar__soch_blorb_bw_galilar
+Galil AR | O-Ranger,milspec,weapon_galilar__soe_orange_flick
+Galil AR | Robin's Egg,milspec,weapon_galilar__soe_robinsegg
+Galil AR | Akoben,milspec,weapon_galilar__sp_galil_akoben
+Galil AR | CAUTION!,restricted,weapon_galilar__sp_galil_caution
+Galil AR | Crimson Tsunami,restricted,weapon_galilar__sp_galil_wave
+Galil AR | Hunting Blind,milspec,weapon_galilar__sp_mesh_slashes
+Galil AR | Metallic Squeezer,milspec,weapon_galilar__sp_overpass_paint_pen_metal
+Galil AR | Phoenix Blacklight,restricted,weapon_galilar__sp_phoenix_tags_purple
+Galil AR | Sage Spray,milspec,weapon_galilar__sp_spray_desert_sage
+Glock-18 | Fade,restricted,weapon_glock__aa_fade
+Glock-18 | Moonrise,restricted,weapon_glock__aa_glock_18_urban_moon_fever
+Glock-18 | High Beam,milspec,weapon_glock__aa_vertigo_blue
+Glock-18 | Twilight Galaxy,classified,weapon_glock__am_aqua_flecks
+Glock-18 | Steel Disruption,restricted,weapon_glock__am_ddpatdense_silver
+Glock-18 | Dragon Tattoo,restricted,weapon_glock__am_dragon_glock
+Glock-18 | Gamma Doppler (Emerald),covert,weapon_glock__am_emerald_marbleized_glock
+Glock-18 | Gamma Doppler (Phase 1),covert,weapon_glock__am_gamma_doppler_phase1_glock
+Glock-18 | Gamma Doppler (Phase 2),covert,weapon_glock__am_gamma_doppler_phase2_glock
+Glock-18 | Gamma Doppler (Phase 3),covert,weapon_glock__am_gamma_doppler_phase3_glock
+Glock-18 | Gamma Doppler (Phase 4),covert,weapon_glock__am_gamma_doppler_phase4_glock
+Glock-18 | Reactor,milspec,weapon_glock__am_nuclear_pattern1_glock
+Glock-18 | Nuclear Garden,restricted,weapon_glock__am_nuclear_skulls_green
+Glock-18 | Brass,restricted,weapon_glock__aq_brass
+Glock-18 | Bunsen Burner,milspec,weapon_glock__aq_glock18_flames_blue
+Glock-18 | Grinder,restricted,weapon_glock__aq_glock_coiled
+Glock-18 | Ironwork,milspec,weapon_glock__aq_glock_dark-fall
+Glock-18 | Case Hardened,restricted,weapon_glock__aq_oiled
+Glock-18 | Water Elemental,restricted,weapon_glock__cu_glock-liquescent
+Glock-18 | Oxide Blaze,milspec,weapon_glock__cu_glock18_corroden
+Glock-18 | Bullet Queen,covert,weapon_glock__cu_glock18_warmaiden
+Glock-18 | Weasel,restricted,weapon_glock__cu_glock18_weasel
+Glock-18 | Catacombs,milspec,weapon_glock__cu_glock_deathtoll
+Glock-18 | Vogue,classified,weapon_glock__cu_glock_eyecontact
+Glock-18 | Sacrifice,milspec,weapon_glock__cu_glock_hero
+Glock-18 | Off World,milspec,weapon_glock__cu_glock_indigo
+Glock-18 | Umbral Rabbit,restricted,weapon_glock__cu_glock_moon_rabbit
+Glock-18 | Neo-Noir,covert,weapon_glock__cu_glock_noir
+Glock-18 | Ramese's Reach,restricted,weapon_glock__cu_glock_ramzes
+Glock-18 | Snack Attack,classified,weapon_glock__cu_glock_snackattack
+Glock-18 | Wasteland Rebel,covert,weapon_glock__cu_glock_wasteland_rebel
+Glock-18 | Franklin,restricted,weapon_glock__cu_money_glock
+Glock-18 | Block-18,restricted,weapon_glock__glock_brick_mondrian
+Glock-18 | Gold Toof,covert,weapon_glock__glock_chomper
+Glock-18 | Ghost Protocol,covert,weapon_glock__glock_ghost_protocol_red
+Glock-18 | Ifrit Lattice,restricted,weapon_glock__glock_ifrit_lattice
+Glock-18 | Fully Tuned,covert,weapon_glock__glock_jdpeek
+Glock-18 | Mirror Mosaic,classified,weapon_glock__glock_mirror_maze_v2_pearl
+Glock-18 | Shinobu,classified,weapon_glock__glock_shinobu
+Glock-18 | Green Line,milspec,weapon_glock__glock_train_green
+Glock-18 | Royal Legion,restricted,weapon_glock__gs_glock18_award
+Glock-18 | Wraiths,milspec,weapon_glock__gs_glock18_wrathys
+Glock-18 | Winterized,milspec,weapon_glock__gs_glock_elite_camo
+Glock-18 | Clear Polymer,milspec,weapon_glock__gs_glock_polymer
+Glock-18 | Warhawk,milspec,weapon_glock__gs_glock_thunder_dust
+Glock-18 | AXIA,classified,weapon_glock__gsch_axia_glock
+Glock-18 | Trace Lock,restricted,weapon_glock__ht_white_edges
+Glock-18 | Blue Fissure,milspec,weapon_glock__hy_craquelure
+Glock-18 | Pink DDPAT,restricted,weapon_glock__hy_ddpat_pink
+Glock-18 | Synth Leaf,restricted,weapon_glock__hy_leaf_blue
+Glock-18 | Death Rattle,milspec,weapon_glock__hy_nerodia
+Glock-18 | Teal Graf,milspec,weapon_glock__hy_overpass_tagged_teal
+Glock-18 | Ocean Topo,milspec,weapon_glock__hye_topo
+Glock-18 | Night,milspec,weapon_glock__so_night
+Glock-18 | Groundwater,milspec,weapon_glock__so_olive
+Glock-18 | Candy Apple,milspec,weapon_glock__so_red
+Glock-18 | Sand Dune,milspec,weapon_glock__so_sand_bravo
+Glock-18 | Coral Bloom,milspec,weapon_glock__soe_roses
+Glock-18 | Red Tire,milspec,weapon_glock__sp_tire_tread_red
+Glock-18 | Glockingbird,restricted,weapon_glock__spe_missile
+P2000 | Amber Fade,restricted,weapon_hkp2000__aa_fade_metallic
+P2000 | Space Race,restricted,weapon_hkp2000__aa_spacerace_orange
+P2000 | Panther Camo,covert,weapon_hkp2000__am_black_panther
+P2000 | Chainmail,milspec,weapon_hkp2000__am_chainmail
+P2000 | Dispatch,milspec,weapon_hkp2000__am_numbers_red_blue
+P2000 | Ocean Foam,classified,weapon_hkp2000__am_ossify_blue_p2000_bravo
+P2000 | Imperial,milspec,weapon_hkp2000__am_p2000_imperial_red
+P2000 | Scorpion,restricted,weapon_hkp2000__am_scorpion_p2000
+P2000 | Silver,milspec,weapon_hkp2000__an_silver
+P2000 | Acid Etched,restricted,weapon_hkp2000__aq_p2000_acid_clover
+P2000 | Handgun,restricted,weapon_hkp2000__aq_p2000_boom
+P2000 | Gnarled,milspec,weapon_hkp2000__aq_p2000_lost_world
+P2000 | Corticera,classified,weapon_hkp2000__cu_favela_p2000
+P2000 | Coach Class,milspec,weapon_hkp2000__cu_luggage_p2000
+P2000 | Wicked Sick,classified,weapon_hkp2000__cu_p2000_decline
+P2000 | Fire Elemental,covert,weapon_hkp2000__cu_p2000_fire_elemental
+P2000 | Woodsman,restricted,weapon_hkp2000__cu_p2000_hunter
+P2000 | Ivory,milspec,weapon_hkp2000__cu_p2000_ivory
+P2000 | Obsidian,restricted,weapon_hkp2000__cu_p2000_obsidian
+P2000 | Pulse,milspec,weapon_hkp2000__cu_p2000_pulse
+P2000 | Urban Hazard,milspec,weapon_hkp2000__cu_p2000_urban_hazard
+P2000 | Lifted Spirits,milspec,weapon_hkp2000__cu_p2k_flying_dream
+P2000 | Turf,milspec,weapon_hkp2000__gs_p2000-sport
+P2000 | Imperial Dragon,classified,weapon_hkp2000__gs_p2000_imperial_dragon
+P2000 | Coral Halftone,milspec,weapon_hkp2000__ht_facet_p2000
+P2000 | Granite Marbleized,milspec,weapon_hkp2000__hy_granite
+P2000 | Mudder,milspec,weapon_hkp2000__hy_mottled_sand
+P2000 | Oceanic,milspec,weapon_hkp2000__hy_p2000_oceani
+P2000 | Red FragCam,milspec,weapon_hkp2000__hy_poly_camo
+P2000 | Red Wing,milspec,weapon_hkp2000__p2000_deep_red
+P2000 | Sure Grip,milspec,weapon_hkp2000__p2k_fractal
+P2000 | Grassland,milspec,weapon_hkp2000__so_grassland
+P2000 | Grip Tape,milspec,weapon_hkp2000__soe_p2000_grips
+P2000 | Marsh,milspec,weapon_hkp2000__soe_teal_glitter
+P2000 | Pathfinder,milspec,weapon_hkp2000__sp_labyrinth2
+P2000 | Grassland Leaves,milspec,weapon_hkp2000__sp_leaves_grassland
+P2000 | Royal Baroque,milspec,weapon_hkp2000__spe_scarf_print
+Butterfly Knife | Fade,gold,weapon_knife_butterfly__aa_fade
+Butterfly Knife | Doppler (Black Pearl),gold,weapon_knife_butterfly__am_blackpearl_marbleized_b
+Butterfly Knife | Doppler (Phase 1),gold,weapon_knife_butterfly__am_doppler_phase1
+Butterfly Knife | Doppler (Phase 2),gold,weapon_knife_butterfly__am_doppler_phase2_b
+Butterfly Knife | Doppler (Phase 3),gold,weapon_knife_butterfly__am_doppler_phase3
+Butterfly Knife | Doppler (Phase 4),gold,weapon_knife_butterfly__am_doppler_phase4
+Butterfly Knife | Gamma Doppler (Emerald),gold,weapon_knife_butterfly__am_emerald_marbleized
+Butterfly Knife | Gamma Doppler (Phase 1),gold,weapon_knife_butterfly__am_gamma_doppler_phase1
+Butterfly Knife | Gamma Doppler (Phase 2),gold,weapon_knife_butterfly__am_gamma_doppler_phase2
+Butterfly Knife | Gamma Doppler (Phase 3),gold,weapon_knife_butterfly__am_gamma_doppler_phase3
+Butterfly Knife | Gamma Doppler (Phase 4),gold,weapon_knife_butterfly__am_gamma_doppler_phase4
+Butterfly Knife | Marble Fade,gold,weapon_knife_butterfly__am_marble_fade
+Butterfly Knife | Freehand,gold,weapon_knife_butterfly__am_marked_up_90
+Butterfly Knife | Doppler (Ruby),gold,weapon_knife_butterfly__am_ruby_marbleized
+Butterfly Knife | Doppler (Sapphire),gold,weapon_knife_butterfly__am_sapphire_marbleized_b
+Butterfly Knife | Slaughter,gold,weapon_knife_butterfly__am_zebra
+Butterfly Knife | Tiger Tooth,gold,weapon_knife_butterfly__an_tiger_orange
+Butterfly Knife | Blue Steel,gold,weapon_knife_butterfly__aq_blued
+Butterfly Knife | Damascus Steel,gold,weapon_knife_butterfly__aq_damascus_90
+Butterfly Knife | Stained,gold,weapon_knife_butterfly__aq_forced
+Butterfly Knife | Case Hardened,gold,weapon_knife_butterfly__aq_oiled
+Butterfly Knife | Rust Coat,gold,weapon_knife_butterfly__aq_steel_knife
+Butterfly Knife | Lore,gold,weapon_knife_butterfly__cu_butterfly_lore
+Butterfly Knife | Autotronic,gold,weapon_knife_butterfly__gs_butterfly_autotronic
+Butterfly Knife | Black Laminate,gold,weapon_knife_butterfly__gs_butterfly_black_laminate
+Butterfly Knife | Forest DDPAT,gold,weapon_knife_butterfly__hy_ddpat
+Butterfly Knife | Boreal Forest,gold,weapon_knife_butterfly__hy_forest_boreal
+Butterfly Knife | Bright Water,gold,weapon_knife_butterfly__hy_ocean_knife_90
+Butterfly Knife | Crimson Web,gold,weapon_knife_butterfly__hy_webs
+Butterfly Knife | Night,gold,weapon_knife_butterfly__so_night
+Butterfly Knife | Ultraviolet,gold,weapon_knife_butterfly__so_purple
+Butterfly Knife | Scorched,gold,weapon_knife_butterfly__sp_dapple
+Butterfly Knife | Safari Mesh,gold,weapon_knife_butterfly__sp_mesh_tan
+Butterfly Knife | Urban Masked,gold,weapon_knife_butterfly__sp_tape_urban
+Survival Knife | Fade,gold,weapon_knife_canis__aa_fade
+Survival Knife | Doppler (Black Pearl),gold,weapon_knife_canis__am_blackpearl_marbleized
+Survival Knife | Doppler (Phase 1),gold,weapon_knife_canis__am_doppler_phase1
+Survival Knife | Doppler (Phase 2),gold,weapon_knife_canis__am_doppler_phase2
+Survival Knife | Doppler (Phase 3),gold,weapon_knife_canis__am_doppler_phase3
+Survival Knife | Doppler (Phase 4),gold,weapon_knife_canis__am_doppler_phase4
+Survival Knife | Marble Fade,gold,weapon_knife_canis__am_marble_fade
+Survival Knife | Doppler (Ruby),gold,weapon_knife_canis__am_ruby_marbleized
+Survival Knife | Doppler (Sapphire),gold,weapon_knife_canis__am_sapphire_marbleized
+Survival Knife | Slaughter,gold,weapon_knife_canis__am_zebra
+Survival Knife | Tiger Tooth,gold,weapon_knife_canis__an_tiger_orange
+Survival Knife | Blue Steel,gold,weapon_knife_canis__aq_blued
+Survival Knife | Damascus Steel,gold,weapon_knife_canis__aq_damascus
+Survival Knife | Stained,gold,weapon_knife_canis__aq_forced
+Survival Knife | Case Hardened,gold,weapon_knife_canis__aq_oiled
+Survival Knife | Rust Coat,gold,weapon_knife_canis__aq_steel_knife
+Survival Knife | Forest DDPAT,gold,weapon_knife_canis__hy_ddpat
+Survival Knife | Boreal Forest,gold,weapon_knife_canis__hy_forest_boreal
+Survival Knife | Crimson Web,gold,weapon_knife_canis__hy_webs
+Survival Knife | Ultraviolet,gold,weapon_knife_canis__so_purple
+Survival Knife | Scorched,gold,weapon_knife_canis__sp_dapple
+Survival Knife | Safari Mesh,gold,weapon_knife_canis__sp_mesh_tan
+Survival Knife | Night Stripe,gold,weapon_knife_canis__sp_nightstripe
+Survival Knife | Urban Masked,gold,weapon_knife_canis__sp_tape_urban
+Paracord Knife | Fade,gold,weapon_knife_cord__aa_fade
+Paracord Knife | Doppler (Black Pearl),gold,weapon_knife_cord__am_blackpearl_marbleized
+Paracord Knife | Doppler (Phase 1),gold,weapon_knife_cord__am_doppler_phase1
+Paracord Knife | Doppler (Phase 2),gold,weapon_knife_cord__am_doppler_phase2
+Paracord Knife | Doppler (Phase 3),gold,weapon_knife_cord__am_doppler_phase3
+Paracord Knife | Doppler (Phase 4),gold,weapon_knife_cord__am_doppler_phase4
+Paracord Knife | Marble Fade,gold,weapon_knife_cord__am_marble_fade
+Paracord Knife | Doppler (Ruby),gold,weapon_knife_cord__am_ruby_marbleized
+Paracord Knife | Doppler (Sapphire),gold,weapon_knife_cord__am_sapphire_marbleized
+Paracord Knife | Slaughter,gold,weapon_knife_cord__am_zebra
+Paracord Knife | Tiger Tooth,gold,weapon_knife_cord__an_tiger_orange
+Paracord Knife | Blue Steel,gold,weapon_knife_cord__aq_blued
+Paracord Knife | Damascus Steel,gold,weapon_knife_cord__aq_damascus
+Paracord Knife | Stained,gold,weapon_knife_cord__aq_forced
+Paracord Knife | Case Hardened,gold,weapon_knife_cord__aq_oiled
+Paracord Knife | Rust Coat,gold,weapon_knife_cord__aq_steel_knife
+Paracord Knife | Forest DDPAT,gold,weapon_knife_cord__hy_ddpat
+Paracord Knife | Boreal Forest,gold,weapon_knife_cord__hy_forest_boreal
+Paracord Knife | Crimson Web,gold,weapon_knife_cord__hy_webs
+Paracord Knife | Ultraviolet,gold,weapon_knife_cord__so_purple_falchion
+Paracord Knife | Scorched,gold,weapon_knife_cord__sp_dapple
+Paracord Knife | Safari Mesh,gold,weapon_knife_cord__sp_mesh_tan
+Paracord Knife | Night Stripe,gold,weapon_knife_cord__sp_nightstripe
+Paracord Knife | Urban Masked,gold,weapon_knife_cord__sp_tape_urban
+Classic Knife | Fade,gold,weapon_knife_css__aa_fade
+Classic Knife | Slaughter,gold,weapon_knife_css__am_zebra
+Classic Knife | Blue Steel,gold,weapon_knife_css__aq_blued
+Classic Knife | Stained,gold,weapon_knife_css__aq_forced
+Classic Knife | Case Hardened,gold,weapon_knife_css__aq_oiled
+Classic Knife | Forest DDPAT,gold,weapon_knife_css__hy_ddpat
+Classic Knife | Boreal Forest,gold,weapon_knife_css__hy_forest_boreal
+Classic Knife | Crimson Web,gold,weapon_knife_css__hy_webs
+Classic Knife | Scorched,gold,weapon_knife_css__sp_dapple
+Classic Knife | Safari Mesh,gold,weapon_knife_css__sp_mesh_tan
+Classic Knife | Night Stripe,gold,weapon_knife_css__sp_nightstripe
+Classic Knife | Urban Masked,gold,weapon_knife_css__sp_tape_urban
+Falchion Knife | Fade,gold,weapon_knife_falchion__aa_fade
+Falchion Knife | Doppler (Black Pearl),gold,weapon_knife_falchion__am_blackpearl_marbleized
+Falchion Knife | Doppler (Phase 1),gold,weapon_knife_falchion__am_doppler_phase1
+Falchion Knife | Doppler (Phase 2),gold,weapon_knife_falchion__am_doppler_phase2
+Falchion Knife | Doppler (Phase 3),gold,weapon_knife_falchion__am_doppler_phase3
+Falchion Knife | Doppler (Phase 4),gold,weapon_knife_falchion__am_doppler_phase4
+Falchion Knife | Gamma Doppler (Emerald),gold,weapon_knife_falchion__am_emerald_marbleized
+Falchion Knife | Gamma Doppler (Phase 1),gold,weapon_knife_falchion__am_gamma_doppler_phase1
+Falchion Knife | Gamma Doppler (Phase 2),gold,weapon_knife_falchion__am_gamma_doppler_phase2
+Falchion Knife | Gamma Doppler (Phase 3),gold,weapon_knife_falchion__am_gamma_doppler_phase3
+Falchion Knife | Gamma Doppler (Phase 4),gold,weapon_knife_falchion__am_gamma_doppler_phase4
+Falchion Knife | Marble Fade,gold,weapon_knife_falchion__am_marble_fade
+Falchion Knife | Freehand,gold,weapon_knife_falchion__am_marked_up_90
+Falchion Knife | Doppler (Ruby),gold,weapon_knife_falchion__am_ruby_marbleized
+Falchion Knife | Doppler (Sapphire),gold,weapon_knife_falchion__am_sapphire_marbleized
+Falchion Knife | Slaughter,gold,weapon_knife_falchion__am_zebra
+Falchion Knife | Tiger Tooth,gold,weapon_knife_falchion__an_tiger_orange
+Falchion Knife | Blue Steel,gold,weapon_knife_falchion__aq_blued
+Falchion Knife | Damascus Steel,gold,weapon_knife_falchion__aq_damascus_90
+Falchion Knife | Stained,gold,weapon_knife_falchion__aq_forced
+Falchion Knife | Case Hardened,gold,weapon_knife_falchion__aq_oiled
+Falchion Knife | Rust Coat,gold,weapon_knife_falchion__aq_steel_knife
+Falchion Knife | Lore,gold,weapon_knife_falchion__cu_falchion_lore
+Falchion Knife | Autotronic,gold,weapon_knife_falchion__gs_falchion_autotronic
+Falchion Knife | Black Laminate,gold,weapon_knife_falchion__gs_falchion_black_laminate
+Falchion Knife | Forest DDPAT,gold,weapon_knife_falchion__hy_ddpat
+Falchion Knife | Boreal Forest,gold,weapon_knife_falchion__hy_forest_boreal
+Falchion Knife | Bright Water,gold,weapon_knife_falchion__hy_ocean_knife_90
+Falchion Knife | Crimson Web,gold,weapon_knife_falchion__hy_webs
+Falchion Knife | Night,gold,weapon_knife_falchion__so_night
+Falchion Knife | Ultraviolet,gold,weapon_knife_falchion__so_purple_falchion
+Falchion Knife | Scorched,gold,weapon_knife_falchion__sp_dapple
+Falchion Knife | Safari Mesh,gold,weapon_knife_falchion__sp_mesh_tan
+Falchion Knife | Urban Masked,gold,weapon_knife_falchion__sp_tape_urban
+Flip Knife | Fade,gold,weapon_knife_flip__aa_fade
+Flip Knife | Doppler (Black Pearl),gold,weapon_knife_flip__am_blackpearl_marbleized
+Flip Knife | Doppler (Phase 1),gold,weapon_knife_flip__am_doppler_phase1
+Flip Knife | Doppler (Phase 2),gold,weapon_knife_flip__am_doppler_phase2
+Flip Knife | Doppler (Phase 3),gold,weapon_knife_flip__am_doppler_phase3
+Flip Knife | Doppler (Phase 4),gold,weapon_knife_flip__am_doppler_phase4
+Flip Knife | Gamma Doppler (Emerald),gold,weapon_knife_flip__am_emerald_marbleized
+Flip Knife | Gamma Doppler (Phase 1),gold,weapon_knife_flip__am_gamma_doppler_phase1
+Flip Knife | Gamma Doppler (Phase 2),gold,weapon_knife_flip__am_gamma_doppler_phase2
+Flip Knife | Gamma Doppler (Phase 3),gold,weapon_knife_flip__am_gamma_doppler_phase3
+Flip Knife | Gamma Doppler (Phase 4),gold,weapon_knife_flip__am_gamma_doppler_phase4
+Flip Knife | Marble Fade,gold,weapon_knife_flip__am_marble_fade
+Flip Knife | Freehand,gold,weapon_knife_flip__am_marked_up
+Flip Knife | Doppler (Ruby),gold,weapon_knife_flip__am_ruby_marbleized
+Flip Knife | Doppler (Sapphire),gold,weapon_knife_flip__am_sapphire_marbleized
+Flip Knife | Slaughter,gold,weapon_knife_flip__am_zebra
+Flip Knife | Tiger Tooth,gold,weapon_knife_flip__an_tiger_orange
+Flip Knife | Blue Steel,gold,weapon_knife_flip__aq_blued
+Flip Knife | Damascus Steel,gold,weapon_knife_flip__aq_damascus
+Flip Knife | Stained,gold,weapon_knife_flip__aq_forced
+Flip Knife | Case Hardened,gold,weapon_knife_flip__aq_oiled
+Flip Knife | Rust Coat,gold,weapon_knife_flip__aq_steel_knife
+Flip Knife | Lore,gold,weapon_knife_flip__cu_flip_lore
+Flip Knife | Black Laminate,gold,weapon_knife_flip__cu_flip_stonewash
+Flip Knife | Autotronic,gold,weapon_knife_flip__gs_flip_autotronic
+Flip Knife | Forest DDPAT,gold,weapon_knife_flip__hy_ddpat
+Flip Knife | Boreal Forest,gold,weapon_knife_flip__hy_forest_boreal
+Flip Knife | Bright Water,gold,weapon_knife_flip__hy_ocean_knife
+Flip Knife | Crimson Web,gold,weapon_knife_flip__hy_webs
+Flip Knife | Night,gold,weapon_knife_flip__so_night
+Flip Knife | Ultraviolet,gold,weapon_knife_flip__so_purple
+Flip Knife | Scorched,gold,weapon_knife_flip__sp_dapple
+Flip Knife | Safari Mesh,gold,weapon_knife_flip__sp_mesh_tan
+Flip Knife | Urban Masked,gold,weapon_knife_flip__sp_tape_urban
+Gut Knife | Fade,gold,weapon_knife_gut__aa_fade
+Gut Knife | Doppler (Black Pearl),gold,weapon_knife_gut__am_blackpearl_marbleized
+Gut Knife | Doppler (Phase 1),gold,weapon_knife_gut__am_doppler_phase1
+Gut Knife | Doppler (Phase 2),gold,weapon_knife_gut__am_doppler_phase2
+Gut Knife | Doppler (Phase 3),gold,weapon_knife_gut__am_doppler_phase3
+Gut Knife | Doppler (Phase 4),gold,weapon_knife_gut__am_doppler_phase4
+Gut Knife | Gamma Doppler (Emerald),gold,weapon_knife_gut__am_emerald_marbleized
+Gut Knife | Gamma Doppler (Phase 1),gold,weapon_knife_gut__am_gamma_doppler_phase1
+Gut Knife | Gamma Doppler (Phase 2),gold,weapon_knife_gut__am_gamma_doppler_phase2
+Gut Knife | Gamma Doppler (Phase 3),gold,weapon_knife_gut__am_gamma_doppler_phase3
+Gut Knife | Gamma Doppler (Phase 4),gold,weapon_knife_gut__am_gamma_doppler_phase4
+Gut Knife | Marble Fade,gold,weapon_knife_gut__am_marble_fade
+Gut Knife | Freehand,gold,weapon_knife_gut__am_marked_up
+Gut Knife | Doppler (Ruby),gold,weapon_knife_gut__am_ruby_marbleized
+Gut Knife | Doppler (Sapphire),gold,weapon_knife_gut__am_sapphire_marbleized
+Gut Knife | Slaughter,gold,weapon_knife_gut__am_zebra
+Gut Knife | Tiger Tooth,gold,weapon_knife_gut__an_tiger_orange
+Gut Knife | Blue Steel,gold,weapon_knife_gut__aq_blued
+Gut Knife | Damascus Steel,gold,weapon_knife_gut__aq_damascus
+Gut Knife | Stained,gold,weapon_knife_gut__aq_forced
+Gut Knife | Case Hardened,gold,weapon_knife_gut__aq_oiled
+Gut Knife | Rust Coat,gold,weapon_knife_gut__aq_steel_knife
+Gut Knife | Lore,gold,weapon_knife_gut__cu_gut_lore
+Gut Knife | Black Laminate,gold,weapon_knife_gut__cu_gut_stonewash
+Gut Knife | Autotronic,gold,weapon_knife_gut__gs_gut_autotronic
+Gut Knife | Forest DDPAT,gold,weapon_knife_gut__hy_ddpat
+Gut Knife | Boreal Forest,gold,weapon_knife_gut__hy_forest_boreal
+Gut Knife | Bright Water,gold,weapon_knife_gut__hy_ocean_knife
+Gut Knife | Crimson Web,gold,weapon_knife_gut__hy_webs
+Gut Knife | Night,gold,weapon_knife_gut__so_night
+Gut Knife | Ultraviolet,gold,weapon_knife_gut__so_purple
+Gut Knife | Scorched,gold,weapon_knife_gut__sp_dapple
+Gut Knife | Safari Mesh,gold,weapon_knife_gut__sp_mesh_tan
+Gut Knife | Urban Masked,gold,weapon_knife_gut__sp_tape_urban
+Navaja Knife | Fade,gold,weapon_knife_gypsy_jackknife__aa_fade
+Navaja Knife | Doppler (Black Pearl),gold,weapon_knife_gypsy_jackknife__am_blackpearl_marbleized
+Navaja Knife | Doppler (Phase 1),gold,weapon_knife_gypsy_jackknife__am_doppler_phase1
+Navaja Knife | Doppler (Phase 2),gold,weapon_knife_gypsy_jackknife__am_doppler_phase2
+Navaja Knife | Doppler (Phase 3),gold,weapon_knife_gypsy_jackknife__am_doppler_phase3
+Navaja Knife | Doppler (Phase 4),gold,weapon_knife_gypsy_jackknife__am_doppler_phase4
+Navaja Knife | Marble Fade,gold,weapon_knife_gypsy_jackknife__am_marble_fade
+Navaja Knife | Doppler (Ruby),gold,weapon_knife_gypsy_jackknife__am_ruby_marbleized
+Navaja Knife | Doppler (Sapphire),gold,weapon_knife_gypsy_jackknife__am_sapphire_marbleized
+Navaja Knife | Slaughter,gold,weapon_knife_gypsy_jackknife__am_zebra
+Navaja Knife | Tiger Tooth,gold,weapon_knife_gypsy_jackknife__an_tiger_orange
+Navaja Knife | Blue Steel,gold,weapon_knife_gypsy_jackknife__aq_blued
+Navaja Knife | Damascus Steel,gold,weapon_knife_gypsy_jackknife__aq_damascus_prisma
+Navaja Knife | Stained,gold,weapon_knife_gypsy_jackknife__aq_forced
+Navaja Knife | Case Hardened,gold,weapon_knife_gypsy_jackknife__aq_oiled
+Navaja Knife | Rust Coat,gold,weapon_knife_gypsy_jackknife__aq_steel_knife
+Navaja Knife | Forest DDPAT,gold,weapon_knife_gypsy_jackknife__hy_ddpat
+Navaja Knife | Boreal Forest,gold,weapon_knife_gypsy_jackknife__hy_forest_boreal
+Navaja Knife | Crimson Web,gold,weapon_knife_gypsy_jackknife__hy_webs
+Navaja Knife | Ultraviolet,gold,weapon_knife_gypsy_jackknife__so_purple
+Navaja Knife | Scorched,gold,weapon_knife_gypsy_jackknife__sp_dapple
+Navaja Knife | Safari Mesh,gold,weapon_knife_gypsy_jackknife__sp_mesh_tan
+Navaja Knife | Night Stripe,gold,weapon_knife_gypsy_jackknife__sp_nightstripe
+Navaja Knife | Urban Masked,gold,weapon_knife_gypsy_jackknife__sp_tape_urban
+Karambit | Fade,gold,weapon_knife_karambit__aa_fade
+Karambit | Doppler (Black Pearl),gold,weapon_knife_karambit__am_blackpearl_marbleized
+Karambit | Doppler (Phase 1),gold,weapon_knife_karambit__am_doppler_phase1
+Karambit | Doppler (Phase 2),gold,weapon_knife_karambit__am_doppler_phase2
+Karambit | Doppler (Phase 3),gold,weapon_knife_karambit__am_doppler_phase3
+Karambit | Doppler (Phase 4),gold,weapon_knife_karambit__am_doppler_phase4
+Karambit | Gamma Doppler (Emerald),gold,weapon_knife_karambit__am_emerald_marbleized
+Karambit | Gamma Doppler (Phase 1),gold,weapon_knife_karambit__am_gamma_doppler_phase1
+Karambit | Gamma Doppler (Phase 2),gold,weapon_knife_karambit__am_gamma_doppler_phase2
+Karambit | Gamma Doppler (Phase 3),gold,weapon_knife_karambit__am_gamma_doppler_phase3
+Karambit | Gamma Doppler (Phase 4),gold,weapon_knife_karambit__am_gamma_doppler_phase4
+Karambit | Marble Fade,gold,weapon_knife_karambit__am_marble_fade
+Karambit | Freehand,gold,weapon_knife_karambit__am_marked_up_fine
+Karambit | Doppler (Ruby),gold,weapon_knife_karambit__am_ruby_marbleized
+Karambit | Doppler (Sapphire),gold,weapon_knife_karambit__am_sapphire_marbleized
+Karambit | Slaughter,gold,weapon_knife_karambit__am_zebra
+Karambit | Tiger Tooth,gold,weapon_knife_karambit__an_tiger_orange
+Karambit | Blue Steel,gold,weapon_knife_karambit__aq_blued
+Karambit | Damascus Steel,gold,weapon_knife_karambit__aq_damascus
+Karambit | Stained,gold,weapon_knife_karambit__aq_forced
+Karambit | Case Hardened,gold,weapon_knife_karambit__aq_oiled
+Karambit | Rust Coat,gold,weapon_knife_karambit__aq_steel_knife
+Karambit | Lore,gold,weapon_knife_karambit__cu_karam_lore
+Karambit | Black Laminate,gold,weapon_knife_karambit__cu_karam_stonewash
+Karambit | Autotronic,gold,weapon_knife_karambit__gs_karam_autotronic
+Karambit | Forest DDPAT,gold,weapon_knife_karambit__hy_ddpat
+Karambit | Boreal Forest,gold,weapon_knife_karambit__hy_forest_boreal
+Karambit | Bright Water,gold,weapon_knife_karambit__hy_ocean_knife
+Karambit | Crimson Web,gold,weapon_knife_karambit__hy_webs
+Karambit | Night,gold,weapon_knife_karambit__so_night
+Karambit | Ultraviolet,gold,weapon_knife_karambit__so_purple
+Karambit | Scorched,gold,weapon_knife_karambit__sp_dapple
+Karambit | Safari Mesh,gold,weapon_knife_karambit__sp_mesh_tan
+Karambit | Urban Masked,gold,weapon_knife_karambit__sp_tape_urban
+Kukri Knife | Fade,gold,weapon_knife_kukri__aa_fade
+Kukri Knife | Slaughter,gold,weapon_knife_kukri__am_zebra
+Kukri Knife | Blue Steel,gold,weapon_knife_kukri__aq_blued
+Kukri Knife | Stained,gold,weapon_knife_kukri__aq_forced
+Kukri Knife | Case Hardened,gold,weapon_knife_kukri__aq_oiled
+Kukri Knife | Forest DDPAT,gold,weapon_knife_kukri__hy_ddpat
+Kukri Knife | Boreal Forest,gold,weapon_knife_kukri__hy_forest_boreal
+Kukri Knife | Crimson Web,gold,weapon_knife_kukri__hy_webs
+Kukri Knife | Scorched,gold,weapon_knife_kukri__sp_dapple
+Kukri Knife | Safari Mesh,gold,weapon_knife_kukri__sp_mesh_tan
+Kukri Knife | Night Stripe,gold,weapon_knife_kukri__sp_nightstripe
+Kukri Knife | Urban Masked,gold,weapon_knife_kukri__sp_tape_urban
+M9 Bayonet | Fade,gold,weapon_knife_m9_bayonet__aa_fade
+M9 Bayonet | Doppler (Black Pearl),gold,weapon_knife_m9_bayonet__am_blackpearl_marbleized
+M9 Bayonet | Doppler (Phase 1),gold,weapon_knife_m9_bayonet__am_doppler_phase1
+M9 Bayonet | Doppler (Phase 2),gold,weapon_knife_m9_bayonet__am_doppler_phase2
+M9 Bayonet | Doppler (Phase 3),gold,weapon_knife_m9_bayonet__am_doppler_phase3
+M9 Bayonet | Doppler (Phase 4),gold,weapon_knife_m9_bayonet__am_doppler_phase4
+M9 Bayonet | Gamma Doppler (Emerald),gold,weapon_knife_m9_bayonet__am_emerald_marbleized
+M9 Bayonet | Gamma Doppler (Phase 1),gold,weapon_knife_m9_bayonet__am_gamma_doppler_phase1
+M9 Bayonet | Gamma Doppler (Phase 2),gold,weapon_knife_m9_bayonet__am_gamma_doppler_phase2
+M9 Bayonet | Gamma Doppler (Phase 3),gold,weapon_knife_m9_bayonet__am_gamma_doppler_phase3
+M9 Bayonet | Gamma Doppler (Phase 4),gold,weapon_knife_m9_bayonet__am_gamma_doppler_phase4
+M9 Bayonet | Marble Fade,gold,weapon_knife_m9_bayonet__am_marble_fade
+M9 Bayonet | Freehand,gold,weapon_knife_m9_bayonet__am_marked_up_90
+M9 Bayonet | Doppler (Ruby),gold,weapon_knife_m9_bayonet__am_ruby_marbleized
+M9 Bayonet | Doppler (Sapphire),gold,weapon_knife_m9_bayonet__am_sapphire_marbleized
+M9 Bayonet | Slaughter,gold,weapon_knife_m9_bayonet__am_zebra
+M9 Bayonet | Tiger Tooth,gold,weapon_knife_m9_bayonet__an_tiger_orange
+M9 Bayonet | Blue Steel,gold,weapon_knife_m9_bayonet__aq_blued
+M9 Bayonet | Damascus Steel,gold,weapon_knife_m9_bayonet__aq_damascus_90
+M9 Bayonet | Stained,gold,weapon_knife_m9_bayonet__aq_forced
+M9 Bayonet | Case Hardened,gold,weapon_knife_m9_bayonet__aq_oiled
+M9 Bayonet | Rust Coat,gold,weapon_knife_m9_bayonet__aq_steel_knife
+M9 Bayonet | Lore,gold,weapon_knife_m9_bayonet__cu_m9_bay_lore
+M9 Bayonet | Black Laminate,gold,weapon_knife_m9_bayonet__cu_m9_bay_stonewash
+M9 Bayonet | Autotronic,gold,weapon_knife_m9_bayonet__gs_m9_bay_autotronic
+M9 Bayonet | Forest DDPAT,gold,weapon_knife_m9_bayonet__hy_ddpat
+M9 Bayonet | Boreal Forest,gold,weapon_knife_m9_bayonet__hy_forest_boreal
+M9 Bayonet | Bright Water,gold,weapon_knife_m9_bayonet__hy_ocean_knife_90
+M9 Bayonet | Crimson Web,gold,weapon_knife_m9_bayonet__hy_webs
+M9 Bayonet | Night,gold,weapon_knife_m9_bayonet__so_night
+M9 Bayonet | Ultraviolet,gold,weapon_knife_m9_bayonet__so_purple
+M9 Bayonet | Scorched,gold,weapon_knife_m9_bayonet__sp_dapple
+M9 Bayonet | Safari Mesh,gold,weapon_knife_m9_bayonet__sp_mesh_tan
+M9 Bayonet | Urban Masked,gold,weapon_knife_m9_bayonet__sp_tape_urban
+Nomad Knife | Fade,gold,weapon_knife_outdoor__aa_fade
+Nomad Knife | Doppler (Black Pearl),gold,weapon_knife_outdoor__am_blackpearl_marbleized
+Nomad Knife | Doppler (Phase 1),gold,weapon_knife_outdoor__am_doppler_phase1
+Nomad Knife | Doppler (Phase 2),gold,weapon_knife_outdoor__am_doppler_phase2
+Nomad Knife | Doppler (Phase 3),gold,weapon_knife_outdoor__am_doppler_phase3
+Nomad Knife | Doppler (Phase 4),gold,weapon_knife_outdoor__am_doppler_phase4
+Nomad Knife | Marble Fade,gold,weapon_knife_outdoor__am_marble_fade
+Nomad Knife | Doppler (Ruby),gold,weapon_knife_outdoor__am_ruby_marbleized
+Nomad Knife | Doppler (Sapphire),gold,weapon_knife_outdoor__am_sapphire_marbleized
+Nomad Knife | Slaughter,gold,weapon_knife_outdoor__am_zebra
+Nomad Knife | Tiger Tooth,gold,weapon_knife_outdoor__an_tiger_orange
+Nomad Knife | Blue Steel,gold,weapon_knife_outdoor__aq_blued
+Nomad Knife | Damascus Steel,gold,weapon_knife_outdoor__aq_damascus
+Nomad Knife | Stained,gold,weapon_knife_outdoor__aq_forced
+Nomad Knife | Case Hardened,gold,weapon_knife_outdoor__aq_oiled
+Nomad Knife | Rust Coat,gold,weapon_knife_outdoor__aq_steel_knife
+Nomad Knife | Forest DDPAT,gold,weapon_knife_outdoor__hy_ddpat
+Nomad Knife | Boreal Forest,gold,weapon_knife_outdoor__hy_forest_boreal
+Nomad Knife | Crimson Web,gold,weapon_knife_outdoor__hy_webs
+Nomad Knife | Ultraviolet,gold,weapon_knife_outdoor__so_purple
+Nomad Knife | Scorched,gold,weapon_knife_outdoor__sp_dapple
+Nomad Knife | Safari Mesh,gold,weapon_knife_outdoor__sp_mesh_tan
+Nomad Knife | Night Stripe,gold,weapon_knife_outdoor__sp_nightstripe
+Nomad Knife | Urban Masked,gold,weapon_knife_outdoor__sp_tape_urban
+Shadow Daggers | Fade,gold,weapon_knife_push__aa_fade
+Shadow Daggers | Doppler (Black Pearl),gold,weapon_knife_push__am_blackpearl_marbleized_b
+Shadow Daggers | Doppler (Phase 1),gold,weapon_knife_push__am_doppler_phase1
+Shadow Daggers | Doppler (Phase 2),gold,weapon_knife_push__am_doppler_phase2_b
+Shadow Daggers | Doppler (Phase 3),gold,weapon_knife_push__am_doppler_phase3
+Shadow Daggers | Doppler (Phase 4),gold,weapon_knife_push__am_doppler_phase4
+Shadow Daggers | Gamma Doppler (Emerald),gold,weapon_knife_push__am_emerald_marbleized
+Shadow Daggers | Gamma Doppler (Phase 1),gold,weapon_knife_push__am_gamma_doppler_phase1
+Shadow Daggers | Gamma Doppler (Phase 2),gold,weapon_knife_push__am_gamma_doppler_phase2
+Shadow Daggers | Gamma Doppler (Phase 3),gold,weapon_knife_push__am_gamma_doppler_phase3
+Shadow Daggers | Gamma Doppler (Phase 4),gold,weapon_knife_push__am_gamma_doppler_phase4
+Shadow Daggers | Marble Fade,gold,weapon_knife_push__am_marble_fade
+Shadow Daggers | Freehand,gold,weapon_knife_push__am_marked_up_90
+Shadow Daggers | Doppler (Ruby),gold,weapon_knife_push__am_ruby_marbleized
+Shadow Daggers | Doppler (Sapphire),gold,weapon_knife_push__am_sapphire_marbleized_b
+Shadow Daggers | Slaughter,gold,weapon_knife_push__am_zebra
+Shadow Daggers | Tiger Tooth,gold,weapon_knife_push__an_tiger_orange
+Shadow Daggers | Blue Steel,gold,weapon_knife_push__aq_blued
+Shadow Daggers | Damascus Steel,gold,weapon_knife_push__aq_damascus_90
+Shadow Daggers | Stained,gold,weapon_knife_push__aq_forced
+Shadow Daggers | Case Hardened,gold,weapon_knife_push__aq_oiled
+Shadow Daggers | Rust Coat,gold,weapon_knife_push__aq_steel_knife
+Shadow Daggers | Lore,gold,weapon_knife_push__cu_push_lore
+Shadow Daggers | Autotronic,gold,weapon_knife_push__gs_push_autotronic
+Shadow Daggers | Black Laminate,gold,weapon_knife_push__gs_push_black_laminate
+Shadow Daggers | Forest DDPAT,gold,weapon_knife_push__hy_ddpat
+Shadow Daggers | Boreal Forest,gold,weapon_knife_push__hy_forest_boreal
+Shadow Daggers | Bright Water,gold,weapon_knife_push__hy_ocean_knife_90
+Shadow Daggers | Crimson Web,gold,weapon_knife_push__hy_webs
+Shadow Daggers | Night,gold,weapon_knife_push__so_night
+Shadow Daggers | Ultraviolet,gold,weapon_knife_push__so_purple
+Shadow Daggers | Scorched,gold,weapon_knife_push__sp_dapple
+Shadow Daggers | Safari Mesh,gold,weapon_knife_push__sp_mesh_tan
+Shadow Daggers | Urban Masked,gold,weapon_knife_push__sp_tape_urban
+Skeleton Knife | Fade,gold,weapon_knife_skeleton__aa_fade
+Skeleton Knife | Doppler (Black Pearl),gold,weapon_knife_skeleton__am_blackpearl_marbleized
+Skeleton Knife | Doppler (Phase 1),gold,weapon_knife_skeleton__am_doppler_phase1
+Skeleton Knife | Doppler (Phase 2),gold,weapon_knife_skeleton__am_doppler_phase2
+Skeleton Knife | Doppler (Phase 3),gold,weapon_knife_skeleton__am_doppler_phase3
+Skeleton Knife | Doppler (Phase 4),gold,weapon_knife_skeleton__am_doppler_phase4
+Skeleton Knife | Marble Fade,gold,weapon_knife_skeleton__am_marble_fade
+Skeleton Knife | Doppler (Ruby),gold,weapon_knife_skeleton__am_ruby_marbleized
+Skeleton Knife | Doppler (Sapphire),gold,weapon_knife_skeleton__am_sapphire_marbleized
+Skeleton Knife | Slaughter,gold,weapon_knife_skeleton__am_zebra
+Skeleton Knife | Tiger Tooth,gold,weapon_knife_skeleton__an_tiger_orange
+Skeleton Knife | Blue Steel,gold,weapon_knife_skeleton__aq_blued
+Skeleton Knife | Damascus Steel,gold,weapon_knife_skeleton__aq_damascus
+Skeleton Knife | Stained,gold,weapon_knife_skeleton__aq_forced
+Skeleton Knife | Case Hardened,gold,weapon_knife_skeleton__aq_oiled
+Skeleton Knife | Rust Coat,gold,weapon_knife_skeleton__aq_steel_knife
+Skeleton Knife | Forest DDPAT,gold,weapon_knife_skeleton__hy_ddpat
+Skeleton Knife | Boreal Forest,gold,weapon_knife_skeleton__hy_forest_boreal
+Skeleton Knife | Crimson Web,gold,weapon_knife_skeleton__hy_webs
+Skeleton Knife | Ultraviolet,gold,weapon_knife_skeleton__so_purple
+Skeleton Knife | Scorched,gold,weapon_knife_skeleton__sp_dapple
+Skeleton Knife | Safari Mesh,gold,weapon_knife_skeleton__sp_mesh_tan
+Skeleton Knife | Night Stripe,gold,weapon_knife_skeleton__sp_nightstripe
+Skeleton Knife | Urban Masked,gold,weapon_knife_skeleton__sp_tape_urban
+Stiletto Knife | Fade,gold,weapon_knife_stiletto__aa_fade
+Stiletto Knife | Doppler (Black Pearl),gold,weapon_knife_stiletto__am_blackpearl_marbleized
+Stiletto Knife | Doppler (Phase 1),gold,weapon_knife_stiletto__am_doppler_phase1
+Stiletto Knife | Doppler (Phase 2),gold,weapon_knife_stiletto__am_doppler_phase2
+Stiletto Knife | Doppler (Phase 3),gold,weapon_knife_stiletto__am_doppler_phase3
+Stiletto Knife | Doppler (Phase 4),gold,weapon_knife_stiletto__am_doppler_phase4
+Stiletto Knife | Marble Fade,gold,weapon_knife_stiletto__am_marble_fade
+Stiletto Knife | Doppler (Ruby),gold,weapon_knife_stiletto__am_ruby_marbleized
+Stiletto Knife | Doppler (Sapphire),gold,weapon_knife_stiletto__am_sapphire_marbleized
+Stiletto Knife | Slaughter,gold,weapon_knife_stiletto__am_zebra
+Stiletto Knife | Tiger Tooth,gold,weapon_knife_stiletto__an_tiger_orange
+Stiletto Knife | Blue Steel,gold,weapon_knife_stiletto__aq_blued
+Stiletto Knife | Damascus Steel,gold,weapon_knife_stiletto__aq_damascus_prisma
+Stiletto Knife | Stained,gold,weapon_knife_stiletto__aq_forced
+Stiletto Knife | Case Hardened,gold,weapon_knife_stiletto__aq_oiled
+Stiletto Knife | Rust Coat,gold,weapon_knife_stiletto__aq_steel_knife
+Stiletto Knife | Forest DDPAT,gold,weapon_knife_stiletto__hy_ddpat
+Stiletto Knife | Boreal Forest,gold,weapon_knife_stiletto__hy_forest_boreal
+Stiletto Knife | Crimson Web,gold,weapon_knife_stiletto__hy_webs
+Stiletto Knife | Ultraviolet,gold,weapon_knife_stiletto__so_purple
+Stiletto Knife | Scorched,gold,weapon_knife_stiletto__sp_dapple
+Stiletto Knife | Safari Mesh,gold,weapon_knife_stiletto__sp_mesh_tan
+Stiletto Knife | Night Stripe,gold,weapon_knife_stiletto__sp_nightstripe
+Stiletto Knife | Urban Masked,gold,weapon_knife_stiletto__sp_tape_urban
+Bowie Knife | Fade,gold,weapon_knife_survival_bowie__aa_fade
+Bowie Knife | Doppler (Black Pearl),gold,weapon_knife_survival_bowie__am_blackpearl_marbleized
+Bowie Knife | Doppler (Phase 1),gold,weapon_knife_survival_bowie__am_doppler_phase1
+Bowie Knife | Doppler (Phase 2),gold,weapon_knife_survival_bowie__am_doppler_phase2
+Bowie Knife | Doppler (Phase 3),gold,weapon_knife_survival_bowie__am_doppler_phase3
+Bowie Knife | Doppler (Phase 4),gold,weapon_knife_survival_bowie__am_doppler_phase4
+Bowie Knife | Gamma Doppler (Emerald),gold,weapon_knife_survival_bowie__am_emerald_marbleized
+Bowie Knife | Gamma Doppler (Phase 1),gold,weapon_knife_survival_bowie__am_gamma_doppler_phase1
+Bowie Knife | Gamma Doppler (Phase 2),gold,weapon_knife_survival_bowie__am_gamma_doppler_phase2
+Bowie Knife | Gamma Doppler (Phase 3),gold,weapon_knife_survival_bowie__am_gamma_doppler_phase3
+Bowie Knife | Gamma Doppler (Phase 4),gold,weapon_knife_survival_bowie__am_gamma_doppler_phase4
+Bowie Knife | Marble Fade,gold,weapon_knife_survival_bowie__am_marble_fade
+Bowie Knife | Freehand,gold,weapon_knife_survival_bowie__am_marked_up_90
+Bowie Knife | Doppler (Ruby),gold,weapon_knife_survival_bowie__am_ruby_marbleized
+Bowie Knife | Doppler (Sapphire),gold,weapon_knife_survival_bowie__am_sapphire_marbleized
+Bowie Knife | Slaughter,gold,weapon_knife_survival_bowie__am_zebra
+Bowie Knife | Tiger Tooth,gold,weapon_knife_survival_bowie__an_tiger_orange
+Bowie Knife | Blue Steel,gold,weapon_knife_survival_bowie__aq_blued
+Bowie Knife | Damascus Steel,gold,weapon_knife_survival_bowie__aq_damascus_90
+Bowie Knife | Stained,gold,weapon_knife_survival_bowie__aq_forced
+Bowie Knife | Case Hardened,gold,weapon_knife_survival_bowie__aq_oiled
+Bowie Knife | Rust Coat,gold,weapon_knife_survival_bowie__aq_steel_knife
+Bowie Knife | Lore,gold,weapon_knife_survival_bowie__cu_bowie_lore
+Bowie Knife | Autotronic,gold,weapon_knife_survival_bowie__gs_bowie_autotronic
+Bowie Knife | Black Laminate,gold,weapon_knife_survival_bowie__gs_bowie_black_laminate
+Bowie Knife | Forest DDPAT,gold,weapon_knife_survival_bowie__hy_ddpat
+Bowie Knife | Boreal Forest,gold,weapon_knife_survival_bowie__hy_forest_boreal
+Bowie Knife | Bright Water,gold,weapon_knife_survival_bowie__hy_ocean_knife_90
+Bowie Knife | Crimson Web,gold,weapon_knife_survival_bowie__hy_webs
+Bowie Knife | Night,gold,weapon_knife_survival_bowie__so_night
+Bowie Knife | Ultraviolet,gold,weapon_knife_survival_bowie__so_purple
+Bowie Knife | Scorched,gold,weapon_knife_survival_bowie__sp_dapple
+Bowie Knife | Safari Mesh,gold,weapon_knife_survival_bowie__sp_mesh_tan
+Bowie Knife | Urban Masked,gold,weapon_knife_survival_bowie__sp_tape_urban
+Huntsman Knife | Fade,gold,weapon_knife_tactical__aa_fade
+Huntsman Knife | Doppler (Black Pearl),gold,weapon_knife_tactical__am_blackpearl_marbleized
+Huntsman Knife | Doppler (Phase 1),gold,weapon_knife_tactical__am_doppler_phase1
+Huntsman Knife | Doppler (Phase 2),gold,weapon_knife_tactical__am_doppler_phase2
+Huntsman Knife | Doppler (Phase 3),gold,weapon_knife_tactical__am_doppler_phase3
+Huntsman Knife | Doppler (Phase 4),gold,weapon_knife_tactical__am_doppler_phase4
+Huntsman Knife | Gamma Doppler (Emerald),gold,weapon_knife_tactical__am_emerald_marbleized
+Huntsman Knife | Gamma Doppler (Phase 1),gold,weapon_knife_tactical__am_gamma_doppler_phase1
+Huntsman Knife | Gamma Doppler (Phase 2),gold,weapon_knife_tactical__am_gamma_doppler_phase2
+Huntsman Knife | Gamma Doppler (Phase 3),gold,weapon_knife_tactical__am_gamma_doppler_phase3
+Huntsman Knife | Gamma Doppler (Phase 4),gold,weapon_knife_tactical__am_gamma_doppler_phase4
+Huntsman Knife | Marble Fade,gold,weapon_knife_tactical__am_marble_fade
+Huntsman Knife | Freehand,gold,weapon_knife_tactical__am_marked_up_90
+Huntsman Knife | Doppler (Ruby),gold,weapon_knife_tactical__am_ruby_marbleized
+Huntsman Knife | Doppler (Sapphire),gold,weapon_knife_tactical__am_sapphire_marbleized
+Huntsman Knife | Slaughter,gold,weapon_knife_tactical__am_zebra
+Huntsman Knife | Tiger Tooth,gold,weapon_knife_tactical__an_tiger_orange
+Huntsman Knife | Blue Steel,gold,weapon_knife_tactical__aq_blued
+Huntsman Knife | Damascus Steel,gold,weapon_knife_tactical__aq_damascus_90
+Huntsman Knife | Stained,gold,weapon_knife_tactical__aq_forced
+Huntsman Knife | Case Hardened,gold,weapon_knife_tactical__aq_oiled
+Huntsman Knife | Rust Coat,gold,weapon_knife_tactical__aq_steel_knife
+Huntsman Knife | Lore,gold,weapon_knife_tactical__cu_huntsman_lore
+Huntsman Knife | Ultraviolet,gold,weapon_knife_tactical__cu_purple_huntsman
+Huntsman Knife | Autotronic,gold,weapon_knife_tactical__gs_huntsman_autotronic
+Huntsman Knife | Black Laminate,gold,weapon_knife_tactical__gs_huntsman_black_laminate
+Huntsman Knife | Forest DDPAT,gold,weapon_knife_tactical__hy_ddpat
+Huntsman Knife | Boreal Forest,gold,weapon_knife_tactical__hy_forest_boreal
+Huntsman Knife | Bright Water,gold,weapon_knife_tactical__hy_ocean_knife_90
+Huntsman Knife | Crimson Web,gold,weapon_knife_tactical__hy_webs
+Huntsman Knife | Night,gold,weapon_knife_tactical__so_night
+Huntsman Knife | Scorched,gold,weapon_knife_tactical__sp_dapple
+Huntsman Knife | Safari Mesh,gold,weapon_knife_tactical__sp_mesh_tan
+Huntsman Knife | Urban Masked,gold,weapon_knife_tactical__sp_tape_urban
+Ursus Knife | Fade,gold,weapon_knife_ursus__aa_fade
+Ursus Knife | Doppler (Black Pearl),gold,weapon_knife_ursus__am_blackpearl_marbleized
+Ursus Knife | Doppler (Phase 1),gold,weapon_knife_ursus__am_doppler_phase1
+Ursus Knife | Doppler (Phase 2),gold,weapon_knife_ursus__am_doppler_phase2
+Ursus Knife | Doppler (Phase 3),gold,weapon_knife_ursus__am_doppler_phase3
+Ursus Knife | Doppler (Phase 4),gold,weapon_knife_ursus__am_doppler_phase4
+Ursus Knife | Marble Fade,gold,weapon_knife_ursus__am_marble_fade
+Ursus Knife | Doppler (Ruby),gold,weapon_knife_ursus__am_ruby_marbleized
+Ursus Knife | Doppler (Sapphire),gold,weapon_knife_ursus__am_sapphire_marbleized
+Ursus Knife | Slaughter,gold,weapon_knife_ursus__am_zebra
+Ursus Knife | Tiger Tooth,gold,weapon_knife_ursus__an_tiger_orange
+Ursus Knife | Blue Steel,gold,weapon_knife_ursus__aq_blued
+Ursus Knife | Damascus Steel,gold,weapon_knife_ursus__aq_damascus_prisma
+Ursus Knife | Stained,gold,weapon_knife_ursus__aq_forced
+Ursus Knife | Case Hardened,gold,weapon_knife_ursus__aq_oiled
+Ursus Knife | Rust Coat,gold,weapon_knife_ursus__aq_steel_knife
+Ursus Knife | Forest DDPAT,gold,weapon_knife_ursus__hy_ddpat
+Ursus Knife | Boreal Forest,gold,weapon_knife_ursus__hy_forest_boreal
+Ursus Knife | Crimson Web,gold,weapon_knife_ursus__hy_webs
+Ursus Knife | Ultraviolet,gold,weapon_knife_ursus__so_purple
+Ursus Knife | Scorched,gold,weapon_knife_ursus__sp_dapple
+Ursus Knife | Safari Mesh,gold,weapon_knife_ursus__sp_mesh_tan
+Ursus Knife | Night Stripe,gold,weapon_knife_ursus__sp_nightstripe
+Ursus Knife | Urban Masked,gold,weapon_knife_ursus__sp_tape_urban
+Talon Knife | Fade,gold,weapon_knife_widowmaker__aa_fade
+Talon Knife | Doppler (Black Pearl),gold,weapon_knife_widowmaker__am_blackpearl_marbleized
+Talon Knife | Doppler (Phase 1),gold,weapon_knife_widowmaker__am_doppler_phase1_widow
+Talon Knife | Doppler (Phase 2),gold,weapon_knife_widowmaker__am_doppler_phase2_widow
+Talon Knife | Doppler (Phase 3),gold,weapon_knife_widowmaker__am_doppler_phase3_widow
+Talon Knife | Doppler (Phase 4),gold,weapon_knife_widowmaker__am_doppler_phase4_widow
+Talon Knife | Marble Fade,gold,weapon_knife_widowmaker__am_marble_fade_widow
+Talon Knife | Doppler (Ruby),gold,weapon_knife_widowmaker__am_ruby_marbleized
+Talon Knife | Doppler (Sapphire),gold,weapon_knife_widowmaker__am_sapphire_marbleized
+Talon Knife | Slaughter,gold,weapon_knife_widowmaker__am_zebra
+Talon Knife | Tiger Tooth,gold,weapon_knife_widowmaker__an_tiger_orange
+Talon Knife | Blue Steel,gold,weapon_knife_widowmaker__aq_blued
+Talon Knife | Damascus Steel,gold,weapon_knife_widowmaker__aq_damascus_widow
+Talon Knife | Stained,gold,weapon_knife_widowmaker__aq_forced
+Talon Knife | Case Hardened,gold,weapon_knife_widowmaker__aq_oiled
+Talon Knife | Rust Coat,gold,weapon_knife_widowmaker__aq_steel_knife
+Talon Knife | Forest DDPAT,gold,weapon_knife_widowmaker__hy_ddpat
+Talon Knife | Boreal Forest,gold,weapon_knife_widowmaker__hy_forest_boreal
+Talon Knife | Crimson Web,gold,weapon_knife_widowmaker__hy_webs
+Talon Knife | Ultraviolet,gold,weapon_knife_widowmaker__so_purple
+Talon Knife | Scorched,gold,weapon_knife_widowmaker__sp_dapple
+Talon Knife | Safari Mesh,gold,weapon_knife_widowmaker__sp_mesh_tan
+Talon Knife | Night Stripe,gold,weapon_knife_widowmaker__sp_nightstripe
+Talon Knife | Urban Masked,gold,weapon_knife_widowmaker__sp_tape_urban
+M249 | Aztec,restricted,weapon_m249__aq_m249_aztec
+M249 | Magma,milspec,weapon_m249__aq_obsidian
+M249 | Deep Relief,milspec,weapon_m249__cu_m249_deep_relief
+M249 | Downtown,restricted,weapon_m249__cu_m249_downvote
+M249 | Submerged,milspec,weapon_m249__cu_m249_scarab
+M249 | System Lock,milspec,weapon_m249__cu_m249_sektor
+M249 | Spectre,milspec,weapon_m249__cu_m249_spectre
+M249 | O.S.I.P.R.,milspec,weapon_m249__gs_m249_combine
+M249 | Nebula Crusader,restricted,weapon_m249__gs_m249_nebula_crusader
+M249 | Warbird,milspec,weapon_m249__gs_m249_warbird_veteran
+M249 | Spectrogram,milspec,weapon_m249__ht_peaks_rainbow
+M249 | Blizzard Marbleized,milspec,weapon_m249__hy_blizzard
+M249 | Jungle DDPAT,milspec,weapon_m249__hy_ddpat_jungle_bravo
+M249 | Shipping Forecast,milspec,weapon_m249__hy_zodiac3
+M249 | Sleet,milspec,weapon_m249__hye_m249_car_wrap_3
+M249 | Sage Camo,milspec,weapon_m249__hyo_jungle_desat
+M249 | Bock Blocks,milspec,weapon_m249__m249_blocks_purple
+M249 | Hypnosis,milspec,weapon_m249__m249_hypnosis
+M249 | Jungle,milspec,weapon_m249__so_jungle
+M249 | Impact Drill,milspec,weapon_m249__so_keycolors
+M249 | Emerald Poison Dart,restricted,weapon_m249__sp_m249_frog_original
+M249 | Gator Mesh,milspec,weapon_m249__sp_mesh_python
+M249 | Humidor,milspec,weapon_m249__sp_moro_carving_burnt
+M249 | Midnight Palm,milspec,weapon_m249__sp_palm_night
+M249 | Contrast Spray,milspec,weapon_m249__sp_spray
+M249 | Predator,milspec,weapon_m249__sp_zebracam
+M4A4 | Mainframe,milspec,weapon_m4a1__am_circuitboard_silver
+M4A4 | Daybreak,restricted,weapon_m4a1__am_kimono_sunrise
+M4A4 | Bullet Rain,covert,weapon_m4a1__cu_bullet_rain_m4a1
+M4A4 | Global Offensive,milspec,weapon_m4a1__cu_csgo_camo
+M4A4 | Asiimov,covert,weapon_m4a1__cu_m4_asimov
+M4A4 | Howl,gold,weapon_m4a1__cu_m4a1_howling
+M4A4 | 龍王 (Dragon King),classified,weapon_m4a1__cu_m4a4_ancestral
+M4A4 | Cyber Security,classified,weapon_m4a1__cu_m4a4_cyberpunk
+M4A4 | Desolate Space,classified,weapon_m4a1__cu_m4a4_desolate_space
+M4A4 | Poly Mag,milspec,weapon_m4a1__cu_m4a4_elite_tactical
+M4A4 | Evil Daimyo,restricted,weapon_m4a1__cu_m4a4_evil_daimyo
+M4A4 | Griffin,restricted,weapon_m4a1__cu_m4a4_griffin
+M4A4 | Hellfire,classified,weapon_m4a1__cu_m4a4_hellfire
+M4A4 | In Living Color,covert,weapon_m4a1__cu_m4a4_love
+M4A4 | Neo-Noir,covert,weapon_m4a1__cu_m4a4_neo_noir
+M4A4 | Tooth Fairy,classified,weapon_m4a1__cu_m4a4_queenfairy
+M4A4 | Temukau,covert,weapon_m4a1__cu_m4a4_temukau
+M4A4 | Hellish,classified,weapon_m4a1__cu_m4a4_train_hell
+M4A4 | Poseidon,classified,weapon_m4a1__cu_poseidon
+M4A4 | Desert-Strike,covert,weapon_m4a1__cu_titanstorm
+M4A4 | X-Ray,covert,weapon_m4a1__cu_xray_m4
+M4A4 | Spider Lily,restricted,weapon_m4a1__gs_m4_flowers
+M4A4 | Magnesium,milspec,weapon_m4a1__gs_m4a4_chopper_ghost
+M4A4 | The Coalition,covert,weapon_m4a1__gs_m4a4_coalition
+M4A4 | The Emperor,covert,weapon_m4a1__gs_m4a4_emperor
+M4A4 | The Battlestar,covert,weapon_m4a1__gs_m4a4_pioneer
+M4A4 | Eye of Horus,covert,weapon_m4a1__gs_m4a4_ra
+M4A4 | Royal Paladin,covert,weapon_m4a1__gs_m4a4_royal_squire
+M4A4 | Buzz Kill,covert,weapon_m4a1__gs_m4a4_sector
+M4A4 | Steel Work,milspec,weapon_m4a1__ht_metal_edges
+M4A4 | Urban DDPAT,milspec,weapon_m4a1__hy_ddpat_urb
+M4A4 | Red DDPAT,restricted,weapon_m4a1__hy_ddpat_urban_red
+M4A4 | Desert Storm,milspec,weapon_m4a1__hy_desert
+M4A4 | Modern Hunter,restricted,weapon_m4a1__hy_hunter_modern
+M4A4 | Converter,milspec,weapon_m4a1__hy_red_hex
+M4A4 | Jungle Tiger,milspec,weapon_m4a1__hy_v_tiger
+M4A4 | Aeolian Dark,milspec,weapon_m4a1__hye_abstract_knot_m4
+M4A4 | Naval Shred Camo,milspec,weapon_m4a1__hye_blue_m4a4
+M4A4 | Dark Operative,milspec,weapon_m4a1__m4a4_black_side_matte
+M4A4 | Falak,classified,weapon_m4a1__m4a4_falak
+M4A4 | Turbine,restricted,weapon_m4a1__m4a4_fusion
+M4A4 | Choppa,milspec,weapon_m4a1__m4a4_green_camo
+M4A4 | Full Throttle,covert,weapon_m4a1__m4a4_skrrrt_green
+M4A4 | Etch Lord,restricted,weapon_m4a1__m4a4_snakebite
+M4A4 | Zubastick,milspec,weapon_m4a1__m4a4_zubastick_bw
+M4A4 | Tornado,milspec,weapon_m4a1__so_tornado
+M4A4 | Polysoup,restricted,weapon_m4a1__soo_polysoup_m4a4
+M4A4 | Dark Blossom,milspec,weapon_m4a1__sp_bud_blue
+M4A4 | Radiation Hazard,milspec,weapon_m4a1__sp_nukestripe_orange
+M4A4 | Zirka,restricted,weapon_m4a1__sp_star_bravo
+M4A4 | Faded Zebra,milspec,weapon_m4a1__sp_zebracam_bw
+M4A4 | Sheet Lightning,restricted,weapon_m4a1__spe_lightning
+M4A1-S | Fade,covert,weapon_m4a1_silencer__aa_fade_m4a1s
+M4A1-S | Hypnotic,restricted,weapon_m4a1_silencer__aa_vertigo
+M4A1-S | Moss Quartz,milspec,weapon_m4a1_silencer__am_crystallized_dark_green
+M4A1-S | Atomic Alloy,restricted,weapon_m4a1_silencer__am_m4a1-s_alloy_orange
+M4A1-S | Blue Phosphor,classified,weapon_m4a1_silencer__am_m4a1s_bluesmoke
+M4A1-S | Knight,classified,weapon_m4a1_silencer__am_metals
+M4A1-S | Dark Water,restricted,weapon_m4a1_silencer__am_zebra_dark
+M4A1-S | Hot Rod,classified,weapon_m4a1_silencer__an_red_m4a1s
+M4A1-S | Basilisk,restricted,weapon_m4a1_silencer__aq_m4a1s_basilisk
+M4A1-S | Guardian,restricted,weapon_m4a1_silencer__cu_m4a1-s_elegant
+M4A1-S | Master Piece,restricted,weapon_m4a1_silencer__cu_m4a1-s_silence
+M4A1-S | Flashback,restricted,weapon_m4a1_silencer__cu_m4a1_flashback
+M4A1-S | Hyper Beast,covert,weapon_m4a1_silencer__cu_m4a1_hyper_beast
+M4A1-S | Welcome to the Jungle,covert,weapon_m4a1_silencer__cu_m4a1_snake
+M4A1-S | Player Two,covert,weapon_m4a1_silencer__cu_m4a1s_csgo2048
+M4A1-S | Cyrex,covert,weapon_m4a1_silencer__cu_m4a1s_cyrex
+M4A1-S | Emphorosaur-S,restricted,weapon_m4a1_silencer__cu_m4a1s_feeding_frenzy
+M4A1-S | Briefing,milspec,weapon_m4a1_silencer__cu_m4a1s_metritera
+M4A1-S | Nightmare,classified,weapon_m4a1_silencer__cu_m4a1s_nightmare
+M4A1-S | Printstream,covert,weapon_m4a1_silencer__cu_m4a1s_printstream
+M4A1-S | Chantico's Fire,covert,weapon_m4a1_silencer__cu_m4a1s_soultaker
+M4A1-S | Stratosphere,classified,weapon_m4a1_silencer__cue_stratosphere
+M4A1-S | Decimator,classified,weapon_m4a1_silencer__gs_m4a1_decimator
+M4A1-S | Mecha Industries,covert,weapon_m4a1_silencer__gs_m4a1_mecha_industries
+M4A1-S | Leaded Glass,classified,weapon_m4a1_silencer__gs_m4a1_shatter
+M4A1-S | Imminent Danger,covert,weapon_m4a1_silencer__gs_m4a1_vertigo
+M4A1-S | Night Terror,restricted,weapon_m4a1_silencer__gs_m4a1s_insomnia
+M4A1-S | Mud-Spec,milspec,weapon_m4a1_silencer__gs_m4a1s_milspec
+M4A1-S | Control Panel,classified,weapon_m4a1_silencer__gs_m4a1s_operator
+M4A1-S | Golden Coil,covert,weapon_m4a1_silencer__gs_m4a1s_snakebite_gold
+M4A1-S | Glitched Paint,restricted,weapon_m4a1_silencer__ht_abstract_wind
+M4A1-S | Boreal Forest,milspec,weapon_m4a1_silencer__hy_forest_boreal
+M4A1-S | Rose Hex,milspec,weapon_m4a1_silencer__hy_hexagon
+M4A1-S | Icarus Fell,restricted,weapon_m4a1_silencer__hy_icarus
+M4A1-S | Bright Water,restricted,weapon_m4a1_silencer__hy_ocean_bravo
+M4A1-S | Wash me plz,milspec,weapon_m4a1_silencer__hy_overpass_doodle_m4a1s
+M4A1-S | Blood Tiger,milspec,weapon_m4a1_silencer__hy_redtiger
+M4A1-S | VariCamo,milspec,weapon_m4a1_silencer__hy_varicamo
+M4A1-S | Party Animal,classified,weapon_m4a1_silencer__hye_animal_print_90s
+M4A1-S | Fatal Glitch,classified,weapon_m4a1_silencer__hye_spyglitch_green_m4a1s
+M4A1-S | Black Lotus,classified,weapon_m4a1_silencer__m4a1s_black_lotus
+M4A1-S | Electrum,restricted,weapon_m4a1_silencer__m4a1s_electrum
+M4A1-S | Liquidation,restricted,weapon_m4a1_silencer__m4a1s_quick_liquidation
+M4A1-S | Vaporwave,covert,weapon_m4a1_silencer__m4a1s_vaporwave
+M4A1-S | Nitro,restricted,weapon_m4a1_silencer__so_orange_accents
+M4A1-S | Solitude,classified,weapon_m4a1_silencer__soch_mountains_m4a1s
+M4A1-S | Fizzy POP,milspec,weapon_m4a1_silencer__sp_technowar_red
+MAC-10 | Fade,milspec,weapon_mac10__aa_fade
+MAC-10 | Amber Fade,milspec,weapon_mac10__aa_fade_metallic
+MAC-10 | Last Dive,restricted,weapon_mac10__aa_mac10_the_last_dive
+MAC-10 | Gold Brick,covert,weapon_mac10__am_gold_brick
+MAC-10 | Copper Borre,milspec,weapon_mac10__am_knots_brown
+MAC-10 | Aloha,milspec,weapon_mac10__am_mac10_aloha
+MAC-10 | Lapis Gator,milspec,weapon_mac10__am_mac10_electricity
+MAC-10 | Malachite,restricted,weapon_mac10__am_mac10_malachite
+MAC-10 | Oceanic,milspec,weapon_mac10__am_mac10_oceani
+MAC-10 | Nuclear Garden,milspec,weapon_mac10__am_nuclear_skulls3_mac10
+MAC-10 | Red Filigree,restricted,weapon_mac10__am_ren_red
+MAC-10 | Silver,milspec,weapon_mac10__an_silver
+MAC-10 | Graven,restricted,weapon_mac10__aq_etched_mac10_bravo
+MAC-10 | Carnivore,milspec,weapon_mac10__aq_mac_10_alien_camo
+MAC-10 | Case Hardened,restricted,weapon_mac10__aq_oiled
+MAC-10 | Tatter,restricted,weapon_mac10__cu_korupt
+MAC-10 | Commuter,milspec,weapon_mac10__cu_luggage_mac10
+MAC-10 | Rangeen,milspec,weapon_mac10__cu_mac10_alekhya_duo
+MAC-10 | Curse,restricted,weapon_mac10__cu_mac10_decay
+MAC-10 | Allure,restricted,weapon_mac10__cu_mac10_isoonna
+MAC-10 | Monkeyflage,milspec,weapon_mac10__cu_mac10_monkeyflage
+MAC-10 | Disco Tech,classified,weapon_mac10__cu_mac10_nacre
+MAC-10 | Neon Rider,covert,weapon_mac10__cu_mac10_neonrider
+MAC-10 | Ensnared,milspec,weapon_mac10__cu_mac10_pixie
+MAC-10 | Button Masher,restricted,weapon_mac10__cu_mac10_portable
+MAC-10 | Propaganda,classified,weapon_mac10__cu_mac10_propaganda
+MAC-10 | Heat,restricted,weapon_mac10__cu_mac10_redhot
+MAC-10 | Sakkaku,restricted,weapon_mac10__cu_mac10_sakkaku
+MAC-10 | Echoing Sands,milspec,weapon_mac10__cu_mac10_scarab
+MAC-10 | Toybox,classified,weapon_mac10__cu_mac10_toybox
+MAC-10 | Pipsqueak,milspec,weapon_mac10__cu_overpass_squeak_mac10
+MAC-10 | Calf Skin,milspec,weapon_mac10__gs_mac10_checker
+MAC-10 | Classic Crate,milspec,weapon_mac10__gs_mac10_dust_crate
+MAC-10 | Pipe Down,restricted,weapon_mac10__gs_mac10_exo_pipes
+MAC-10 | Whitefish,milspec,weapon_mac10__gs_mac10_fish_bait
+MAC-10 | Hot Snakes,classified,weapon_mac10__gs_mac10_snake
+MAC-10 | Stalker,covert,weapon_mac10__gs_mac10_stalker
+MAC-10 | Urban DDPAT,milspec,weapon_mac10__hy_ddpat_urb
+MAC-10 | Strats,milspec,weapon_mac10__hy_vertigospray_blue
+MAC-10 | Snow Splash,milspec,weapon_mac10__hye_car_wrap4
+MAC-10 | Acid Hex,milspec,weapon_mac10__hye_green_camo
+MAC-10 | Poplar Thicket,milspec,weapon_mac10__hye_green_forest
+MAC-10 | Arabesque Mosaic,milspec,weapon_mac10__mac10_arabesque_gold
+MAC-10 | Light Box,milspec,weapon_mac10__mac10_illusion
+MAC-10 | Cat Fight,restricted,weapon_mac10__mac10_kamicatze
+MAC-10 | Saibā Oni,restricted,weapon_mac10__mac10_ozaki
+MAC-10 | Derailment,restricted,weapon_mac10__mac10_train_crash
+MAC-10 | Video Cam,milspec,weapon_mac10__mac10_video_cam
+MAC-10 | Bronzer,milspec,weapon_mac10__so_bronze_powder
+MAC-10 | Indigo,milspec,weapon_mac10__so_indigo_and_grey
+MAC-10 | Ultraviolet,milspec,weapon_mac10__so_purple
+MAC-10 | Candy Apple,milspec,weapon_mac10__so_red
+MAC-10 | Tornado,milspec,weapon_mac10__so_tornado
+MAC-10 | Storm Camo,milspec,weapon_mac10__soo_mac10_blueberry
+MAC-10 | Sienna Damask,milspec,weapon_mac10__sp_mirage_flowers_tan
+MAC-10 | Palm,milspec,weapon_mac10__sp_palm
+MAC-10 | Surfwood,milspec,weapon_mac10__sp_twigs_beach
+MAG-7 | Carbon Fiber,milspec,weapon_mag7__am_carbon_fiber
+MAG-7 | Chainmail,milspec,weapon_mag7__am_chainmail
+MAG-7 | Hard Water,milspec,weapon_mag7__am_mag7_caustic
+MAG-7 | Sonar,milspec,weapon_mag7__am_mag7_malform
+MAG-7 | Navy Sheen,milspec,weapon_mag7__am_navy_shine
+MAG-7 | Metallic DDPAT,milspec,weapon_mag7__am_urban
+MAG-7 | Silver,milspec,weapon_mag7__an_silver
+MAG-7 | SWAG-7,restricted,weapon_mag7__aq_mag7_swag7
+MAG-7 | Rust Coat,milspec,weapon_mag7__aq_steel
+MAG-7 | Rust Coat,milspec,weapon_mag7__aq_steel_inferno
+MAG-7 | Heaven Guard,milspec,weapon_mag7__cu_mag7_heaven
+MAG-7 | Insomnia,milspec,weapon_mag7__cu_mag7_insomnia
+MAG-7 | Monster Call,restricted,weapon_mag7__cu_mag7_monster_call
+MAG-7 | Cobalt Core,milspec,weapon_mag7__cu_mag7_myrcene
+MAG-7 | Foresight,milspec,weapon_mag7__cu_mag7_predictor
+MAG-7 | Heat,restricted,weapon_mag7__cu_mag7_redhot
+MAG-7 | Petroglyph,restricted,weapon_mag7__cu_mag7_tribal
+MAG-7 | BI83 Spectrum,restricted,weapon_mag7__gs_mag7_bismuth
+MAG-7 | Cinquedea,classified,weapon_mag7__gs_mag7_glass
+MAG-7 | Copper Coated,milspec,weapon_mag7__gs_mag7_goold
+MAG-7 | Justice,classified,weapon_mag7__gs_mag7_justice
+MAG-7 | Popdog,milspec,weapon_mag7__gs_mag7_popdog
+MAG-7 | Praetorian,restricted,weapon_mag7__gs_mag7_praetorian
+MAG-7 | Counter Terrace,milspec,weapon_mag7__hy_geometric_steps_green
+MAG-7 | Prism Terrace,restricted,weapon_mag7__hy_geometric_steps_pearl
+MAG-7 | Memento,milspec,weapon_mag7__hy_icosahedron
+MAG-7 | Core Breach,restricted,weapon_mag7__hy_nuclear_hotorange
+MAG-7 | Resupply,milspec,weapon_mag7__mag7_ammo_box
+MAG-7 | MAGnitude,milspec,weapon_mag7__mag7_circle_copper
+MAG-7 | Seabird,milspec,weapon_mag7__so_aqua
+MAG-7 | Copper Oxide,milspec,weapon_mag7__so_greyblue
+MAG-7 | Sand Dune,milspec,weapon_mag7__so_sand
+MAG-7 | Storm,milspec,weapon_mag7__so_stormfront
+MAG-7 | Bulldozer,restricted,weapon_mag7__so_yellow
+MAG-7 | Wildwood,milspec,weapon_mag7__soch_wildwood_mag7
+MAG-7 | Hazard,milspec,weapon_mag7__sp_hazard_bravo
+MAG-7 | Firestarter,milspec,weapon_mag7__sp_mag7_firebitten
+MAG-7 | Irradiated Alert,milspec,weapon_mag7__sp_nukestripe_brown
+MAG-7 | Midnight Palm,milspec,weapon_mag7__sp_palm_night
+MP5-SD | Co-Processor,milspec,weapon_mp5sd__am_circuitboard_aqua
+MP5-SD | Desert Strike,milspec,weapon_mp5sd__cu_mp5_desert_strike
+MP5-SD | Liquidation,milspec,weapon_mp5sd__cu_mp5sd_quick_liquidation
+MP5-SD | Condition Zero,milspec,weapon_mp5sd__gs_mp5_conditionzero
+MP5-SD | Acid Wash,milspec,weapon_mp5sd__gs_mp5_etch
+MP5-SD | Agent,restricted,weapon_mp5sd__gs_mp5_fbi
+MP5-SD | Phosphor,classified,weapon_mp5sd__gs_mp5_festival_drip
+MP5-SD | Necro Jr.,milspec,weapon_mp5sd__gs_mp5_kid_necronomicon
+MP5-SD | Oxide Oasis,classified,weapon_mp5sd__gs_mp5_neon_flektarn
+MP5-SD | Gauss,restricted,weapon_mp5sd__gs_mp5sd_astromatic
+MP5-SD | Kitbash,restricted,weapon_mp5sd__gs_mp5sd_wasteland_legacy
+MP5-SD | Savannah Halftone,milspec,weapon_mp5sd__ht_blur_camo_mp5sd
+MP5-SD | Bamboo Garden,milspec,weapon_mp5sd__hy_bamboo_stmarc
+MP5-SD | Lab Rats,restricted,weapon_mp5sd__hy_labrat_mp5
+MP5-SD | Autumn Twilly,restricted,weapon_mp5sd__hy_trainarchitect
+MP5-SD | Urban Rubble,milspec,weapon_mp5sd__hy_varicamo_urban
+MP5-SD | Gold Leaf,milspec,weapon_mp5sd__hye_gold_camo
+MP5-SD | Snow Splash,milspec,weapon_mp5sd__hye_mp5_car_wrap4
+MP5-SD | Statics,milspec,weapon_mp5sd__mp5_statics_blue
+MP5-SD | Focus,milspec,weapon_mp5sd__mp5sd_chrome
+MP5-SD | Nitro,milspec,weapon_mp5sd__so_orange_accents3
+MP5-SD | Picnic,milspec,weapon_mp5sd__soe_red
+MP5-SD | Lime Hex,milspec,weapon_mp5sd__sp_lime_hex
+MP5-SD | Neon Squeezer,milspec,weapon_mp5sd__sp_overpass_paint_pen_neon
+MP5-SD | Dirt Drop,milspec,weapon_mp5sd__sp_tape_short_rally
+MP7 | Fade,restricted,weapon_mp7__aa_fade_mp7
+MP7 | Motherboard,milspec,weapon_mp7__am_circuitboard_green
+MP7 | Vault Heist,milspec,weapon_mp7__am_heist_plans_yellow
+MP7 | Ocean Foam,restricted,weapon_mp7__am_ossify_blue
+MP7 | Anodized Navy,milspec,weapon_mp7__an_navy
+MP7 | Armor Core,milspec,weapon_mp7__aq_mp7_ultramodern
+MP7 | Urban Hazard,milspec,weapon_mp7__cu_mp7-commander
+MP7 | Special Delivery,restricted,weapon_mp7__cu_mp7_classified
+MP7 | Abyssal Apparition,classified,weapon_mp7__cu_mp7_fear
+MP7 | Guerrilla,milspec,weapon_mp7__cu_mp7_khaki
+MP7 | Nemesis,classified,weapon_mp7__cu_mp7_nemsis
+MP7 | Mischief,milspec,weapon_mp7__cu_mp7_racketeer
+MP7 | Neon Ply,restricted,weapon_mp7__cu_mp7_replica
+MP7 | Astrolabe,milspec,weapon_mp7__gs_constellation_dark_mp7
+MP7 | Cirrus,milspec,weapon_mp7__gs_final_pooldeadv2
+MP7 | Bloodsport,covert,weapon_mp7__gs_mp7_bloodsport
+MP7 | Sunbaked,milspec,weapon_mp7__gs_mp7_strone
+MP7 | Powercore,restricted,weapon_mp7__gs_powercore_mp7
+MP7 | Forest DDPAT,milspec,weapon_mp7__hy_ddpat
+MP7 | Tall Grass,covert,weapon_mp7__hy_drywood_green
+MP7 | Gunsmoke,milspec,weapon_mp7__hy_gelpen
+MP7 | Olive Plaid,milspec,weapon_mp7__hy_plaid1
+MP7 | Skulls,milspec,weapon_mp7__hy_skulls
+MP7 | Full Stop,milspec,weapon_mp7__hy_varicamo_red
+MP7 | Coral Paisley,milspec,weapon_mp7__hye_paisley_warm
+MP7 | Amberline,restricted,weapon_mp7__mp7_amberline
+MP7 | Base-2,milspec,weapon_mp7__mp7_binary_green
+MP7 | Just Smile,restricted,weapon_mp7__mp7_just_smile
+MP7 | Smoking Kills,classified,weapon_mp7__mp7_smoking_kills_v2
+MP7 | Short Ochre,milspec,weapon_mp7__so_mustard
+MP7 | Groundwater,milspec,weapon_mp7__so_olive_bravo
+MP7 | Whiteout,milspec,weapon_mp7__so_whiteout
+MP7 | Teal Blossom,milspec,weapon_mp7__sp_bud_green
+MP7 | Scorched,milspec,weapon_mp7__sp_dapple
+MP7 | Asterion,milspec,weapon_mp7__sp_labyrinth
+MP7 | Impire,restricted,weapon_mp7__sp_mp7_impire
+MP7 | Akoben,milspec,weapon_mp7__sp_mp7_tribal_yellow
+MP7 | Army Recon,milspec,weapon_mp7__sp_spray_army
+MP7 | Orange Peel,milspec,weapon_mp7__sp_tape_orange
+MP7 | Prey,milspec,weapon_mp7__sp_zebracam_red
+MP9 | Sand Scale,milspec,weapon_mp9__aa_hide-mp9
+MP9 | Mount Fuji,restricted,weapon_mp9__aa_mp9_fuji_pink
+MP9 | Pandora's Box,milspec,weapon_mp9__aa_pandora
+MP9 | Hypnotic,restricted,weapon_mp9__aa_vertigo
+MP9 | Army Sheen,milspec,weapon_mp9__am_army_shine
+MP9 | Dark Age,milspec,weapon_mp9__am_metal_inlay
+MP9 | Music Box,milspec,weapon_mp9__am_mirage_flowers_metalic
+MP9 | Bioleak,milspec,weapon_mp9__am_mp9_bioleak
+MP9 | Ruby Poison Dart,restricted,weapon_mp9__am_mp9_nitrogen
+MP9 | Stained Glass,restricted,weapon_mp9__am_stained_glass
+MP9 | Rose Iron,restricted,weapon_mp9__am_thorny_rose_mp9
+MP9 | Hot Rod,milspec,weapon_mp9__an_red
+MP9 | Black Sand,milspec,weapon_mp9__cu_mp9_black_sand
+MP9 | Dart,milspec,weapon_mp9__cu_mp9_chevron
+MP9 | Deadly Poison,milspec,weapon_mp9__cu_mp9_deadly_poison
+MP9 | Food Chain,classified,weapon_mp9__cu_mp9_food_chain
+MP9 | Goo,restricted,weapon_mp9__cu_mp9_goo
+MP9 | Hydra,classified,weapon_mp9__cu_mp9_hydra
+MP9 | Wild Lily,classified,weapon_mp9__cu_mp9_island_floral
+MP9 | Latte Rush,classified,weapon_mp9__cu_mp9_latte
+MP9 | Airlock,classified,weapon_mp9__cu_mp9_narcis
+MP9 | Featherweight,milspec,weapon_mp9__cu_mp9_superlight
+MP9 | Capillary,milspec,weapon_mp9__cu_mp9_vein
+MP9 | Arctic Tri-Tone,restricted,weapon_mp9__gs_arctic_mp9
+MP9 | Modest Threat,milspec,weapon_mp9__gs_mp9_colony01
+MP9 | Starlight Protector,covert,weapon_mp9__gs_mp9_starlight
+MP9 | Buff Blue,milspec,weapon_mp9__ht_blue_edges
+MP9 | Multi-Terrain,milspec,weapon_mp9__hy_mtp
+MP9 | Setting Sun,milspec,weapon_mp9__hy_nuclear_pattern2_mp9
+MP9 | Green Plaid,milspec,weapon_mp9__hy_plaid2
+MP9 | Slide,milspec,weapon_mp9__hy_splatter3
+MP9 | Cobalt Paisley,milspec,weapon_mp9__hye_blue_paisley
+MP9 | Shredded,milspec,weapon_mp9__hye_pink_tiger
+MP9 | Dune Asp,milspec,weapon_mp9__mp9_dune_asp
+MP9 | Nexus,milspec,weapon_mp9__mp9_nexus
+MP9 | Spy Prototype,milspec,weapon_mp9__mp9_prototype_extended
+MP9 | Urban Sovereign,restricted,weapon_mp9__mp9_urban_sovereign
+MP9 | Broken Record,milspec,weapon_mp9__mp9_vinyl
+MP9 | Storm,milspec,weapon_mp9__so_stormfront
+MP9 | Bulldozer,restricted,weapon_mp9__so_yellow
+MP9 | Pine,milspec,weapon_mp9__soe_alpine_green
+MP9 | Dizzy,milspec,weapon_mp9__soe_ddpat_swirl_bw
+MP9 | Bee-Tron,milspec,weapon_mp9__soe_yellow_bits
+MP9 | Old Roots,milspec,weapon_mp9__sp_moro_carving_yellow
+MP9 | Dry Season,milspec,weapon_mp9__sp_tape_dots_bravo
+MP9 | Orange Peel,milspec,weapon_mp9__sp_tape_orange
+MP9 | Sand Dashed,milspec,weapon_mp9__sp_tape_short_sand
+Negev | Army Sheen,milspec,weapon_negev__am_army_shine
+Negev | Man-o'-war,milspec,weapon_negev__am_negev_glory
+Negev | Anodized Navy,milspec,weapon_negev__an_navy
+Negev | Bratatat,milspec,weapon_negev__cu_bratatat_negev
+Negev | Loudmouth,restricted,weapon_negev__cu_negev_annihilator
+Negev | Drop Me,milspec,weapon_negev__cu_negev_clear_sky
+Negev | dev_texture,restricted,weapon_negev__cu_negev_devtexture
+Negev | Power Loader,restricted,weapon_negev__cu_negev_impact
+Negev | Prototype,milspec,weapon_negev__cu_negev_prototype
+Negev | Desert-Strike,milspec,weapon_negev__cu_negev_titanstorm
+Negev | Ultralight,milspec,weapon_negev__cu_negev_ultralight
+Negev | Wall Bang,milspec,weapon_negev__cu_overpass_graf_negev
+Negev | Mjölnir,classified,weapon_negev__gs_negev_thor
+Negev | Polar Camo,milspec,weapon_negev__hy_arctic_contrast
+Negev | Bulkhead,milspec,weapon_negev__hy_ducts_yellow
+Negev | Dazzle,milspec,weapon_negev__hy_negev_dazzle
+Negev | Phoenix Stencil,milspec,weapon_negev__hy_phoenix_tags_red
+Negev | CaliCamo,milspec,weapon_negev__hy_varicamo_desert
+Negev | Boroque Sand,milspec,weapon_negev__hy_veneto_tan
+Negev | Infrastructure,milspec,weapon_negev__hy_vertigospray
+Negev | Raw Ceramic,milspec,weapon_negev__so_ceramic_negev
+Negev | Sour Grapes,milspec,weapon_negev__soe_berry
+Negev | Lionfish,restricted,weapon_negev__sp_negev_lionfish
+Negev | Terrain,milspec,weapon_negev__sp_negev_turq_terrain
+Negev | Nuclear Waste,milspec,weapon_negev__sp_nuclear_pattern3_negev
+Negev | Palm,milspec,weapon_negev__sp_palm_bravo
+Nova | Army Sheen,covert,weapon_nova__am_army_shine
+Nova | Graphite,restricted,weapon_nova__am_crumple
+Nova | Red Quartz,restricted,weapon_nova__am_crystallized
+Nova | Gila,restricted,weapon_nova__am_nova_sand
+Nova | Caged Steel,milspec,weapon_nova__am_oval_hex
+Nova | Baroque Orange,restricted,weapon_nova__am_veneto2
+Nova | Silver,milspec,weapon_nova__an_silver
+Nova | Exo,milspec,weapon_nova__aq_nova_sci_fi
+Nova | Rust Coat,milspec,weapon_nova__aq_steel
+Nova | Antique,classified,weapon_nova__cu_nova_antique
+Nova | Plume,milspec,weapon_nova__cu_nova_featherswing
+Nova | Hyper Beast,classified,weapon_nova__cu_nova_hyperbeast
+Nova | Koi,restricted,weapon_nova__cu_nova_koi
+Nova | Clear Polymer,restricted,weapon_nova__cu_nova_polymer
+Nova | Ranger,milspec,weapon_nova__cu_nova_ranger
+Nova | Toy Soldier,restricted,weapon_nova__cu_nova_toy_soldier
+Nova | Wurst Hölle,milspec,weapon_nova__cu_overpass_wurst_nova
+Nova | Rising Skull,restricted,weapon_nova__cu_skull_nova
+Nova | Bloomstick,classified,weapon_nova__cu_spring_nova
+Nova | Walnut,milspec,weapon_nova__cu_walnut_nova
+Nova | Wild Six,restricted,weapon_nova__gs_nova_anchorite
+Nova | Wood Fired,milspec,weapon_nova__gs_nova_hunter_brute
+Nova | Sobek's Bite,restricted,weapon_nova__gs_nova_sobek
+Nova | Yorkshire,milspec,weapon_nova__gs_ripple_nova
+Nova | Mandrel,milspec,weapon_nova__hy_ducts_grey
+Nova | Blaze Orange,milspec,weapon_nova__hy_hunter_blaze_orange
+Nova | Modern Hunter,milspec,weapon_nova__hy_hunter_modern
+Nova | Tempest,milspec,weapon_nova__hy_seaside_bravo
+Nova | Quick Sand,milspec,weapon_nova__hy_torn_camo_paints
+Nova | Interlock,milspec,weapon_nova__hy_vertigoillusion_yellow
+Nova | Moon in Libra,milspec,weapon_nova__hy_zodiac1
+Nova | Currents,milspec,weapon_nova__hye_geobirds
+Nova | Dark Sigil,milspec,weapon_nova__nova_drakkar
+Nova | Morning Sun,milspec,weapon_nova__nova_morning_sun
+Nova | Ocular,restricted,weapon_nova__nova_ocular
+Nova | Rising Sun,restricted,weapon_nova__nova_rising_sun
+Nova | Smart Gun,restricted,weapon_nova__nova_smart
+Nova | Green Apple,milspec,weapon_nova__so_green
+Nova | Candy Apple,milspec,weapon_nova__so_red
+Nova | Sand Dune,milspec,weapon_nova__so_sand
+Nova | Turquoise Pour,milspec,weapon_nova__soo_acrylic_flow_turquoise
+Nova | Marsh Grass,milspec,weapon_nova__soo_grass_photo_camo
+Nova | Ghost Camo,milspec,weapon_nova__sp_camo_wood_blue
+Nova | Forest Leaves,milspec,weapon_nova__sp_leaves
+Nova | Polar Mesh,milspec,weapon_nova__sp_mesh_arctic_contrast
+Nova | Windblown,milspec,weapon_nova__sp_nova_wind_dispersal
+Nova | Predator,milspec,weapon_nova__sp_zebracam
+Nova | Rain Station,milspec,weapon_nova__train_shapes_01
+P250 | Nevermore,restricted,weapon_p250__aa_p250_gravediggers
+P250 | Digital Architect,restricted,weapon_p250__aa_vertigogeo_neon
+P250 | Steel Disruption,milspec,weapon_p250__am_ddpatdense_silver
+P250 | Undertow,classified,weapon_p250__am_p250_beaded_paint
+P250 | Ripple,milspec,weapon_p250__am_p250_sputnik
+P250 | Dark Filigree,milspec,weapon_p250__am_ren_dark
+P250 | Metallic DDPAT,milspec,weapon_p250__am_urban
+P250 | Cartel,classified,weapon_p250__aq_p250_cartel
+P250 | Valence,milspec,weapon_p250__aq_p250_contour
+P250 | Verdigris,milspec,weapon_p250__aq_p250_verdigris
+P250 | Constructivist,milspec,weapon_p250__brutalist_architecture
+P250 | Supernova,restricted,weapon_p250__cu_bittersweet
+P250 | Franklin,classified,weapon_p250__cu_money
+P250 | Asiimov,classified,weapon_p250__cu_p250_asiimov
+P250 | Red Rock,restricted,weapon_p250__cu_p250_axiom
+P250 | Cassette,milspec,weapon_p250__cu_p250_cassette
+P250 | See Ya Later,covert,weapon_p250__cu_p250_cybercroc
+P250 | Contaminant,milspec,weapon_p250__cu_p250_infect
+P250 | Muertos,classified,weapon_p250__cu_p250_mandala
+P250 | Re.built,milspec,weapon_p250__cu_p250_rebuilt
+P250 | Mehndi,classified,weapon_p250__cu_p250_refined
+P250 | X-Ray,restricted,weapon_p250__cu_xray_p250
+P250 | Apep's Curse,classified,weapon_p250__gs_p250_apep
+P250 | Vino Primo,restricted,weapon_p250__gs_p250_checker
+P250 | Cyber Shell,restricted,weapon_p250__gs_p250_cybershell
+P250 | Inferno,restricted,weapon_p250__gs_p250_inferno
+P250 | Iron Clad,milspec,weapon_p250__gs_p250_metal_panels
+P250 | Visions,classified,weapon_p250__gs_p250_visions
+P250 | Facility Draft,milspec,weapon_p250__hy_blueprint_red
+P250 | Facets,milspec,weapon_p250__hy_crumple_dark_bravo
+P250 | Black & Tan,milspec,weapon_p250__hy_desert_multicam
+P250 | Exchanger,milspec,weapon_p250__hy_ducts_blue
+P250 | Boreal Forest,milspec,weapon_p250__hy_forest_boreal
+P250 | Forest Night,milspec,weapon_p250__hy_forest_night
+P250 | Gunsmoke,milspec,weapon_p250__hy_gelpen
+P250 | Modern Hunter,milspec,weapon_p250__hy_hunter_modern
+P250 | Crimson Kimono,milspec,weapon_p250__hy_kimono_diamonds_red
+P250 | Contamination,milspec,weapon_p250__hy_nuclear_skulls4_p250
+P250 | Wingshot,restricted,weapon_p250__hy_p250_crackshot
+P250 | Bengal Tiger,milspec,weapon_p250__hy_p250_tiger
+P250 | Hive,milspec,weapon_p250__hy_redhex
+P250 | Sleet,milspec,weapon_p250__hye_car_wrap_3
+P250 | Red Tide,milspec,weapon_p250__hye_pink_coral
+P250 | Bullfrog,milspec,weapon_p250__p250_bullfrog
+P250 | Epicenter,classified,weapon_p250__p250_impact
+P250 | Kintsugi,classified,weapon_p250__p250_kintsugi
+P250 | Lotus Imprint,restricted,weapon_p250__p250_lotus_imprint_glitter_purple
+P250 | Copper Oxide,milspec,weapon_p250__so_greyblue_p250
+P250 | Sand Dune,milspec,weapon_p250__so_sand
+P250 | Whiteout,milspec,weapon_p250__so_whiteout
+P250 | Small Game,milspec,weapon_p250__soch_hunter_blaze_p250
+P250 | Sedimentary,milspec,weapon_p250__soe_yellow_swirl
+P250 | Drought,milspec,weapon_p250__sp_desert_skulls_dawn
+P250 | Mint Kimono,milspec,weapon_p250__sp_kimono_diamonds
+P250 | Plum Netting,milspec,weapon_p250__sp_lace
+P250 | Nuclear Threat,restricted,weapon_p250__sp_nukestripe_green
+P250 | Splash,restricted,weapon_p250__sp_splash_p250
+P250 | Bone Mask,milspec,weapon_p250__sp_tape
+P90 | Ancient Earth,covert,weapon_p90__aa_ancient_brown
+P90 | Astral Jörmungandr,restricted,weapon_p90__am_jorm_blue
+P90 | Cold Blooded,classified,weapon_p90__am_slither_p90
+P90 | Tiger Pit,milspec,weapon_p90__am_tigers_brown
+P90 | Baroque Red,milspec,weapon_p90__am_veneto_red
+P90 | Module,milspec,weapon_p90__an_royalbleed
+P90 | Leather,milspec,weapon_p90__cu_brown_leather_p90
+P90 | Death by Kitty,covert,weapon_p90__cu_catskulls_p90
+P90 | Emerald Dragon,classified,weapon_p90__cu_dragon_p90_bravo
+P90 | Run and Hide,covert,weapon_p90__cu_jaguar_p90
+P90 | Asiimov,covert,weapon_p90__cu_p90-asiimov
+P90 | Grim,milspec,weapon_p90__cu_p90_grimm
+P90 | Elite Build,milspec,weapon_p90__cu_p90_mastery
+P90 | Nostalgia,classified,weapon_p90__cu_p90_nostalgia
+P90 | Off World,milspec,weapon_p90__cu_p90_offworld
+P90 | ScaraB Rush,restricted,weapon_p90__cu_p90_scarab_of_wisdom
+P90 | Desert Warfare,milspec,weapon_p90__cu_p90_scorpius
+P90 | Shapewood,classified,weapon_p90__cu_p90_shapewood
+P90 | Trigon,classified,weapon_p90__cu_p90_trigon
+P90 | Attack Vector,restricted,weapon_p90__cu_poly_violet_p90
+P90 | Freight,milspec,weapon_p90__gs_p90_container
+P90 | Chopper,restricted,weapon_p90__gs_p90_full_throttle
+P90 | Neoqueen,restricted,weapon_p90__gs_p90_neoqueen
+P90 | Shallow Grave,classified,weapon_p90__gs_p90_shallow_grave
+P90 | Vent Rush,restricted,weapon_p90__gs_p90_tangled
+P90 | Traction,milspec,weapon_p90__gs_p90_tread
+P90 | Desert Halftone,milspec,weapon_p90__ht_simple_camo
+P90 | Facility Negative,milspec,weapon_p90__hy_blueprint_aqua
+P90 | Desert DDPAT,milspec,weapon_p90__hy_ddpat_desert
+P90 | Forest Night,milspec,weapon_p90__hy_forest_night
+P90 | Blind Spot,restricted,weapon_p90__hy_modspots
+P90 | Death Grip,restricted,weapon_p90__hy_p90_barebones_blue
+P90 | Cocoa Rampage,milspec,weapon_p90__hy_p90_dino_rampage
+P90 | Blue Tac,milspec,weapon_p90__hy_usaf_round
+P90 | Schematic,milspec,weapon_p90__hy_vertigogeo
+P90 | Virus,restricted,weapon_p90__hy_zombie
+P90 | Aeolian Light,milspec,weapon_p90__hye_abstract_knot
+P90 | Reef Grief,milspec,weapon_p90__hye_coral
+P90 | Mustard Gas,milspec,weapon_p90__hye_zoom
+P90 | Wave Breaker,restricted,weapon_p90__p90_boost_blue
+P90 | Deathgaze,classified,weapon_p90__p90_deathgaze
+P90 | Randy Rush,restricted,weapon_p90__p90_randy_rush
+P90 | Straight Dimes,milspec,weapon_p90__p90_steelcraft
+P90 | Storm,milspec,weapon_p90__so_stormfront
+P90 | Sunset Lily,milspec,weapon_p90__sp_bloom_orange
+P90 | Scorched,milspec,weapon_p90__sp_dapple
+P90 | Glacier Mesh,milspec,weapon_p90__sp_mesh_glacier
+P90 | Teardown,milspec,weapon_p90__sp_mesh_hot_and_cold
+P90 | Verdant Growth,milspec,weapon_p90__sp_moro_textile_green_vine
+P90 | Fallout Warning,milspec,weapon_p90__sp_nukestripe_maroon
+P90 | Wash me,milspec,weapon_p90__sp_overpass_doodle_plum
+P90 | Sand Spray,milspec,weapon_p90__sp_spray_sand
+P90 | Ash Wood,milspec,weapon_p90__sp_twigs
+R8 Revolver | Amber Fade,classified,weapon_revolver__aa_fade_metallic_revolver
+R8 Revolver | Fade,covert,weapon_revolver__aa_fade_revolver
+R8 Revolver | Blaze,milspec,weapon_revolver__aa_flames
+R8 Revolver | Phoenix Marker,milspec,weapon_revolver__am_phoenix_tags_blue
+R8 Revolver | Leafhopper,milspec,weapon_revolver__aq_titanium_acid
+R8 Revolver | Reboot,restricted,weapon_revolver__cu_r8_cybersport
+R8 Revolver | Survivalist,milspec,weapon_revolver__cu_r8_survivalist
+R8 Revolver | Skull Crusher,classified,weapon_revolver__cu_revolver_oppressor
+R8 Revolver | Banana Cannon,restricted,weapon_revolver__gs_r8_banana
+R8 Revolver | Bone Forged,milspec,weapon_revolver__gs_r8_leviathan
+R8 Revolver | Llama Cannon,classified,weapon_revolver__gs_r8_llamacannon
+R8 Revolver | Memento,milspec,weapon_revolver__gs_r8_memento
+R8 Revolver | Junk Yard,milspec,weapon_revolver__gs_r8_rustking
+R8 Revolver | Inlay,milspec,weapon_revolver__gs_revolver_acanthus_bronze
+R8 Revolver | Crazy 8,restricted,weapon_revolver__gs_revolver_purple_elite
+R8 Revolver | Grip,milspec,weapon_revolver__gs_revolver_tread
+R8 Revolver | Desert Brush,milspec,weapon_revolver__hy_brush_camo_tan
+R8 Revolver | Crimson Web,milspec,weapon_revolver__hy_webs
+R8 Revolver | Monarch,milspec,weapon_revolver__r8_monarch_extended
+R8 Revolver | Tango,milspec,weapon_revolver__r8_roses_and_guns
+R8 Revolver | Night,covert,weapon_revolver__so_night
+R8 Revolver | Nitro,milspec,weapon_revolver__so_orange_accents
+R8 Revolver | Nitro,milspec,weapon_revolver__so_orange_accents3
+R8 Revolver | Mauve Aside,milspec,weapon_revolver__soch_copper_accent_revolver
+R8 Revolver | Cobalt Grip,milspec,weapon_revolver__soch_indigo_grips
+R8 Revolver | Dark Chamber,milspec,weapon_revolver__soch_smoke_grips
+R8 Revolver | Canal Spray,milspec,weapon_revolver__sp_spray_water
+R8 Revolver | Bone Mask,milspec,weapon_revolver__sp_tape
+Sawed-Off | Amber Fade,milspec,weapon_sawedoff__aa_fade_metallic
+Sawed-Off | Brake Light,milspec,weapon_sawedoff__aa_vertigo_red
+Sawed-Off | Copper,milspec,weapon_sawedoff__aq_copper
+Sawed-Off | Morris,milspec,weapon_sawedoff__aq_sawed-off_flower
+Sawed-Off | Highwayman,restricted,weapon_sawedoff__aq_sawedoff_blackgold
+Sawed-Off | Zander,milspec,weapon_sawedoff__aq_sawedoff_zander2
+Sawed-Off | Rust Coat,milspec,weapon_sawedoff__aq_steel
+Sawed-Off | First Class,milspec,weapon_sawedoff__cu_green_leather_sawedoff
+Sawed-Off | Limelight,restricted,weapon_sawedoff__cu_sawed_off_lime
+Sawed-Off | Apocalypto,restricted,weapon_sawedoff__cu_sawedoff_apocalypto
+Sawed-Off | Black Sand,milspec,weapon_sawedoff__cu_sawedoff_black_sand
+Sawed-Off | Serenity,restricted,weapon_sawedoff__cu_sawedoff_deva
+Sawed-Off | Devourer,classified,weapon_sawedoff__cu_sawedoff_devourer
+Sawed-Off | Kiss♥Love,classified,weapon_sawedoff__cu_sawedoff_kisslove
+Sawed-Off | The Kraken,covert,weapon_sawedoff__cu_sawedoff_octopump
+Sawed-Off | Origami,milspec,weapon_sawedoff__cu_sawedoff_origami
+Sawed-Off | Spirit Board,milspec,weapon_sawedoff__cu_sawedoff_ouija
+Sawed-Off | Wasteland Princess,classified,weapon_sawedoff__cu_wp_sawedoff
+Sawed-Off | Fubar,milspec,weapon_sawedoff__gs_sawedoff_fubar
+Sawed-Off | Yorick,milspec,weapon_sawedoff__gs_sawedoff_necromancer
+Sawed-Off | Runoff,milspec,weapon_sawedoff__gsch_ripple
+Sawed-Off | Mosaico,milspec,weapon_sawedoff__hy_ali_tile_bravo
+Sawed-Off | Bamboo Shadow,milspec,weapon_sawedoff__hy_bamboo_jungle_black
+Sawed-Off | Forest DDPAT,milspec,weapon_sawedoff__hy_ddpat
+Sawed-Off | Orange DDPAT,restricted,weapon_sawedoff__hy_ddpat_orange
+Sawed-Off | Parched,milspec,weapon_sawedoff__hy_desert_bloom
+Sawed-Off | Clay Ambush,milspec,weapon_sawedoff__hy_tigers_tan
+Sawed-Off | Full Stop,milspec,weapon_sawedoff__hy_varicamo_red
+Sawed-Off | Crimson Batik,milspec,weapon_sawedoff__hye_batik_eyes
+Sawed-Off | Fusion,milspec,weapon_sawedoff__sawedoff_fusion
+Sawed-Off | Analog Input,restricted,weapon_sawedoff__sawedoff_gamer
+Sawed-Off | Lunar Wyrm,milspec,weapon_sawedoff__sawedoff_lunar_wyrm
+Sawed-Off | Irradiated Alert,milspec,weapon_sawedoff__sp_nukestripe_brown
+Sawed-Off | Jungle Thicket,milspec,weapon_sawedoff__sp_palm_green
+Sawed-Off | Snake Camo,milspec,weapon_sawedoff__sp_snake
+Sawed-Off | Sage Spray,milspec,weapon_sawedoff__sp_spray_desert_sage
+SCAR-20 | Army Sheen,milspec,weapon_scar20__am_army_shine
+SCAR-20 | Carbon Fiber,milspec,weapon_scar20__am_carbon_fiber
+SCAR-20 | Dark Water,milspec,weapon_scar20__am_zebra_dark
+SCAR-20 | Emerald (Emerald),restricted,weapon_scar20__an_emerald_bravo
+SCAR-20 | Brass,milspec,weapon_scar20__aq_brass
+SCAR-20 | Grotto,milspec,weapon_scar20__aq_scar20_leak
+SCAR-20 | Blueprint,milspec,weapon_scar20__cu_blueprint_scar
+SCAR-20 | Wild Berry,milspec,weapon_scar20__cu_chevron_scar20
+SCAR-20 | Cardiac,classified,weapon_scar20__cu_scar20_intervention
+SCAR-20 | Assault,milspec,weapon_scar20__cu_scar_assault
+SCAR-20 | Cyrex,classified,weapon_scar20__cu_scar_cyrex
+SCAR-20 | Bloodsport,classified,weapon_scar20__gs_scar20_bloodsport
+SCAR-20 | Enforcer,restricted,weapon_scar20__gs_scar20_enforcer
+SCAR-20 | Green Marine,milspec,weapon_scar20__gs_scar20_peacemaker03
+SCAR-20 | Powercore,restricted,weapon_scar20__gs_scar20_powercore
+SCAR-20 | Fragments,milspec,weapon_scar20__gs_scar_fragments_black
+SCAR-20 | Magna Carta,milspec,weapon_scar20__hy_authority_purple
+SCAR-20 | Stone Mosaico,milspec,weapon_scar20__hy_canals_tile
+SCAR-20 | Splash Jam,classified,weapon_scar20__hy_hunter_blaze_pink
+SCAR-20 | Jungle Slipstream,milspec,weapon_scar20__hy_scar20_jungle_slipstream
+SCAR-20 | Outbreak,milspec,weapon_scar20__hy_scar20_jungler
+SCAR-20 | Crimson Web,milspec,weapon_scar20__hy_webs_darker
+SCAR-20 | Zinc,milspec,weapon_scar20__hye_chrome_ripple
+SCAR-20 | Trail Blazer,milspec,weapon_scar20__scar20_fury_topo
+SCAR-20 | Arctic Camo Panels,milspec,weapon_scar20__scar_arctic_camo_panels
+SCAR-20 | Caged,milspec,weapon_scar20__scar_refraction_v4
+SCAR-20 | Sirocco Script,milspec,weapon_scar20__scar_sirocco
+SCAR-20 | Short Ochre,milspec,weapon_scar20__so_mustard_scar20
+SCAR-20 | Contractor,milspec,weapon_scar20__so_pmc
+SCAR-20 | Storm,milspec,weapon_scar20__so_stormfront
+SCAR-20 | Sand Mesh,milspec,weapon_scar20__sp_mesh_sand
+SCAR-20 | Palm,milspec,weapon_scar20__sp_palm
+SCAR-20 | Torn,milspec,weapon_scar20__sp_scar20_striker_dust
+SCAR-20 | Poultrygeist,milspec,weapon_scar20__sp_scar_chickenfight
+SG 553 | Desert Blossom,milspec,weapon_sg556__aa_desert_bloom_bright
+SG 553 | Lush Ruins,covert,weapon_sg556__aa_ruins_green
+SG 553 | Hypnotic,restricted,weapon_sg556__aa_vertigo
+SG 553 | Army Sheen,milspec,weapon_sg556__am_army_shine
+SG 553 | Anodized Navy,milspec,weapon_sg556__an_navy
+SG 553 | Damascus Steel,milspec,weapon_sg556__aq_damascus_sg553
+SG 553 | Traveler,milspec,weapon_sg556__cu_luggage_sg553
+SG 553 | Aerial,milspec,weapon_sg556__cu_sg553_aerial
+SG 553 | Atlas,milspec,weapon_sg556__cu_sg553_atlas
+SG 553 | Hazard Pay,classified,weapon_sg556__cu_sg553_caution
+SG 553 | Dragon Tech,restricted,weapon_sg556__cu_sg553_cyber_dragon
+SG 553 | Cyberforce,milspec,weapon_sg556__cu_sg553_cyberforce
+SG 553 | Cyrex,classified,weapon_sg556__cu_sg553_cyrex
+SG 553 | Darkwing,restricted,weapon_sg556__cu_sg553_darkwing
+SG 553 | Pulse,restricted,weapon_sg556__cu_sg553_pulse
+SG 553 | Integrale,classified,weapon_sg556__cu_sg553_rally
+SG 553 | Colony IV,classified,weapon_sg556__cu_sg553_reactor
+SG 553 | Triarch,restricted,weapon_sg556__cu_sg556_triarch
+SG 553 | Berry Gel Coat,milspec,weapon_sg556__gs_happy_red_sg556
+SG 553 | Heavy Metal,milspec,weapon_sg556__gs_sg553_deathmetal
+SG 553 | Danger Close,milspec,weapon_sg556__gs_sg553_over_heated
+SG 553 | Phantom,restricted,weapon_sg556__gs_sg553_phantom
+SG 553 | Ol' Rusty,milspec,weapon_sg556__gs_sg553_rusty
+SG 553 | Tiger Moth,restricted,weapon_sg556__gs_sg553_tiger_moth
+SG 553 | Basket Halftone,milspec,weapon_sg556__ht_orange_basket
+SG 553 | Safari Print,milspec,weapon_sg556__hye_animal_print_lc
+SG 553 | Ultraviolet,milspec,weapon_sg556__so_purple
+SG 553 | Candy Apple,milspec,weapon_sg556__so_red_sg553
+SG 553 | Tornado,milspec,weapon_sg556__so_tornado
+SG 553 | Bulldozer,restricted,weapon_sg556__so_yellow
+SG 553 | Night Camo,milspec,weapon_sg556__soo_blues
+SG 553 | Barricade,milspec,weapon_sg556__sp_asgard_wall
+SG 553 | Bleached,milspec,weapon_sg556__sp_desert_skulls
+SG 553 | Gator Mesh,milspec,weapon_sg556__sp_mesh_python
+SG 553 | Fallout Warning,milspec,weapon_sg556__sp_nukestripe_maroon_sg553
+SG 553 | Aloha,milspec,weapon_sg556__sp_sg533_aloha
+SG 553 | Wave Spray,milspec,weapon_sg556__sp_spray_waves_bravo
+SG 553 | Waves Perforated,milspec,weapon_sg556__sp_tape_dots_waves
+SG 553 | Prey,milspec,weapon_sg556__sp_zebracam_red
+SSG 08 | Acid Fade,milspec,weapon_ssg08__aa_fade_grassland
+SSG 08 | Carbon Fiber,milspec,weapon_ssg08__am_carbon_fiber
+SSG 08 | Threat Detected,milspec,weapon_ssg08__am_intelligence_orange
+SSG 08 | Dark Water,milspec,weapon_ssg08__am_zebra_dark
+SSG 08 | Abyss,milspec,weapon_ssg08__aq_leviathan
+SSG 08 | Blood in the Water,covert,weapon_ssg08__cu_shark
+SSG 08 | Parallax,restricted,weapon_ssg08__cu_ssg08_chromatic
+SSG 08 | Death's Head,restricted,weapon_ssg08__cu_ssg08_deathshead
+SSG 08 | Dragonfire,covert,weapon_ssg08__cu_ssg08_dragonfire_scope
+SSG 08 | Fever Dream,restricted,weapon_ssg08__cu_ssg08_fever_dream
+SSG 08 | Slashed,milspec,weapon_ssg08__cu_ssg08_immortal
+SSG 08 | Mainframe 001,milspec,weapon_ssg08__cu_ssg08_mainframe
+SSG 08 | Necropos,milspec,weapon_ssg08__cu_ssg08_necropos
+SSG 08 | Death Strike,classified,weapon_ssg08__cu_ssg08_scorpion
+SSG 08 | Big Iron,classified,weapon_ssg08__cu_ssg08_technicality
+SSG 08 | Bloodshot,classified,weapon_ssg08__cu_ssg08_tickler
+SSG 08 | Turbo Peek,classified,weapon_ssg08__cu_ssg_overtake
+SSG 08 | Azure Glyph,milspec,weapon_ssg08__gs_ssg08_anubis
+SSG 08 | Ghost Crusader,restricted,weapon_ssg08__gs_ssg08_armacore
+SSG 08 | Hand Brake,milspec,weapon_ssg08__gs_ssg08_checker
+SSG 08 | Zeno,milspec,weapon_ssg08__gsch_zeno_ssg08
+SSG 08 | Calligrafaux,milspec,weapon_ssg08__ht_red_edges_fineline
+SSG 08 | Halftone Whorl,milspec,weapon_ssg08__ht_swirl_ssg08
+SSG 08 | Sea Calico,restricted,weapon_ssg08__hy_flowers_stmarc
+SSG 08 | Mayan Dreams,milspec,weapon_ssg08__hy_mayan_dreams_bravo
+SSG 08 | Orange Filigree,milspec,weapon_ssg08__hy_ren_orange
+SSG 08 | Detour,milspec,weapon_ssg08__hy_ssg08_marker
+SSG 08 | Spring Twilly,milspec,weapon_ssg08__hy_trainarchitect_green
+SSG 08 | Sans Comic,milspec,weapon_ssg08__hye_comic_shapes
+SSG 08 | Tiger Tear,milspec,weapon_ssg08__hye_tiger2
+SSG 08 | Green Ceramic,milspec,weapon_ssg08__so_ceramic_green_ssg08
+SSG 08 | Blue Spruce,milspec,weapon_ssg08__so_moss
+SSG 08 | Red Stone,milspec,weapon_ssg08__so_rune_stone
+SSG 08 | Sand Dune,milspec,weapon_ssg08__so_sand
+SSG 08 | Grey Smoke,milspec,weapon_ssg08__soch_blorb_bw
+SSG 08 | Blush Pour,milspec,weapon_ssg08__soo_acrylic_flow_pink
+SSG 08 | Tropical Storm,milspec,weapon_ssg08__sp_palm_shadow
+SSG 08 | Lichen Dashed,milspec,weapon_ssg08__sp_short_tape
+SSG 08 | Jungle Dashed,covert,weapon_ssg08__sp_tape_short_jungle
+SSG 08 | Prey,milspec,weapon_ssg08__sp_zebracam_red
+SSG 08 | Memorial,milspec,weapon_ssg08__ssg08_brutalist
+SSG 08 | Dezastre,milspec,weapon_ssg08__ssg08_dezastre
+SSG 08 | Rapid Transit,restricted,weapon_ssg08__ssg08_transit_white
+Taser | Dragon Snore,classified,weapon_taser__cu_overpass_dragon_zeus
+Taser | Swamp DDPAT,milspec,weapon_taser__hy_digicam_forest
+Taser | Earth Mandala,milspec,weapon_taser__hye_earth_mandala_lc
+Taser | Electric Blue,milspec,weapon_taser__soe_electric_blue
+Taser | Charged Up,restricted,weapon_taser__zeus_standard_issue
+Taser | Olympus,classified,weapon_taser__zeus_thunder_god
+Taser | Tosai,restricted,weapon_taser__zeus_tosai
+Tec-9 | Red Quartz,restricted,weapon_tec9__am_crystallized
+Tec-9 | Titanium Bit,restricted,weapon_tec9__am_fluted_tec9
+Tec-9 | Ossified,milspec,weapon_tec9__am_ossify
+Tec-9 | Re-Entry,restricted,weapon_tec9__am_tec9_redblast
+Tec-9 | Ice Cap,milspec,weapon_tec9__am_tec_9_sea_salt
+Tec-9 | Blue Titanium,milspec,weapon_tec9__an_titanium30v
+Tec-9 | Brass,milspec,weapon_tec9__aq_brass
+Tec-9 | Cut Out,milspec,weapon_tec9__aq_tec9_chalk_pattern
+Tec-9 | Isaac,milspec,weapon_tec9__cu_tec9_asiimov
+Tec-9 | Avalanche,restricted,weapon_tec9__cu_tec9_avalanche
+Tec-9 | Bamboozle,restricted,weapon_tec9__cu_tec9_bamboo
+Tec-9 | Cracked Opal,milspec,weapon_tec9__cu_tec9_cracked_opal
+Tec-9 | Flash Out,milspec,weapon_tec9__cu_tec9_flash
+Tec-9 | Rebel,milspec,weapon_tec9__cu_tec9_freedom
+Tec-9 | Mummy's Rot,milspec,weapon_tec9__cu_tec9_mummy
+Tec-9 | Sandstorm,milspec,weapon_tec9__cu_tec9_sandstorm
+Tec-9 | Snek-9,milspec,weapon_tec9__cu_tec9_snake
+Tec-9 | Decimator,classified,weapon_tec9__gs_tec9_decimator
+Tec-9 | Remote Control,classified,weapon_tec9__gs_tec9_envoy
+Tec-9 | Fubar,milspec,weapon_tec9__gs_tec9_fubar
+Tec-9 | Brother,restricted,weapon_tec9__gs_tec9_guerilla
+Tec-9 | Jambiya,milspec,weapon_tec9__gs_tec9_jambiya
+Tec-9 | Fuel Injector,classified,weapon_tec9__gs_tec9_supercharged
+Tec-9 | Blast From the Past,covert,weapon_tec9__hy_ancient_tiles_peach
+Tec-9 | Bamboo Forest,milspec,weapon_tec9__hy_bamboo_jungle
+Tec-9 | Urban DDPAT,milspec,weapon_tec9__hy_ddpat_urb
+Tec-9 | Terrace,milspec,weapon_tec9__hy_geometric_steps_yellow
+Tec-9 | Hades,milspec,weapon_tec9__hy_hades
+Tec-9 | Safety Net,milspec,weapon_tec9__hy_mesh_safetyorange
+Tec-9 | Orange Murano,milspec,weapon_tec9__hy_murano_orange
+Tec-9 | Toxic,milspec,weapon_tec9__hy_nuclear_skulls5_tec9
+Tec-9 | Phoenix Chalk,milspec,weapon_tec9__hy_phoenix_tags_lilac
+Tec-9 | VariCamo,milspec,weapon_tec9__hy_varicamo
+Tec-9 | Banana Leaf,milspec,weapon_tec9__hye_batik_eyes_tec9
+Tec-9 | Raw Ceramic,milspec,weapon_tec9__so_ceramic
+Tec-9 | Groundwater,milspec,weapon_tec9__so_olive
+Tec-9 | Blue Blast,milspec,weapon_tec9__so_teal
+Tec-9 | Tornado,milspec,weapon_tec9__so_tornado_bravo
+Tec-9 | Whiteout,restricted,weapon_tec9__so_whiteout_tec9
+Tec-9 | Tiger Stencil,milspec,weapon_tec9__soch_tiger_stencil_tec9
+Tec-9 | Garter-9,milspec,weapon_tec9__soe_snakeskin
+Tec-9 | Citric Acid,milspec,weapon_tec9__soo_paint_splats_yellow
+Tec-9 | Rust Leaf,milspec,weapon_tec9__sp_leaf_orange
+Tec-9 | Army Mesh,milspec,weapon_tec9__sp_mesh_army
+Tec-9 | Nuclear Threat,restricted,weapon_tec9__sp_nukestripe_green_tec9
+Tec-9 | Slag,milspec,weapon_tec9__tec9_junkyard_engineering
+Tec-9 | Perimeter,milspec,weapon_tec9__tec9_perimeter_urban
+Tec-9 | Sultan,milspec,weapon_tec9__tec9_sultan
+UMP-45 | Mechanism,milspec,weapon_ump45__aa_engine_performance
+UMP-45 | Fade,restricted,weapon_ump45__aa_fade_mp7
+UMP-45 | Fade,classified,weapon_ump45__aa_fade_ump
+UMP-45 | Blaze,milspec,weapon_ump45__aa_flames
+UMP-45 | Moonrise,restricted,weapon_ump45__aa_ump45_moonrise_sunset
+UMP-45 | Carbon Fiber,milspec,weapon_ump45__am_carbon_fiber
+UMP-45 | Motherboard,milspec,weapon_ump45__am_circuitboard_green
+UMP-45 | Oscillator,milspec,weapon_ump45__am_ump45_electrowave
+UMP-45 | Grand Prix,restricted,weapon_ump45__am_ump_racer
+UMP-45 | Metal Flowers,milspec,weapon_ump45__aq_ump45_flameflower
+UMP-45 | Minotaur's Labyrinth,milspec,weapon_ump45__cu_labyrinth
+UMP-45 | Briefing,milspec,weapon_ump45__cu_ump45_metritera
+UMP-45 | Primal Saber,classified,weapon_ump45__cu_ump45_primalsaber
+UMP-45 | Riot,milspec,weapon_ump45__cu_ump45_uproar
+UMP-45 | Arctic Wolf,restricted,weapon_ump45__cu_ump45_white_fang
+UMP-45 | Exposure,restricted,weapon_ump45__cu_ump45_x-ray_machine
+UMP-45 | Momentum,classified,weapon_ump45__cu_ump_arrows
+UMP-45 | Plastique,restricted,weapon_ump45__cu_ump_bomb
+UMP-45 | Wild Child,classified,weapon_ump45__cu_ump_clutch_kick
+UMP-45 | Corporal,milspec,weapon_ump45__cu_ump_corporal
+UMP-45 | Crime Scene,restricted,weapon_ump45__cu_ump_crime_scene
+UMP-45 | Scaffold,restricted,weapon_ump45__gs_ump_abyss
+UMP-45 | Gold Bismuth,restricted,weapon_ump45__gs_ump_gold_bismuth
+UMP-45 | Roadblock,milspec,weapon_ump45__gs_ump_roadblock
+UMP-45 | Crimson Foil,restricted,weapon_ump45__gsch_sport_ump45
+UMP-45 | Day Lily,milspec,weapon_ump45__hy_bloom_red
+UMP-45 | Facility Dark,milspec,weapon_ump45__hy_blueprint_bluered
+UMP-45 | Urban DDPAT,milspec,weapon_ump45__hy_ddpat_urb
+UMP-45 | Gunsmoke,milspec,weapon_ump45__hy_gelpen
+UMP-45 | Houndstooth,milspec,weapon_ump45__hy_houndstooth_brown
+UMP-45 | Labyrinth,milspec,weapon_ump45__hy_lines_orange
+UMP-45 | Mudder,milspec,weapon_ump45__hy_mottled_sand
+UMP-45 | Full Stop,milspec,weapon_ump45__hy_varicamo_red
+UMP-45 | Warm Blooded,milspec,weapon_ump45__hye_test_animal_print_45
+UMP-45 | Caramel,milspec,weapon_ump45__so_caramel
+UMP-45 | Indigo,milspec,weapon_ump45__so_indigo_and_grey
+UMP-45 | Green Swirl,milspec,weapon_ump45__soch_hueshift_desat
+UMP-45 | Scorched,milspec,weapon_ump45__sp_dapple
+UMP-45 | Fallout Warning,milspec,weapon_ump45__sp_nukestripe_maroon
+UMP-45 | Bone Pile,milspec,weapon_ump45__sp_skull_diagram_bravo
+UMP-45 | Delusion,milspec,weapon_ump45__sp_ump45_d-visions
+UMP-45 | Motorized,milspec,weapon_ump45__ump45_assembled_engine
+UMP-45 | Continuum,restricted,weapon_ump45__ump45_illumina_v2
+UMP-45 | Neo-Noir,classified,weapon_ump45__ump45_neo_noir
+UMP-45 | K.O. Factory,classified,weapon_ump45__ump45_old_cartoon
+UMP-45 | Fragment,milspec,weapon_ump45__ump_fragment
+UMP-45 | Late Night Transit,milspec,weapon_ump45__ump_transit
+USP-S | Purple DDPAT,milspec,weapon_usp_silencer__am_ddpat_purple
+USP-S | Serum,classified,weapon_usp_silencer__am_electric_red
+USP-S | Target Acquired,classified,weapon_usp_silencer__am_intelligence_magenta
+USP-S | Orange Anolis,restricted,weapon_usp_silencer__am_lizard_red
+USP-S | Dark Water,restricted,weapon_usp_silencer__am_zebra_dark
+USP-S | Stainless,milspec,weapon_usp_silencer__aq_usp_stainless
+USP-S | Caiman,classified,weapon_usp_silencer__cu_kaiman
+USP-S | Business Class,milspec,weapon_usp_silencer__cu_luggage_usp-s
+USP-S | Black Lotus,milspec,weapon_usp_silencer__cu_usp_black_lotus
+USP-S | Cortex,classified,weapon_usp_silencer__cu_usp_cut
+USP-S | Cyrex,restricted,weapon_usp_silencer__cu_usp_cyrex
+USP-S | Guardian,restricted,weapon_usp_silencer__cu_usp_elegant
+USP-S | Flashback,restricted,weapon_usp_silencer__cu_usp_flashback
+USP-S | Kill Confirmed,covert,weapon_usp_silencer__cu_usp_kill_confirmed
+USP-S | Monster Mashup,classified,weapon_usp_silencer__cu_usp_krokos
+USP-S | Printstream,covert,weapon_usp_silencer__cu_usp_printstream
+USP-S | Torque,milspec,weapon_usp_silencer__cu_usp_progressiv
+USP-S | Road Rash,restricted,weapon_usp_silencer__cu_usp_sandpapered
+USP-S | Orion,restricted,weapon_usp_silencer__cu_usp_spitfire
+USP-S | Ticket to Hell,restricted,weapon_usp_silencer__cu_usp_to_hell
+USP-S | Blueprint,milspec,weapon_usp_silencer__cu_usps_blueprint
+USP-S | Neo-Noir,covert,weapon_usp_silencer__cu_usps_noir
+USP-S | Lead Conduit,milspec,weapon_usp_silencer__gs_usp_voltage
+USP-S | The Traitor,covert,weapon_usp_silencer__gs_usps_hangedman
+USP-S | Desert Tactical,milspec,weapon_usp_silencer__gs_usps_tactical_camo
+USP-S | Alpine Camo,milspec,weapon_usp_silencer__gsch_bright_camo_usp
+USP-S | Bleeding Edge,restricted,weapon_usp_silencer__ht_red_edges
+USP-S | Royal Blue,milspec,weapon_usp_silencer__hy_indigo_usp
+USP-S | Blood Tiger,milspec,weapon_usp_silencer__hy_redtiger
+USP-S | Overgrowth,restricted,weapon_usp_silencer__hy_siege_bravo
+USP-S | Night Ops,milspec,weapon_usp_silencer__hy_varicamo_night
+USP-S | Para Green,milspec,weapon_usp_silencer__so_khaki_green
+USP-S | Whiteout,classified,weapon_usp_silencer__so_whiteout_riptide
+USP-S | Royal Guard,restricted,weapon_usp_silencer__soe_blue_and_gold
+USP-S | Sleeping Potion,restricted,weapon_usp_silencer__soe_purple
+USP-S | Tropical Breeze,milspec,weapon_usp_silencer__soe_tropical
+USP-S | Ancient Visions,covert,weapon_usp_silencer__sp_ancient_bright
+USP-S | Pathfinder,milspec,weapon_usp_silencer__sp_labyrinth2
+USP-S | Forest Leaves,milspec,weapon_usp_silencer__sp_leaves
+USP-S | Check Engine,milspec,weapon_usp_silencer__sp_mesh_safetyred
+USP-S | 27,milspec,weapon_usp_silencer__usp_field_snake
+USP-S | PC-GRN,milspec,weapon_usp_silencer__usps_bruteforce_green
+USP-S | Jawbreaker,classified,weapon_usp_silencer__usps_doggy
+USP-S | Silent Shot,milspec,weapon_usp_silencer__usps_silent_boy
+USP-S | Spiral Glitch,classified,weapon_usp_silencer__usps_spiral_glitch_iridescent
+XM1014 | Ancient Lore,covert,weapon_xm1014__am_ancient_warm
+XM1014 | Charter,milspec,weapon_xm1014__am_authority_brown
+XM1014 | Frost Borre,milspec,weapon_xm1014__am_knots_silver
+XM1014 | Elegant Vines,restricted,weapon_xm1014__am_moro_textile_bright
+XM1014 | Bone Machine,milspec,weapon_xm1014__am_nuclear_skulls1_xm1014
+XM1014 | Zombie Offensive,restricted,weapon_xm1014__am_xm_zombie_offensive
+XM1014 | Blue Steel,milspec,weapon_xm1014__aq_blued
+XM1014 | Teclu Burner,restricted,weapon_xm1014__aq_xm1014_hot_rod
+XM1014 | XOXO,classified,weapon_xm1014__aq_xm1014_punk
+XM1014 | Scumbria,milspec,weapon_xm1014__aq_xm1014_scumbria
+XM1014 | Quicksilver,milspec,weapon_xm1014__aq_xm1014_sigla
+XM1014 | Ziggy,restricted,weapon_xm1014__aq_xm1014_ziggy_anarchy
+XM1014 | Seasons,restricted,weapon_xm1014__aq_xm_leaf_fade
+XM1014 | Red Leather,milspec,weapon_xm1014__cu_leather_xm1014
+XM1014 | Monster Melt,restricted,weapon_xm1014__cu_overpass_monsters_xm
+XM1014 | Entombed,classified,weapon_xm1014__cu_xm1014_amulet_blue
+XM1014 | Tranquility,classified,weapon_xm1014__cu_xm1014_caritas
+XM1014 | Heaven Guard,restricted,weapon_xm1014__cu_xm1014_heaven_guard
+XM1014 | Incinegator,classified,weapon_xm1014__cu_xm1014_incinerator
+XM1014 | Oxide Blaze,milspec,weapon_xm1014__cu_xm1014_oxide_blaze
+XM1014 | Hieroglyph,milspec,weapon_xm1014__cu_xm1014_pharaoh
+XM1014 | Black Tie,restricted,weapon_xm1014__cu_xm1014_spectrum
+XM1014 | Watchdog,milspec,weapon_xm1014__gs_xm1014_watchdog
+XM1014 | Copperflage,milspec,weapon_xm1014__ht_copper_edges
+XM1014 | Halftone Shift,milspec,weapon_xm1014__ht_shapes_xm1014
+XM1014 | Canvas Cloud,milspec,weapon_xm1014__hy_cloud_camo
+XM1014 | Urban DDPAT,milspec,weapon_xm1014__hy_ddpat_urb
+XM1014 | Blaze Orange,milspec,weapon_xm1014__hy_hunter_blaze_orange
+XM1014 | Banana Leaf,milspec,weapon_xm1014__hy_leaf_green
+XM1014 | Red Python,milspec,weapon_xm1014__hy_snakeskin_red
+XM1014 | VariCamo Blue,milspec,weapon_xm1014__hy_varicamo_blue
+XM1014 | CaliCamo,milspec,weapon_xm1014__hy_varicamo_desert
+XM1014 | Slipstream,milspec,weapon_xm1014__hy_xm1014_fractal_blue
+XM1014 | Gum Wall Camo,milspec,weapon_xm1014__hye_drippy_camo
+XM1014 | Grassland,milspec,weapon_xm1014__so_grassland
+XM1014 | Jungle,milspec,weapon_xm1014__so_jungle_bravo
+XM1014 | Blue Spruce,milspec,weapon_xm1014__so_moss
+XM1014 | Solitude,restricted,weapon_xm1014__soch_mountains_limited_time
+XM1014 | XoooM,milspec,weapon_xm1014__soe_yellow_xm
+XM1014 | Fallout Warning,milspec,weapon_xm1014__sp_nukestripe_maroon
+XM1014 | Urban Perforated,milspec,weapon_xm1014__sp_tape_dots_urban
+XM1014 | Blue Tire,milspec,weapon_xm1014__sp_tire_tread_blue
+XM1014 | Black Site,milspec,weapon_xm1014__xm1014_black_site
+XM1014 | Run Run Run,milspec,weapon_xm1014__xm1014_freight
+XM1014 | Irezumi,milspec,weapon_xm1014__xm1014_irezumi
+XM1014 | Mockingbird,milspec,weapon_xm1014__xm1014_mockingbird
