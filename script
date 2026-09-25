@@ -1,0 +1,1160 @@
+// ==UserScript==
+// @name         FATALITY - Premium Cheat Menu
+// @namespace    fatality.cheats.local
+// @version      8.4.1
+// @description  Skinchanger en grid de tarjetas, botón "Dar todas las skins", scrollbars custom. Para Clutcher.io
+// @match        https://clutcher.io/*
+// @run-at       document-idle
+// @grant        none
+// ==/UserScript==
+
+(function () {
+    'use strict';
+
+    // ============ CONFIG STORAGE ============
+    const CONFIG_KEY = 'fatality_config_v8';
+    const DEFAULT_CONFIG = {
+        aimbot: false,
+        aimbot_fov: 25,
+        fov_visible: false,
+        aimbot_smooth: 4,
+        aimbot_autofire: false,
+        aimbot_visibleOnly: true,
+        aimbot_target: 'head',
+
+        ragebot_triggerbot: false,
+        triggerbot_delay: 10,
+
+        ragebot_damage_enabled: false,
+        ragebot_damage: 10,
+        ragebot_onetap: false,
+        ragebot_rapid: false,
+        ragebot_norecoil: false,
+        ragebot_nospread: false,
+        ragebot_aim: false,
+        infammo: false,
+
+        esp: false,
+        esp_boxes: true,
+        esp_health: true,
+        esp_names: true,
+        esp_chams: false,
+        esp_headdot: false,
+        esp_skeleton: false,
+        esp_visible_color: '#3cff5a',
+        esp_hidden_color: '#ff4444',
+
+        hitmarker: false,
+        hitsound: false,
+
+        godmode: false,
+        armor: false,
+        antiflash: false,
+        infmoney: false,
+        speed: 1,
+        bhop: false,
+        jumppower: false,
+        jumppower_mult: 1.5,
+        thirdperson: false,
+        thirdperson_distance: 4,
+        ambient_color: false,
+        ambient_color_value: '#ffffff',
+        ambient_intensity: 2,
+
+        particles: true,
+        menu_color: '#ffffff',
+        menu_scale: 100,
+        menu_key: 'Insert',
+
+        modes: {},
+        skinOpts: {}
+    };
+
+    let CFG = { ...DEFAULT_CONFIG };
+    function saveCfg() {
+        try { localStorage.setItem(CONFIG_KEY, JSON.stringify(CFG)); } catch (e) { }
+    }
+    function loadCfg() {
+        try {
+            const saved = localStorage.getItem(CONFIG_KEY);
+            if (saved) CFG = { ...DEFAULT_CONFIG, ...JSON.parse(saved) };
+            if (!CFG.modes) CFG.modes = {};
+            if (!CFG.skinOpts) CFG.skinOpts = {};
+        } catch (e) { }
+    }
+    loadCfg();
+
+    // ============ COLOR HELPERS ============
+    function hexToRgbTriplet(hex) {
+        try {
+            hex = hex.replace('#', '');
+            if (hex.length === 3) hex = hex.split('').map(c => c + c).join('');
+            const r = parseInt(hex.slice(0, 2), 16), g = parseInt(hex.slice(2, 4), 16), b = parseInt(hex.slice(4, 6), 16);
+            return `${r}, ${g}, ${b}`;
+        } catch (e) { return '255, 255, 255'; }
+    }
+    function hexToRgba(hex, a) { return `rgba(${hexToRgbTriplet(hex)}, ${a})`; }
+    function applyThemeColor(hex) {
+        document.documentElement.style.setProperty('--fx-accent', hex);
+        document.documentElement.style.setProperty('--fx-accent-rgb', hexToRgbTriplet(hex));
+    }
+    function applyMenuScale(pct) {
+        document.documentElement.style.setProperty('--fx-scale', (pct || 100) / 100);
+    }
+
+    // ============ ACTIVATION SYSTEM ============
+    const heldKeys = new Set();
+    const toggleStates = {};
+
+    function getFeatureMode(id) {
+        if (!CFG.modes) CFG.modes = {};
+        if (!CFG.modes[id]) CFG.modes[id] = { mode: 'always', key: null };
+        return CFG.modes[id];
+    }
+
+    function keyLabel(code) {
+        if (!code) return 'Sin asignar';
+        if (code === 'Mouse0') return 'Mouse Left';
+        if (code === 'Mouse1') return 'Mouse Middle';
+        if (code === 'Mouse2') return 'Mouse Right';
+        if (code === 'Mouse3') return 'Mouse 4 (Back)';
+        if (code === 'Mouse4') return 'Mouse 5 (Fwd)';
+        if (code.startsWith('Key')) return code.slice(3);
+        if (code.startsWith('Digit')) return code.slice(5);
+        return code;
+    }
+
+    function isFeatureActive(id) {
+        if (!CFG[id]) return false;
+        const m = getFeatureMode(id);
+        if (m.mode === 'always') return true;
+        if (!m.key) return false;
+        if (m.mode === 'toggle') return !!toggleStates[id];
+        return heldKeys.has(m.key);
+    }
+
+    function handleBindEdge(code) {
+        if (!CFG.modes) return;
+        Object.keys(CFG.modes).forEach(id => {
+            const m = CFG.modes[id];
+            if (m.mode === 'toggle' && m.key === code) toggleStates[id] = !toggleStates[id];
+        });
+    }
+
+    document.addEventListener('keydown', (e) => { if (!e.repeat) handleBindEdge(e.code); heldKeys.add(e.code); }, true);
+    document.addEventListener('keyup', (e) => { heldKeys.delete(e.code); }, true);
+    document.addEventListener('mousedown', (e) => { const code = 'Mouse' + e.button; handleBindEdge(code); heldKeys.add(code); });
+    document.addEventListener('mouseup', (e) => { heldKeys.delete('Mouse' + e.button); });
+    document.addEventListener('contextmenu', (e) => {
+        const usesRight = Object.values(CFG.modes || {}).some(m => m.key === 'Mouse2' && m.mode !== 'always');
+        if (usesRight) e.preventDefault();
+    });
+
+    // ============ GAME REFERENCES ============
+    let G = null, hooked = false, orig = {}, lockTarget = null, bhopActive = false, wasOnGround = true;
+
+    function player() { return (G && G.player) || null; }
+    function weapons() { return (G && G.weapons) || null; }
+    function playing() { var P = player(); return !!(G && G.state === 'playing' && P && P.alive); }
+    function eyeOf(e) { return { x: e.x, y: e.y + (e.eyeH || 1.6) - (e._stepLift || 0), z: e.z }; }
+    function baseYOf(e) { return (e._visY == null ? e.y : e._visY); }
+    function aimPointOf(e) {
+        var b = baseYOf(e);
+        return CFG.aimbot_target === 'head' ? { x: e.x, y: b + 1.55, z: e.z } : { x: e.x, y: b + 0.95, z: e.z };
+    }
+    function enemies() {
+        var P = player(), out = [];
+        if (!G || !P || !G.allEntities) return out;
+        var list; try { list = G.allEntities(); } catch (e) { return out; }
+        for (var i = 0; i < list.length; i++) {
+            var e = list[i];
+            if (!e || e === P || !e.alive) continue;
+            if (!e.team || e.team === P.team) continue;
+            if ((e.spawnProt || 0) > 0) continue;
+            out.push(e);
+        }
+        return out;
+    }
+    function viewDir(yaw, pitch) { var o = Math.cos(pitch); return { x: -Math.sin(yaw) * o, y: Math.sin(pitch), z: -Math.cos(yaw) * o }; }
+    function wantAngles(from, to) {
+        var dx = to.x - from.x, dy = to.y - from.y, dz = to.z - from.z;
+        var len = Math.sqrt(dx * dx + dy * dy + dz * dz) || 0.0001;
+        return { yaw: Math.atan2(-dx, -dz), pitch: Math.asin(Math.max(-1, Math.min(1, dy / len))), dist: len };
+    }
+    function wrapPi(a) { while (a > Math.PI) a -= Math.PI * 2; while (a < -Math.PI) a += Math.PI * 2; return a; }
+    function visClear(x1, y1, z1, x2, y2, z2) { try { return !!G.physics.lineClear(x1, y1, z1, x2, y2, z2); } catch (e) { return true; } }
+
+    // ============ HIT MARKER / HIT SOUND ============
+    let hitMarkerUntil = 0, hitMarkerIsKill = false, audioCtx = null;
+
+    function playHitSound(isKill) {
+        try {
+            if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            var o = audioCtx.createOscillator(), g = audioCtx.createGain();
+            o.type = 'square'; o.frequency.value = isKill ? 1300 : 850; g.gain.value = 0.18;
+            o.connect(g); g.connect(audioCtx.destination);
+            var t = audioCtx.currentTime;
+            g.gain.setValueAtTime(0.18, t); g.gain.exponentialRampToValueAtTime(0.001, t + 0.09);
+            o.start(t); o.stop(t + 0.1);
+            if (isKill) {
+                var o2 = audioCtx.createOscillator(), g2 = audioCtx.createGain();
+                o2.type = 'square'; o2.frequency.value = 1700; g2.gain.value = 0.15;
+                o2.connect(g2); g2.connect(audioCtx.destination);
+                o2.start(t + 0.07); g2.gain.setValueAtTime(0.15, t + 0.07);
+                g2.gain.exponentialRampToValueAtTime(0.001, t + 0.16); o2.stop(t + 0.17);
+            }
+        } catch (e) { }
+    }
+
+    function triggerHitFeedback(isKill) {
+        if (CFG.hitmarker) { hitMarkerUntil = performance.now() + (isKill ? 260 : 150); hitMarkerIsKill = isKill; }
+        if (CFG.hitsound) playHitSound(isKill);
+    }
+
+    function drawHitMarker() {
+        if (performance.now() > hitMarkerUntil) return;
+        var cx = espCanvas.width / 2, cy = espCanvas.height / 2, s = hitMarkerIsKill ? 11 : 7, gap = 4;
+        espCtx.strokeStyle = hitMarkerIsKill ? '#ff3b3b' : '#ffffff'; espCtx.lineWidth = 2;
+        espCtx.beginPath();
+        espCtx.moveTo(cx - s - gap, cy - s - gap); espCtx.lineTo(cx - gap, cy - gap);
+        espCtx.moveTo(cx + gap, cy + gap); espCtx.lineTo(cx + s + gap, cy + s + gap);
+        espCtx.moveTo(cx + s + gap, cy - s - gap); espCtx.lineTo(cx + gap, cy - gap);
+        espCtx.moveTo(cx - gap, cy + gap); espCtx.lineTo(cx - s - gap, cy + s + gap);
+        espCtx.stroke();
+    }
+
+    // ============ HOOKS ============
+    function installHooks() {
+        if (hooked || !G) return;
+        try {
+            orig.dealDamage = G.dealDamage.bind(G);
+            G.dealDamage = function (vic, dmg, atk, hs, def, region, group, x8) {
+                try {
+                    if (vic && vic.isPlayer && isFeatureActive('godmode')) return;
+                    if (atk && atk.isPlayer && vic && vic !== atk) {
+                        if (isFeatureActive('ragebot_onetap')) dmg = 100000;
+                        else if (isFeatureActive('ragebot_damage_enabled') && CFG.ragebot_damage !== 1) dmg = dmg * CFG.ragebot_damage;
+                    }
+                } catch (e) { }
+                var result = orig.dealDamage(vic, dmg, atk, hs, def, region, group, x8);
+                try {
+                    var P = player();
+                    if (atk && P && atk === P && vic && vic !== atk) {
+                        var isKill = !!(vic.alive === false || (vic.health !== undefined && vic.health <= 0));
+                        triggerHitFeedback(isKill);
+                    }
+                } catch (e) { }
+                return result;
+            };
+        } catch (e) { }
+        try {
+            orig.damagePlayer = G.damagePlayer.bind(G);
+            G.damagePlayer = function (amount, atk, a2, type) { if (isFeatureActive('godmode')) return; return orig.damagePlayer(amount, atk, a2, type); };
+        } catch (e) { }
+        try {
+            orig.killEntity = G.killEntity.bind(G);
+            G.killEntity = function (ent, atk, a2, a3, a4, a5) { if (ent && ent.isPlayer && isFeatureActive('godmode')) return; return orig.killEntity(ent, atk, a2, a3, a4, a5); };
+        } catch (e) { }
+        hooked = true;
+    }
+
+    function ensureSpeedHook() {
+        try {
+            var W = weapons();
+            if (W && typeof W.maxSpeed === 'function' && !W.__fatalitySpd) {
+                var origMaxSpeed = W.maxSpeed.bind(W);
+                W.__fatalitySpd = true;
+                W.maxSpeed = function () { var v = origMaxSpeed(); return (CFG.speed && CFG.speed !== 1) ? v * CFG.speed : v; };
+            }
+        } catch (e) { }
+    }
+
+    function ensureSpreadHook() {
+        [weapons(), player()].forEach(function (obj) {
+            try {
+                if (!obj || obj.__fatalitySpread) return;
+                var hasC = typeof obj.crosshairSpread === 'function', hasR = typeof obj.restingSpread === 'function';
+                if (!hasC && !hasR) return;
+                obj.__fatalitySpread = true;
+                if (hasC) { var oc = obj.crosshairSpread.bind(obj); obj.crosshairSpread = function () { return isFeatureActive('ragebot_nospread') ? 0 : oc.apply(obj, arguments); }; }
+                if (hasR) { var or = obj.restingSpread.bind(obj); obj.restingSpread = function () { return isFeatureActive('ragebot_nospread') ? 0 : or.apply(obj, arguments); }; }
+            } catch (e) { }
+        });
+    }
+
+    // ============ AIMBOT ============
+    function aimTick() {
+        var P = player(), W = weapons(); lockTarget = null;
+        if (!isFeatureActive('aimbot') || !playing()) return;
+        try { if (W) { W.punchP = 0; W.punchY = 0; } } catch (e) { }
+        var eye = eyeOf(P), vd = viewDir(P.yaw, P.pitch), best = null, bestAng = (CFG.aimbot_fov || 25) * Math.PI / 180, list = enemies();
+        for (var i = 0; i < list.length; i++) {
+            var e = list[i], pt = aimPointOf(e);
+            if (CFG.aimbot_visibleOnly && !visClear(eye.x, eye.y, eye.z, pt.x, pt.y, pt.z)) continue;
+            var w = wantAngles(eye, pt), d = viewDir(w.yaw, w.pitch);
+            var dot = Math.max(-1, Math.min(1, vd.x * d.x + vd.y * d.y + vd.z * d.z)), ang = Math.acos(dot);
+            if (ang < bestAng) { bestAng = ang; best = { ent: e, want: w }; }
+        }
+        if (best) {
+            lockTarget = best.ent;
+            var k = 1 / Math.max(1, CFG.aimbot_smooth || 1);
+            P.yaw = P.yaw + wrapPi(best.want.yaw - P.yaw) * k;
+            P.pitch = P.pitch + wrapPi(best.want.pitch - P.pitch) * k;
+            if (isFeatureActive('aimbot_autofire') && G.input) {
+                try {
+                    var vis = visClear(eye.x, eye.y, eye.z, aimPointOf(best.ent).x, aimPointOf(best.ent).y, aimPointOf(best.ent).z);
+                    if (!CFG.aimbot_visibleOnly || vis) { G.input.mouse1 = true; G.input.mouse1Pressed = true; }
+                    else { G.input.mouse1 = false; G.input.mouse1Pressed = false; }
+                } catch (e) { }
+            }
+        } else if (isFeatureActive('aimbot_autofire') && G.input) {
+            try { G.input.mouse1 = false; G.input.mouse1Pressed = false; } catch (e) { }
+        }
+    }
+
+    // ============ RAGE AIM ============
+    function rageAimTick() {
+        var P = player(), W = weapons();
+        if (!isFeatureActive('ragebot_aim') || !playing()) return;
+        try { if (W) { W.punchP = 0; W.punchY = 0; } } catch (e) { }
+        var eye = eyeOf(P), vd = viewDir(P.yaw, P.pitch), best = null, bestAng = Math.PI, list = enemies();
+        for (var i = 0; i < list.length; i++) {
+            var e = list[i], pt = aimPointOf(e);
+            if (CFG.aimbot_visibleOnly && !visClear(eye.x, eye.y, eye.z, pt.x, pt.y, pt.z)) continue;
+            var w = wantAngles(eye, pt), d = viewDir(w.yaw, w.pitch);
+            var dot = Math.max(-1, Math.min(1, vd.x * d.x + vd.y * d.y + vd.z * d.z)), ang = Math.acos(dot);
+            if (ang < bestAng) { bestAng = ang; best = { ent: e, want: w }; }
+        }
+        if (best) {
+            lockTarget = best.ent; P.yaw = best.want.yaw; P.pitch = best.want.pitch;
+            if (isFeatureActive('aimbot_autofire') && G.input) { try { G.input.mouse1 = true; G.input.mouse1Pressed = true; } catch (e) { } }
+        }
+    }
+
+    // ============ TRIGGERBOT ============
+    let triggerTimer = null;
+    function triggerTick() {
+        if (!isFeatureActive('ragebot_triggerbot') || !playing() || !G.input) return;
+        var P = player(), eye = eyeOf(P), vd = viewDir(P.yaw, P.pitch), list = enemies(), onTarget = false;
+        for (var i = 0; i < list.length; i++) {
+            var e = list[i], pt = aimPointOf(e), w = wantAngles(eye, pt), d = viewDir(w.yaw, w.pitch);
+            var dot = Math.max(-1, Math.min(1, vd.x * d.x + vd.y * d.y + vd.z * d.z)), ang = Math.acos(dot) * 180 / Math.PI;
+            if (ang < 3 && visClear(eye.x, eye.y, eye.z, pt.x, pt.y, pt.z)) { onTarget = true; break; }
+        }
+        if (onTarget && !triggerTimer) {
+            triggerTimer = setTimeout(function () {
+                try { G.input.mouse1 = true; G.input.mouse1Pressed = true; } catch (e) { }
+                setTimeout(function () { try { G.input.mouse1 = false; G.input.mouse1Pressed = false; } catch (e) { } }, 60);
+                triggerTimer = null;
+            }, CFG.triggerbot_delay || 0);
+        } else if (!onTarget && triggerTimer) { clearTimeout(triggerTimer); triggerTimer = null; }
+    }
+
+    // ============ CHEAT TICK ============
+    function cheatTick() {
+        ensureSpeedHook(); ensureSpreadHook();
+        if (!playing()) return;
+        var P = player(), W = weapons();
+        try { if (isFeatureActive('ragebot_norecoil') && W && W.clearViewPunch) W.clearViewPunch(); } catch (e) { }
+        try { if (isFeatureActive('ragebot_norecoil') && W) { W.punchP = 0; W.punchY = 0; if (W.punch) W.punch.index = 0; } } catch (e) { }
+        try { if (isFeatureActive('ragebot_nospread') && W) { if (W.acc) W.acc.penalty = 0; if (W._acc && typeof W._acc === 'object' && 'penalty' in W._acc) W._acc.penalty = 0; } } catch (e) { }
+        try { if (isFeatureActive('ragebot_rapid') && W) { W.nextFire = 0; W.reloading = false; W.reloadT = 0; } } catch (e) { }
+        try { if (isFeatureActive('infammo')) { P.ammo = 999; P.reserve = 999; if (W && W.state) { var st = W.state(); if (st) { st.ammo = 999; st.reserve = 999; } } } } catch (e) { }
+        try { if (isFeatureActive('godmode')) P.health = 100; } catch (e) { }
+        try { if (isFeatureActive('armor')) { P.armor = 100; P.helmet = true; } } catch (e) { }
+        try { if (isFeatureActive('antiflash')) { P.flashUntil = 0; P.blindUntil = 0; } } catch (e) { }
+        try { if (isFeatureActive('infmoney')) P.money = 16000; } catch (e) { }
+        try { if (CFG.bhop && bhopActive && P.onGround) P.jumpBuffer = 0.15; } catch (e) { }
+        try { if (isFeatureActive('jumppower') && wasOnGround && !P.onGround && P.vy > 0) P.vy = P.vy * (CFG.jumppower_mult || 1.5); wasOnGround = P.onGround; } catch (e) { }
+        try { if (P.y < -25) { P.y = 10; P.vy = 0; } } catch (e) { }
+    }
+
+    // ============ THIRD PERSON ============
+    function thirdPersonTick() {
+        if (!isFeatureActive('thirdperson') || !G || !G.camera || !playing()) return;
+        try {
+            var P = player(), eye = eyeOf(P), dir = viewDir(P.yaw, P.pitch), dist = CFG.thirdperson_distance || 4;
+            var camX = eye.x - dir.x * dist, camY = eye.y - dir.y * dist + 1.0, camZ = eye.z - dir.z * dist;
+            try { if (!visClear(eye.x, eye.y, eye.z, camX, camY, camZ)) { var d2 = dist * 0.3; camX = eye.x - dir.x * d2; camY = eye.y - dir.y * d2 + 0.6; camZ = eye.z - dir.z * d2; } } catch (e) { }
+            G.camera.position.set(camX, camY, camZ); G.camera.updateMatrixWorld(true);
+            if (G.camera.matrixWorldInverse && G.camera.matrixWorldInverse.copy) G.camera.matrixWorldInverse.copy(G.camera.matrixWorld).invert();
+        } catch (e) { }
+    }
+
+    // ============ AMBIENT LIGHT ============
+    let ambientLightCache = null, ambientOrig = null;
+    function findSceneRoot() { if (G.scene) return G.scene; if (G.camera) { var node = G.camera; while (node.parent) node = node.parent; return node; } return null; }
+    function findAmbientLight() {
+        if (ambientLightCache) return ambientLightCache;
+        var found = null;
+        try { if (G._lights && G._lights.sun && G._lights.sun.isLight) found = G._lights.sun; } catch (e) { }
+        if (!found) { var scene = findSceneRoot(); if (scene && typeof scene.traverse === 'function') { try { scene.traverse(function (node) { if (!found && node.isLight && node.isAmbientLight) found = node; }); if (!found) { scene.traverse(function (node) { if (!found && node.isLight && node.isHemisphereLight) found = node; }); } } catch (e) { } } }
+        ambientLightCache = found; return found;
+    }
+    function ambientTick() {
+        var light = findAmbientLight(); if (!light) return;
+        var active = isFeatureActive('ambient_color');
+        try {
+            if (active) { if (!ambientOrig) ambientOrig = { color: light.color.clone(), intensity: light.intensity }; light.color.set(CFG.ambient_color_value || '#ffffff'); light.intensity = CFG.ambient_intensity; }
+            else if (ambientOrig) { light.color.copy(ambientOrig.color); light.intensity = ambientOrig.intensity; ambientOrig = null; }
+        } catch (e) { }
+    }
+
+    // ============ CHAMS ============
+    const chammedSet = new Set();
+    function isFlatMesh(node) {
+        try {
+            if (!node.geometry) return false;
+            if (!node.geometry.boundingBox && typeof node.geometry.computeBoundingBox === 'function') node.geometry.computeBoundingBox();
+            var bb = node.geometry.boundingBox; if (!bb) return false;
+            if (typeof node.updateWorldMatrix === 'function') node.updateWorldMatrix(true, false); else if (typeof node.updateMatrixWorld === 'function') node.updateMatrixWorld(true);
+            var m = node.matrixWorld; if (!m || !m.elements) return false;
+            var e = m.elements, corners = [[bb.min.x,bb.min.y,bb.min.z],[bb.max.x,bb.min.y,bb.min.z],[bb.min.x,bb.max.y,bb.min.z],[bb.max.x,bb.max.y,bb.min.z],[bb.min.x,bb.min.y,bb.max.z],[bb.max.x,bb.min.y,bb.max.z],[bb.min.x,bb.max.y,bb.max.z],[bb.max.x,bb.max.y,bb.max.z]];
+            var minX=Infinity,maxX=-Infinity,minY=Infinity,maxY=-Infinity,minZ=Infinity,maxZ=-Infinity;
+            for (var i=0;i<8;i++){var x=corners[i][0],y=corners[i][1],z=corners[i][2];var wx=e[0]*x+e[4]*y+e[8]*z+e[12],wy=e[1]*x+e[5]*y+e[9]*z+e[13],wz=e[2]*x+e[6]*y+e[10]*z+e[14];if(wx<minX)minX=wx;if(wx>maxX)maxX=wx;if(wy<minY)minY=wy;if(wy>maxY)maxY=wy;if(wz<minZ)minZ=wz;if(wz>maxZ)maxZ=wz;}
+            return Math.min(maxX-minX,maxY-minY,maxZ-minZ)<0.08;
+        } catch(e){return false;}
+    }
+    function collectMeshNodes(entity) {
+        var scene=findSceneRoot(),results=[],seen=new Set();
+        if(scene&&typeof scene.traverse==='function'){var ex=entity.x,ez=entity.z;try{scene.traverse(function(node){if(!node.isMesh||seen.has(node))return;if(!node.userData||!node.userData.dynamic)return;if(isFlatMesh(node))return;try{if(typeof node.updateWorldMatrix==='function')node.updateWorldMatrix(true,false);else if(typeof node.updateMatrixWorld==='function')node.updateMatrixWorld(true);var m=node.matrixWorld.elements,dx=m[12]-ex,dz=m[14]-ez;if(Math.sqrt(dx*dx+dz*dz)<1.3){seen.add(node);results.push(node);}}catch(e){}});}catch(e){}}
+        if(!results.length){var objs=[];if(entity.isObject3D)objs.push(entity);['mesh','model','object3D','avatar','root','node','obj','body','view','sprite','gfx','character','skin','group','container','entity3d'].forEach(function(k){var c=entity[k];if(c&&(c.isObject3D||typeof c.traverse==='function')&&objs.indexOf(c)===-1)objs.push(c);});try{Object.keys(entity).forEach(function(k){var v=entity[k];if(v&&typeof v==='object'&&(v.isObject3D||typeof v.traverse==='function')&&objs.indexOf(v)===-1)objs.push(v);});}catch(e){}objs.forEach(function(obj){try{obj.traverse(function(node){if(!node.isMesh||seen.has(node))return;if(isFlatMesh(node))return;seen.add(node);results.push(node);});}catch(e){}});}
+        return results;
+    }
+    function applyChamsFor(entity,colorHex){if(!entity.__fatalityChamNodes||!entity.__fatalityChamNodes.length)entity.__fatalityChamNodes=collectMeshNodes(entity);var nodes=entity.__fatalityChamNodes;if(!nodes||!nodes.length)return;nodes.forEach(function(node){if(!node.material)return;var mats=Array.isArray(node.material)?node.material:[node.material];mats.forEach(function(mat){if(!mat)return;if(!mat.__fatalityOrig)mat.__fatalityOrig={color:mat.color?mat.color.clone():null,emissive:mat.emissive?mat.emissive.clone():null,emissiveIntensity:mat.emissiveIntensity,depthTest:mat.depthTest,fog:mat.fog,map:'map'in mat?mat.map:undefined};if(mat.color&&mat.color.set)mat.color.set(colorHex);if(mat.emissive&&mat.emissive.set){mat.emissive.set(colorHex);mat.emissiveIntensity=1;}mat.depthTest=false;mat.fog=false;if('map'in mat)mat.map=null;mat.needsUpdate=true;});node.renderOrder=999;});}
+    function restoreChamsFor(entity){var nodes=entity.__fatalityChamNodes;if(!nodes)return;nodes.forEach(function(node){if(!node.material)return;var mats=Array.isArray(node.material)?node.material:[node.material];mats.forEach(function(mat){if(!mat||!mat.__fatalityOrig)return;var o=mat.__fatalityOrig;if(mat.color&&o.color)mat.color.copy(o.color);if(mat.emissive&&o.emissive)mat.emissive.copy(o.emissive);if(o.emissiveIntensity!==undefined)mat.emissiveIntensity=o.emissiveIntensity;mat.depthTest=o.depthTest;mat.fog=o.fog;if(o.map!==undefined)mat.map=o.map;mat.needsUpdate=true;mat.__fatalityOrig=null;});});entity.__fatalityChamNodes=null;}
+    function chamsTick(){var active=isFeatureActive('esp')&&CFG.esp_chams&&playing(),list=[],eye=null;if(active){try{eye=eyeOf(player());list=enemies();}catch(e){active=false;list=[];}}var wantSet=new Set(list);chammedSet.forEach(function(e){if(!wantSet.has(e)){restoreChamsFor(e);chammedSet.delete(e);}});list.forEach(function(e){var vis=true;try{vis=visClear(eye.x,eye.y,eye.z,e.x,baseYOf(e)+1.2,e.z);}catch(err){}var col=vis?CFG.esp_visible_color:CFG.esp_hidden_color;applyChamsFor(e,col);chammedSet.add(e);});}
+
+    // ============ SKELETON ESP ============
+    function getBoneLinks(entity){var now=performance.now(),age=now-(entity.__fxBonesT||0),hasLinks=entity.__fxBones&&entity.__fxBones.length;if(hasLinks?age<3000:age<1000)return entity.__fxBones||[];entity.__fxBonesT=now;var links=[],seenBones=new Set();try{var meshes=collectMeshNodes(entity);meshes.forEach(function(mesh){if(mesh.isSkinnedMesh&&mesh.skeleton&&mesh.skeleton.bones){mesh.skeleton.bones.forEach(function(b){if(seenBones.has(b))return;seenBones.add(b);if(b.parent&&b.parent.isBone)links.push([b.parent,b]);});}});}catch(e){}entity.__fxBones=links;return links;}
+    function boneWorldPos(b){var m=b.matrixWorld.elements;return{x:m[12],y:m[13],z:m[14]};}
+    function drawSkeleton(entity,col){var c=espCtx,links=getBoneLinks(entity);c.strokeStyle=col;c.lineWidth=1.5;c.beginPath();if(links.length){for(var i=0;i<links.length;i++){var a=boneWorldPos(links[i][0]),b=boneWorldPos(links[i][1]),dx=a.x-b.x,dy=a.y-b.y,dz=a.z-b.z;if(dx*dx+dy*dy+dz*dz>4)continue;var pa=project(G.camera,a.x,a.y,a.z),pb=project(G.camera,b.x,b.y,b.z);if(!pa||!pb)continue;c.moveTo(pa.x,pa.y);c.lineTo(pb.x,pb.y);}}else{var by=baseYOf(entity),yaw=entity.yaw||0,rx=Math.cos(yaw),rz=-Math.sin(yaw);var J=function(side,y){return project(G.camera,entity.x+rx*side,by+y,entity.z+rz*side);};var head=J(0,1.68),neck=J(0,1.5),pelvis=J(0,0.95),shL=J(-0.22,1.45),shR=J(0.22,1.45),haL=J(-0.3,0.95),haR=J(0.3,0.95),knL=J(-0.12,0.5),knR=J(0.12,0.5),ftL=J(-0.14,0),ftR=J(0.14,0);[[head,neck],[neck,pelvis],[shL,shR],[shL,haL],[shR,haR],[pelvis,knL],[pelvis,knR],[knL,ftL],[knR,ftR]].forEach(function(s){if(!s[0]||!s[1])return;c.moveTo(s[0].x,s[0].y);c.lineTo(s[1].x,s[1].y);});}c.stroke();}
+
+    // ============ ESP OVERLAY ============
+    let espCanvas = null, espCtx = null;
+    function ensureEsp() { if (espCanvas) return; espCanvas = document.createElement('canvas'); espCanvas.id = 'fx_esp'; espCanvas.style.cssText = 'position:fixed;inset:0;width:100vw;height:100vh;pointer-events:none;z-index:9998;'; document.documentElement.appendChild(espCanvas); espCtx = espCanvas.getContext('2d'); }
+    function sizeEsp() { if (!espCanvas) return; var w = window.innerWidth, h = window.innerHeight; if (espCanvas.width !== w || espCanvas.height !== h) { espCanvas.width = w; espCanvas.height = h; } }
+    function project(cam, x, y, z) {
+        var v = cam.matrixWorldInverse.elements, p = cam.projectionMatrix.elements;
+        var X = v[0]*x+v[4]*y+v[8]*z+v[12], Y = v[1]*x+v[5]*y+v[9]*z+v[13], Z = v[2]*x+v[6]*y+v[10]*z+v[14], Wm = v[3]*x+v[7]*y+v[11]*z+v[15];
+        var cx = p[0]*X+p[4]*Y+p[8]*Z+p[12]*Wm, cy = p[1]*X+p[5]*Y+p[9]*Z+p[13]*Wm, cw = p[3]*X+p[7]*Y+p[11]*Z+p[15]*Wm;
+        if (cw <= 0.01) return null;
+        return { x: (cx/cw*0.5+0.5)*espCanvas.width, y: (-cy/cw*0.5+0.5)*espCanvas.height };
+    }
+    function drawFovCircle() {
+        if (!CFG.fov_visible || !CFG.aimbot || !G || !G.camera) return;
+        var cx = espCanvas.width/2, cy = espCanvas.height/2, camFovDeg = G.camera.fov || 90, camFovRad = camFovDeg*Math.PI/180, fovRad = (CFG.aimbot_fov||25)*Math.PI/180;
+        var r = Math.tan(fovRad/2)/Math.tan(camFovRad/2)*(espCanvas.height/2);
+        espCtx.beginPath(); espCtx.strokeStyle = isFeatureActive('aimbot') ? hexToRgba(CFG.menu_color, 0.8) : hexToRgba(CFG.menu_color, 0.4);
+        espCtx.lineWidth = 1.5; espCtx.setLineDash([4,4]); espCtx.arc(cx, cy, r, 0, Math.PI*2); espCtx.stroke(); espCtx.setLineDash([]);
+    }
+    function espTick() {
+        if (!espCanvas) return; sizeEsp();
+        var c = espCtx; c.clearRect(0, 0, espCanvas.width, espCanvas.height);
+        if (G && G.camera && playing()) drawFovCircle(); drawHitMarker();
+        if (!isFeatureActive('esp') || !G || !G.camera || (G.state !== 'playing' && G.state !== 'freeze')) return;
+        var P = player(); if (!P) return;
+        var eye = null; try { eye = eyeOf(P); } catch (e) { return; }
+        var list = enemies(); c.textBaseline = 'top'; c.font = '12px monospace';
+        for (var i = 0; i < list.length; i++) {
+            var e = list[i], feet, head;
+            try { feet = project(G.camera, e.x, baseYOf(e), e.z); head = project(G.camera, e.x, baseYOf(e)+1.75, e.z); } catch (err) { continue; }
+            if (!feet || !head) continue;
+            var h = Math.abs(feet.y - head.y); if (h < 4 || h > 1200) continue;
+            var w = h * 0.45, x0 = (feet.x+head.x)/2-w/2, y0 = Math.min(feet.y, head.y);
+            var vis = visClear(eye.x, eye.y, eye.z, e.x, baseYOf(e)+1.2, e.z);
+            var col = vis ? CFG.esp_visible_color : CFG.esp_hidden_color;
+            if (e === lockTarget) col = '#ffff00';
+            if (CFG.esp_boxes) { c.strokeStyle = col; c.lineWidth = 1.5; c.strokeRect(x0, y0, w, h); }
+            if (CFG.esp_skeleton) { try { drawSkeleton(e, col); } catch (err) { } }
+            if (CFG.esp_health) { var hp = Math.max(0, Math.min(100, e.health||100))/100; c.fillStyle = 'rgba(0,0,0,0.55)'; c.fillRect(x0-6, y0, 4, h); c.fillStyle = hp > 0.5 ? '#3cff5a' : hp > 0.25 ? '#ffaa00' : '#ff4444'; c.fillRect(x0-6, y0+h*(1-hp), 4, h*hp); }
+            if (CFG.esp_names) { var nm = e.playerName || e.name || 'BOT'; c.fillStyle = col; var tw = c.measureText(nm).width; c.fillText(nm, x0+w/2-tw/2, y0-14); }
+            if (CFG.esp_headdot) { var hpPt = project(G.camera, e.x, baseYOf(e)+1.68, e.z); if (hpPt) { c.beginPath(); c.fillStyle = col; c.arc(hpPt.x, hpPt.y, 3.2, 0, Math.PI*2); c.fill(); c.lineWidth = 1; c.strokeStyle = 'rgba(0,0,0,0.6)'; c.stroke(); } }
+        }
+    }
+
+    // ============ MAIN LOOP ============
+    function gameLoop() {
+        try {
+            if (!G) { if (window.game && window.game.player) { G = window.game; installHooks(); } }
+            else { if (!hooked) installHooks(); aimTick(); rageAimTick(); triggerTick(); cheatTick(); thirdPersonTick(); ambientTick(); chamsTick(); espTick(); }
+        } catch (e) { }
+        requestAnimationFrame(gameLoop);
+    }
+
+    // ============ SKIN DATABASE ============
+    let skinDB = null;
+    function slotFromId(id) { const i = id.indexOf('__'); return i > 0 ? id.slice(0, i) : 'other'; }
+    function loadSkinDatabase(callback) {
+        if (skinDB) { callback(skinDB); return; }
+        let res; try { res = performance.getEntriesByType('resource') || []; } catch (e) { res = []; }
+        let url = null;
+        for (let i = 0; i < res.length; i++) { if (/\/src\/data-[A-Za-z0-9]+\.js/.test(res[i].name)) { url = res[i].name; break; } }
+        if (!url) { callback(null); return; }
+        fetch(url).then(r => r.text()).then(txt => {
+            const re = /\{id:`([^`]+)`,name:`([^`]*)`,slot:`([^`]+)`/g;
+            let m, out = [], seen = {};
+            while ((m = re.exec(txt))) { if (!seen[m[1]]) { seen[m[1]] = 1; out.push({ id: m[1], name: m[2] || m[1], slot: m[3] || slotFromId(m[1]) }); } }
+            skinDB = out; callback(out);
+        }).catch(() => callback(null));
+    }
+    function getOwnedSkinIds() { try { const raw = localStorage.getItem('clutcher_inv_v1'); if (!raw) return {}; const d = JSON.parse(raw); const have = {}; (d.items || []).forEach(it => { have[it.skin] = 1; }); return have; } catch (e) { return {}; } }
+    function randWear() { return Math.round(Math.random() * 1000) / 1000; }
+    function randSeed() { return Math.floor(Math.random() * 1001); }
+    function getSkinOpts(id) { return (CFG.skinOpts && CFG.skinOpts[id]) || {}; }
+    function updateOwnedSkin(id, opts) { try { const raw = localStorage.getItem('clutcher_inv_v1'); if (!raw) return; const d = JSON.parse(raw); let changed = false; (d.items || []).forEach(it => { if (it.skin !== id) return; if (opts.wear != null) { it.wear = opts.wear; changed = true; } if (opts.seed != null) { it.seed = opts.seed; changed = true; } }); if (changed) localStorage.setItem('clutcher_inv_v1', JSON.stringify(d)); } catch (e) { } }
+    function addSkinToInventory(id) { try { let raw = localStorage.getItem('clutcher_inv_v1'); let d = raw ? JSON.parse(raw) : { coins: 0, items: [], equipped: {}, stats: { games: 0, kills: 0, wins: 0 } }; if (!Array.isArray(d.items)) d.items = []; const have = {}; d.items.forEach(it => have[it.skin] = 1); if (have[id]) return false; const o = getSkinOpts(id), now = Date.now(); d.items.push({ uid: 'i' + now.toString(36) + Math.random().toString(36).slice(2, 6), skin: id, wear: o.wear != null ? o.wear : randWear(), seed: o.seed != null ? o.seed : randSeed(), st: false, kills: 0, t: now }); localStorage.setItem('clutcher_inv_v1', JSON.stringify(d)); return true; } catch (e) { return false; } }
+    function addAllSkinsToInventory(list) { try { let raw = localStorage.getItem('clutcher_inv_v1'); let d = raw ? JSON.parse(raw) : { coins: 0, items: [], equipped: {}, stats: { games: 0, kills: 0, wins: 0 } }; if (!Array.isArray(d.items)) d.items = []; const have = {}; d.items.forEach(it => have[it.skin] = 1); const now = Date.now(); let added = 0; list.forEach((s, i) => { if (have[s.id]) return; const o = getSkinOpts(s.id); d.items.push({ uid: 'i' + (now + i).toString(36) + Math.random().toString(36).slice(2, 6), skin: s.id, wear: o.wear != null ? o.wear : randWear(), seed: o.seed != null ? o.seed : randSeed(), st: false, kills: 0, t: now }); have[s.id] = 1; added++; }); if (added) localStorage.setItem('clutcher_inv_v1', JSON.stringify(d)); return added; } catch (e) { return 0; } }
+    function escHtml(s) { return String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c])); }
+
+    // ============ SKIN IMAGE MAP ============
+    const SKIN_IMAGE_LIST_URL = 'https://raw.githubusercontent.com/icyyboy/fatality/refs/heads/main/skins.txt';
+    let skinImageMap = null, skinImageMapLoading = false;
+    function loadSkinImageMap(callback) {
+        if (skinImageMap) { callback(skinImageMap); return; }
+        if (skinImageMapLoading) { setTimeout(() => loadSkinImageMap(callback), 200); return; }
+        skinImageMapLoading = true;
+        fetch(SKIN_IMAGE_LIST_URL).then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.text(); }).then(txt => {
+            const map = new Map();
+            txt.split('\n').forEach(line => { line = line.trim(); if (!line) return; const idx1 = line.indexOf(','); if (idx1 < 0) return; const idx2 = line.indexOf(',', idx1 + 1); if (idx2 < 0) return; const fullName = line.slice(0, idx1).trim(), imageId = line.slice(idx2 + 1).trim(); if (!imageId) return; const weaponPart = imageId.split('__')[0].toLowerCase(); const pipeIdx = fullName.indexOf('|'); const skinName = (pipeIdx >= 0 ? fullName.slice(pipeIdx + 1) : fullName).trim().toLowerCase(); if (!map.has(skinName)) map.set(skinName, []); map.get(skinName).push({ weaponPart, imageId }); });
+            skinImageMap = map; skinImageMapLoading = false; callback(map);
+        }).catch(() => { skinImageMapLoading = false; skinImageMap = new Map(); callback(skinImageMap); });
+    }
+    function resolveSkinImageId(skin) { if (!skinImageMap) return null; const rawName = (skin.name || '').trim(), pipeIdx = rawName.indexOf('|'), nameLower = (pipeIdx >= 0 ? rawName.slice(pipeIdx + 1) : rawName).trim().toLowerCase(), candidates = skinImageMap.get(nameLower); if (!candidates || !candidates.length) return null; if (candidates.length === 1) return candidates[0].imageId; const slotLower = (skin.slot || '').trim().toLowerCase(), bySlot = candidates.find(c => c.weaponPart === slotLower || c.weaponPart === 'weapon_' + slotLower); return (bySlot || candidates[0]).imageId; }
+    function skinImageUrl(imageId) { return `https://clutcher.io/ui/skins/weapon_${imageId}.webp`; }
+    function getFilteredSkins(filter) { if (!skinDB) return []; const f = (filter || '').trim().toLowerCase(); return skinDB.filter(s => !f || s.id.toLowerCase().includes(f) || s.name.toLowerCase().includes(f)); }
+
+    function renderSkinList(filter) {
+        const listEl = document.getElementById('skin-list-container'); if (!listEl || !skinDB) return;
+        const owned = getOwnedSkinIds(), filtered = getFilteredSkins(filter), groups = {};
+        filtered.forEach(s => { (groups[s.slot] = groups[s.slot] || []).push(s); });
+        const slots = Object.keys(groups).sort();
+        if (!slots.length) { listEl.innerHTML = '<div style="color:#888;padding:14px;text-align:center;font-size:11px;">Sin resultados</div>'; return; }
+        let html = '';
+        slots.forEach(slot => {
+            html += `<div class="skin-group-title">${escHtml(slot)}</div><div class="skin-grid">`;
+            groups[slot].sort((a, b) => a.name.localeCompare(b.name)).forEach(s => {
+                const isOwned = !!owned[s.id], o = getSkinOpts(s.id), custom = o.wear != null || o.seed != null, resolvedImageId = resolveSkinImageId(s);
+                const imgTag = resolvedImageId ? `<img class="skin-card-thumb" src="${skinImageUrl(resolvedImageId)}" loading="lazy">` : `<div class="skin-card-thumb skin-thumb-empty"></div>`;
+                html += `<div class="skin-card ${isOwned ? 'owned' : ''}" data-skin="${s.id}" title="${escHtml(s.name)}"><span class="skin-card-gear ${custom ? 'has-mode' : ''}" data-skin-gear="${s.id}" title="Wear / Seed">&#9881;</span>${isOwned ? '<span class="skin-card-owned" title="Ya la tienes">&#10003;</span>' : ''}${imgTag}<span class="skin-card-name">${escHtml(s.name)}</span></div>`;
+            });
+            html += `</div>`;
+        });
+        listEl.innerHTML = html;
+        listEl.querySelectorAll('img.skin-card-thumb').forEach(img => { img.addEventListener('error', () => { img.style.visibility = 'hidden'; }); });
+        listEl.querySelectorAll('.skin-card-gear').forEach(g => { g.addEventListener('click', (e) => { e.stopPropagation(); openSkinPopover(g.dataset.skinGear, g); }); });
+        listEl.querySelectorAll('.skin-card:not(.owned)').forEach(card => {
+            card.addEventListener('click', () => {
+                const id = card.dataset.skin, ok = addSkinToInventory(id);
+                if (ok) { card.classList.add('owned'); if (!card.querySelector('.skin-card-owned')) { const tick = document.createElement('span'); tick.className = 'skin-card-owned'; tick.title = 'Ya la tienes'; tick.innerHTML = '&#10003;'; card.appendChild(tick); } setStatus('Skin añadida — refresca para verla'); }
+            });
+        });
+    }
+
+    function initSkinsTab() {
+        const listEl = document.getElementById('skin-list-container'), searchEl = document.getElementById('skin-search');
+        if (searchEl) searchEl.addEventListener('input', (e) => renderSkinList(e.target.value));
+        const giveAllBtn = document.getElementById('skin-give-all');
+        if (giveAllBtn) {
+            giveAllBtn.addEventListener('click', () => {
+                if (!skinDB) return;
+                const searchVal = searchEl ? searchEl.value : '', list = getFilteredSkins(searchVal);
+                giveAllBtn.disabled = true; giveAllBtn.textContent = 'Añadiendo...';
+                const added = addAllSkinsToInventory(list);
+                renderSkinList(searchVal);
+                giveAllBtn.disabled = false; giveAllBtn.textContent = 'Dar todas las skins';
+                setStatus(added ? `+${added} skins añadidas — refresca para verlas` : 'Ya tenías todas');
+            });
+        }
+        function whenReady() { if (!skinDB) { if (listEl) listEl.innerHTML = '<div style="color:#888;padding:14px;text-align:center;font-size:11px;">No se encontró la base de datos.<br>Abre la tienda/cases del juego una vez y reintenta.</div>'; return; } renderSkinList(''); }
+        loadSkinImageMap(() => { if (skinDB) whenReady(); else loadSkinDatabase(whenReady); });
+    }
+
+    // ============ UI STYLES ============
+    const STYLES = `
+        #fatality-intro {
+            position: fixed; inset: 0; background: #000000;
+            display: flex; align-items: center; justify-content: center;
+            z-index: 10000; opacity: 1; transition: opacity 0.6s ease-out;
+        }
+        #fatality-intro.hidden { opacity: 0; pointer-events: none; }
+        #fatality-text {
+            font-size: 120px; font-weight: 900; letter-spacing: 20px;
+            text-transform: uppercase; color: #ffffff;
+            text-shadow: 0 0 20px rgba(var(--fx-accent-rgb), 0.35);
+            font-family: 'Arial Black', Arial, sans-serif;
+        }
+        .letter { display: inline-block; opacity: 0; transform: translateX(-30px); }
+        #particles-container { position: fixed; inset: 0; pointer-events: none; z-index: 9997; }
+        .particle { position: absolute; width: 2px; height: 2px; background: rgba(var(--fx-accent-rgb), 0.5); border-radius: 50%; }
+
+        #fatality-menu {
+            position: fixed; top: 60px; left: 12px;
+            width: 480px; height: 440px;
+            background: rgba(9, 11, 14, 0.97);
+            border: 1px solid rgba(var(--fx-accent-rgb), 0.25);
+            border-radius: 4px; z-index: 9999;
+            display: flex; flex-direction: column;
+            opacity: 0; transform: translateY(-16px) scale(var(--fx-scale, 1));
+            transform-origin: top left;
+            pointer-events: none;
+            transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            font-family: 'Segoe UI', 'Courier New', monospace;
+            color: #e8eef2;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+            overflow: hidden;
+        }
+        #fatality-menu.active { opacity: 1; transform: translateY(0) scale(var(--fx-scale, 1)); pointer-events: auto; }
+        #fatality-menu.minimized { height: auto; }
+        #fatality-menu.minimized .fx-body { display: none; }
+        #fatality-menu.minimized .fx-header { border-bottom: none; }
+
+        .fx-header {
+            padding: 14px 16px; border-bottom: 1px solid rgba(var(--fx-accent-rgb), 0.15);
+            cursor: move; user-select: none;
+            display: flex; justify-content: space-between; align-items: center;
+            background: linear-gradient(180deg, rgba(var(--fx-accent-rgb),0.06), transparent);
+        }
+        .fx-title { font-size: 13px; font-weight: 700; color: var(--fx-accent); letter-spacing: 3px; }
+        .fx-header-btns { display: flex; align-items: center; gap: 4px; }
+        .fx-hbtn { cursor: pointer; color: #666; font-size: 15px; opacity: 0.8; transition: all 0.2s; width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; border-radius: 3px; }
+        .fx-hbtn:hover { opacity: 1; color: var(--fx-accent); background: rgba(var(--fx-accent-rgb), 0.1); }
+        .fx-close:hover { color: #ff5555; background: rgba(255,85,85,0.1); }
+
+        .fx-body { flex: 1; display: flex; overflow: hidden; }
+
+        .fx-sidebar {
+            width: 115px; background: rgba(0, 0, 0, 0.35);
+            border-right: 1px solid rgba(var(--fx-accent-rgb), 0.12);
+            display: flex; flex-direction: column; padding: 8px 0;
+        }
+        .fx-tab { padding: 10px 16px; font-size: 11px; cursor: pointer; color: #777; text-transform: uppercase; letter-spacing: 1.5px; transition: all 0.2s; border-left: 2px solid transparent; position: relative; }
+        .fx-tab:hover { background: rgba(var(--fx-accent-rgb), 0.06); color: #aaa; }
+        .fx-tab.active { background: rgba(var(--fx-accent-rgb), 0.1); color: var(--fx-accent); border-left: 2px solid var(--fx-accent); font-weight: 600; }
+
+        .fx-status { font-size: 10px; color: #666; padding: 8px 16px; border-top: 1px solid rgba(var(--fx-accent-rgb), 0.1); margin-top: auto; }
+
+        /* ========== SCROLLBARS CUSTOM ========== */
+        .fx-content,
+        .skin-list,
+        #skin-list-container { overflow-x: hidden !important; }
+
+        .fx-content::-webkit-scrollbar,
+        .skin-list::-webkit-scrollbar,
+        #skin-list-container::-webkit-scrollbar { width: 4px; height: 0px; }
+
+        .fx-content::-webkit-scrollbar-track,
+        .skin-list::-webkit-scrollbar-track,
+        #skin-list-container::-webkit-scrollbar-track { background: transparent; }
+
+        .fx-content::-webkit-scrollbar-thumb,
+        .skin-list::-webkit-scrollbar-thumb,
+        #skin-list-container::-webkit-scrollbar-thumb {
+            background: rgba(var(--fx-accent-rgb), 0.35);
+            border-radius: 3px;
+        }
+        .fx-content::-webkit-scrollbar-thumb:hover,
+        .skin-list::-webkit-scrollbar-thumb:hover,
+        #skin-list-container::-webkit-scrollbar-thumb:hover {
+            background: rgba(var(--fx-accent-rgb), 0.65);
+        }
+
+        /* Firefox */
+        .fx-content,
+        .skin-list,
+        #skin-list-container { scrollbar-width: thin; scrollbar-color: rgba(var(--fx-accent-rgb), 0.35) transparent; }
+        /* ======================================= */
+
+        .fx-content { flex: 1; overflow-y: auto; padding: 16px 18px; }
+
+        .fx-section { margin-bottom: 18px; animation: fxFade 0.25s ease-out; }
+        .fx-section-title { font-size: 10px; letter-spacing: 2.5px; color: rgba(var(--fx-accent-rgb), 0.75); font-weight: 700; margin-bottom: 10px; text-transform: uppercase; opacity: 0.95; }
+        .fx-section-hint { font-size: 10px; color: #666; margin: -4px 0 10px; line-height: 1.5; }
+        @keyframes fxFade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+
+        .fx-row { display: flex; align-items: center; gap: 10px; margin: 8px 0; font-size: 12px; }
+        .fx-switch { position: relative; width: 32px; height: 18px; flex-shrink: 0; }
+        .fx-switch input { opacity: 0; width: 0; height: 0; }
+        .fx-switch-track { position: absolute; inset: 0; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; cursor: pointer; transition: all 0.25s; }
+        .fx-switch-track::before { content: ''; position: absolute; width: 12px; height: 12px; left: 2px; top: 2px; background: #888; border-radius: 50%; transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1); }
+        .fx-switch input:checked + .fx-switch-track { background: rgba(var(--fx-accent-rgb), 0.25); border-color: var(--fx-accent); }
+        .fx-switch input:checked + .fx-switch-track::before { transform: translateX(14px); background: var(--fx-accent); box-shadow: 0 0 8px rgba(var(--fx-accent-rgb), 0.6); }
+
+        .fx-label { cursor: pointer; flex: 1; user-select: none; color: #d5dbe0; }
+
+        .fx-gear { cursor: pointer; color: #555; font-size: 13px; padding: 2px 5px; border-radius: 3px; transition: all 0.15s; flex-shrink: 0; user-select: none; }
+        .fx-gear:hover { color: var(--fx-accent); background: rgba(var(--fx-accent-rgb),0.1); }
+        .fx-gear.has-mode { color: rgba(var(--fx-accent-rgb), 0.85); }
+
+        .fx-slider { width: 100%; height: 3px; border-radius: 2px; background: rgba(255,255,255,0.1); outline: none; -webkit-appearance: none; appearance: none; }
+        .fx-slider::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 13px; height: 13px; border-radius: 50%; background: var(--fx-accent); cursor: pointer; box-shadow: 0 0 0 3px rgba(var(--fx-accent-rgb),0.15); }
+        .fx-slider::-moz-range-thumb { width: 13px; height: 13px; border-radius: 50%; background: var(--fx-accent); cursor: pointer; border: none; }
+        .fx-slider-row { margin: 10px 0; }
+        .fx-slider-label { display: flex; justify-content: space-between; margin-bottom: 6px; font-size: 11px; color: #999; }
+        .fx-slider-value { color: var(--fx-accent); font-weight: 700; }
+
+        .fx-btn { width: 100%; padding: 9px; margin: 5px 0; background: rgba(var(--fx-accent-rgb), 0.08); border: 1px solid rgba(var(--fx-accent-rgb), 0.25); color: #d5dbe0; font-size: 11px; cursor: pointer; border-radius: 3px; transition: all 0.2s; text-transform: uppercase; letter-spacing: 1px; font-weight: 500; font-family: inherit; }
+        .fx-btn:hover { background: rgba(var(--fx-accent-rgb), 0.16); border-color: var(--fx-accent); color: #fff; }
+        .fx-btn:active { transform: scale(0.98); }
+        .fx-btn:disabled { opacity: 0.5; cursor: default; }
+        .fx-btn.fx-btn-accent { background: rgba(var(--fx-accent-rgb), 0.18); border-color: var(--fx-accent); color: #fff; }
+
+        .fx-radio-group { display: flex; gap: 6px; margin: 8px 0; }
+        .fx-radio { flex: 1; padding: 7px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); color: #999; cursor: pointer; border-radius: 3px; font-size: 11px; text-align: center; transition: all 0.2s; font-family: inherit; }
+        .fx-radio:hover { background: rgba(var(--fx-accent-rgb), 0.08); }
+        .fx-radio.active { background: rgba(var(--fx-accent-rgb), 0.15); color: var(--fx-accent); border-color: var(--fx-accent); }
+
+        .fx-color-input { width: 100%; height: 28px; cursor: pointer; margin: 4px 0 2px; border: 1px solid rgba(255,255,255,0.1); border-radius: 3px; background: transparent; }
+        .fx-color-label { font-size: 11px; color: #999; margin-top: 8px; display: block; }
+        .fx-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+        .fx-input { width: 100%; padding: 8px; background: rgba(0,0,0,0.35); border: 1px solid rgba(255,255,255,0.08); color: #e8eef2; border-radius: 3px; font-size: 11px; font-family: inherit; margin-bottom: 4px; box-sizing: border-box; }
+        .fx-input:focus { outline: none; border-color: var(--fx-accent); }
+
+        .bind-btn { width: 100%; padding: 7px; background: rgba(255,255,255,0.03); border: 1px dashed rgba(var(--fx-accent-rgb),0.35); color: var(--fx-accent); border-radius: 3px; cursor: pointer; font-size: 10px; text-align: center; font-family: inherit; }
+        .bind-btn.listening { border-color: #ffcc00; color: #ffcc00; }
+        .bind-btn:hover { background: rgba(var(--fx-accent-rgb),0.06); }
+
+        .skin-list { max-height: 260px; overflow-y: auto; overflow-x: hidden; }
+        .skin-group-title { font-size: 10px; letter-spacing: 1.5px; color: rgba(var(--fx-accent-rgb), 0.8); margin: 10px 0 4px; text-transform: uppercase; opacity: 0.9; }
+
+        .skin-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px; margin-bottom: 4px; }
+        .skin-card { position: relative; cursor: pointer; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 4px; padding: 6px 4px 5px; text-align: center; transition: all 0.15s; }
+        .skin-card:hover { background: rgba(var(--fx-accent-rgb), 0.08); border-color: rgba(var(--fx-accent-rgb), 0.35); }
+        .skin-card.owned { cursor: default; border-color: rgba(var(--fx-accent-rgb), 0.3); background: rgba(var(--fx-accent-rgb), 0.05); }
+        .skin-card-thumb { width: 100%; aspect-ratio: 1.4 / 1; object-fit: contain; display: block; background: radial-gradient(ellipse at center, rgba(255,255,255,0.05), rgba(0,0,0,0.25)); border-radius: 3px; margin-bottom: 4px; }
+        .skin-thumb-empty { border: 1px dashed rgba(255,255,255,0.08); }
+        .skin-card-name { display: block; font-size: 9.5px; color: #cfd6db; line-height: 1.25; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+        .skin-card-gear { position: absolute; top: 2px; left: 2px; cursor: pointer; color: #666; font-size: 11px; padding: 1px 3px; border-radius: 3px; z-index: 2; line-height: 1.4; }
+        .skin-card-gear:hover { color: var(--fx-accent); background: rgba(0,0,0,0.5); }
+        .skin-card-gear.has-mode { color: rgba(var(--fx-accent-rgb), 0.9); }
+        .skin-card-owned { position: absolute; top: 2px; right: 2px; color: var(--fx-accent); font-size: 11px; background: rgba(0,0,0,0.5); border-radius: 50%; width: 14px; height: 14px; display: flex; align-items: center; justify-content: center; line-height: 1; }
+
+        #fx-popover { position: fixed; z-index: 10010; background: rgba(14, 17, 21, 0.98); border: 1px solid rgba(var(--fx-accent-rgb), 0.3); border-radius: 4px; padding: 10px; width: 175px; box-shadow: 0 8px 28px rgba(0,0,0,0.55); display: none; font-family: 'Segoe UI', 'Courier New', monospace; color: #e8eef2; }
+        #fx-popover.skin-pop { width: 215px; }
+        #fx-popover.open { display: block; animation: fxFade 0.15s ease-out; }
+        .fx-popover-title { font-size: 9px; letter-spacing: 1.5px; color: rgba(var(--fx-accent-rgb), 0.85); text-transform: uppercase; margin-bottom: 8px; opacity: 0.95; word-break: break-all; }
+        #fx-popover .fx-radio-group { margin: 0 0 8px; }
+        #fx-popover .fx-radio { padding: 5px; font-size: 10px; }
+
+        .fx-money-row { display: flex; gap: 6px; margin: 6px 0; }
+        .fx-money-row .fx-input { margin-bottom: 0; flex: 1; }
+        .fx-money-row .fx-btn { width: auto; margin: 0; padding: 8px 14px; white-space: nowrap; }
+    `;
+
+    // ============ INTRO ANIMATION ============
+    let introDone = false;
+    function playIntro() {
+        const intro = document.getElementById('fatality-intro'), textEl = document.getElementById('fatality-text'), text = 'FATALITY';
+        textEl.innerHTML = '';
+        for (let i = 0; i < text.length; i++) {
+            const span = document.createElement('span'); span.className = 'letter'; span.textContent = text[i];
+            span.style.animationDelay = (i * 0.12) + 's'; span.style.animation = `reveal 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards`; textEl.appendChild(span);
+        }
+        setTimeout(() => { intro.classList.add('hidden'); introDone = true; openMenu(); startParticles(); }, 3200);
+    }
+
+    // ============ PARTICLES ============
+    function startParticles() {
+        const container = document.getElementById('particles-container');
+        function createParticle() {
+            if (!CFG.particles) return; if (!menuEl || !menuEl.classList.contains('active')) return;
+            const particle = document.createElement('div'); particle.className = 'particle';
+            particle.style.left = Math.random() * window.innerWidth + 'px'; particle.style.top = '-10px';
+            const duration = 8 + Math.random() * 4; particle.style.animation = `fall ${duration}s linear forwards`;
+            container.appendChild(particle); setTimeout(() => particle.remove(), duration * 1000);
+        }
+        setInterval(createParticle, 200);
+    }
+
+    function togRow(id, checked, labelText, gear) {
+        return `<div class="fx-row">
+            <label class="fx-switch"><input type="checkbox" id="${id}" ${checked ? 'checked' : ''}><span class="fx-switch-track"></span></label>
+            <label for="${id}" class="fx-label">${labelText}</label>
+            ${gear ? `<span class="fx-gear ${getFeatureMode(id).mode !== 'always' ? 'has-mode' : ''}" data-gear="${id}" title="Modo de activación">&#9881;</span>` : ''}
+        </div>`;
+    }
+
+    // ============ TAB CONTENT ============
+    const TAB_CONTENT = {
+        aimbot: () => `
+            <div class="fx-section">
+                <div class="fx-section-title">Core</div>
+                ${togRow('aimbot', CFG.aimbot, 'Aimbot', true)}
+                <div class="fx-slider-row">
+                    <div class="fx-slider-label"><span>FOV (°)</span><span class="fx-slider-value" id="aimbot_fov-val">${CFG.aimbot_fov}</span></div>
+                    <input type="range" id="aimbot_fov" class="fx-slider" min="5" max="120" value="${CFG.aimbot_fov}">
+                </div>
+                ${togRow('fov_visible', CFG.fov_visible, 'FOV visible', false)}
+                <div class="fx-slider-row">
+                    <div class="fx-slider-label"><span>Smooth</span><span class="fx-slider-value" id="aimbot_smooth-val">${CFG.aimbot_smooth}</span></div>
+                    <input type="range" id="aimbot_smooth" class="fx-slider" min="1" max="20" value="${CFG.aimbot_smooth}">
+                </div>
+                ${togRow('aimbot_visibleOnly', CFG.aimbot_visibleOnly, 'Solo visibles', false)}
+            </div>
+            <div class="fx-section">
+                <div class="fx-section-title">Target</div>
+                <div class="fx-radio-group">
+                    <button class="fx-radio ${CFG.aimbot_target === 'head' ? 'active' : ''}" data-target="head">Head</button>
+                    <button class="fx-radio ${CFG.aimbot_target === 'chest' ? 'active' : ''}" data-target="chest">Chest</button>
+                </div>
+            </div>
+            <div class="fx-section">
+                <div class="fx-section-title">Triggerbot</div>
+                ${togRow('ragebot_triggerbot', CFG.ragebot_triggerbot, 'Triggerbot', true)}
+                <div class="fx-slider-row">
+                    <div class="fx-slider-label"><span>Delay (ms)</span><span class="fx-slider-value" id="triggerbot_delay-val">${CFG.triggerbot_delay}</span></div>
+                    <input type="range" id="triggerbot_delay" class="fx-slider" min="0" max="100" value="${CFG.triggerbot_delay}">
+                </div>
+            </div>
+        `,
+        ragebot: () => `
+            <div class="fx-section">
+                <div class="fx-section-title">Rage Aim</div>
+                <div class="fx-section-hint">Misma lógica que el Aimbot pero con FOV al máximo (180°) y smoothness 1 — snap instantáneo al objetivo más cercano.</div>
+                ${togRow('ragebot_aim', CFG.ragebot_aim, 'Rage Aim (Snap)', true)}
+            </div>
+            <div class="fx-section">
+                <div class="fx-section-title">Auto Fire</div>
+                ${togRow('aimbot_autofire', CFG.aimbot_autofire, 'Auto Fire', true)}
+            </div>
+            <div class="fx-section">
+                <div class="fx-section-title">Damage</div>
+                ${togRow('ragebot_damage_enabled', CFG.ragebot_damage_enabled, 'Damage Multiplier', true)}
+                <div class="fx-slider-row">
+                    <div class="fx-slider-label"><span>Damage x</span><span class="fx-slider-value" id="ragebot_damage-val">${CFG.ragebot_damage}</span></div>
+                    <input type="range" id="ragebot_damage" class="fx-slider" min="1" max="100" value="${CFG.ragebot_damage}">
+                </div>
+                ${togRow('ragebot_onetap', CFG.ragebot_onetap, 'One-Tap Kill', true)}
+            </div>
+            <div class="fx-section">
+                <div class="fx-section-title">Weapon</div>
+                ${togRow('ragebot_rapid', CFG.ragebot_rapid, 'Rapid Fire', true)}
+                ${togRow('ragebot_norecoil', CFG.ragebot_norecoil, 'No Recoil', true)}
+                ${togRow('ragebot_nospread', CFG.ragebot_nospread, 'No Spread', true)}
+                ${togRow('infammo', CFG.infammo, 'Infinite Ammo', true)}
+            </div>
+        `,
+        esp: () => `
+            <div class="fx-section">
+                <div class="fx-section-title">Display</div>
+                ${togRow('esp', CFG.esp, 'ESP Overlay', true)}
+                ${togRow('esp_boxes', CFG.esp_boxes, 'Boxes', false)}
+                ${togRow('esp_skeleton', CFG.esp_skeleton, 'Skeleton', false)}
+                ${togRow('esp_health', CFG.esp_health, 'Health Bars', false)}
+                ${togRow('esp_names', CFG.esp_names, 'Names', false)}
+                ${togRow('esp_headdot', CFG.esp_headdot, 'Head Dot', false)}
+            </div>
+            <div class="fx-section">
+                <div class="fx-section-title">Chams</div>
+                <div class="fx-section-hint">Color plano que ignora la iluminación y se ve a través de paredes. Descarta mallas planas (sombras/marcadores de suelo) y solo highlightea el modelo real.</div>
+                ${togRow('esp_chams', CFG.esp_chams, 'Chams', false)}
+            </div>
+            <div class="fx-section">
+                <div class="fx-section-title">Colors</div>
+                <div class="fx-grid-2">
+                    <div><span class="fx-color-label">Visible</span><input type="color" id="esp_visible_color" class="fx-color-input" value="${CFG.esp_visible_color}"></div>
+                    <div><span class="fx-color-label">Hidden</span><input type="color" id="esp_hidden_color" class="fx-color-input" value="${CFG.esp_hidden_color}"></div>
+                </div>
+            </div>
+        `,
+        skins: () => `
+            <div class="fx-section">
+                <div class="fx-section-title">Buscar</div>
+                <input type="text" id="skin-search" class="fx-input" placeholder="Buscar skin por nombre...">
+                <button class="fx-btn fx-btn-accent" id="skin-give-all">Dar todas las skins</button>
+            </div>
+            <div class="fx-section">
+                <div class="fx-section-title">Skins (agrupadas por arma)</div>
+                <div class="fx-section-hint">Wear y seed son aleatorios al añadir. Usa la ruedita &#9881; de cada skin para fijarlos a mano. Clic en la tarjeta para añadirla.</div>
+                <div id="skin-list-container" class="skin-list">
+                    <div style="color:#888;padding:14px;text-align:center;font-size:11px;">Cargando base de datos...</div>
+                </div>
+            </div>
+        `,
+        misc: () => `
+            <div class="fx-section">
+                <div class="fx-section-title">Survival</div>
+                ${togRow('godmode', CFG.godmode, 'Godmode', true)}
+                ${togRow('armor', CFG.armor, 'Full Armor', true)}
+                ${togRow('antiflash', CFG.antiflash, 'Anti-Flash', true)}
+                ${togRow('infmoney', CFG.infmoney, 'Infinite Money', true)}
+            </div>
+            <div class="fx-section">
+                <div class="fx-section-title">Movement</div>
+                <div class="fx-slider-row">
+                    <div class="fx-slider-label"><span>Speed x</span><span class="fx-slider-value" id="speed-val">${CFG.speed.toFixed(1)}</span></div>
+                    <input type="range" id="speed" class="fx-slider" min="1" max="5" step="0.1" value="${CFG.speed}">
+                </div>
+                ${togRow('bhop', CFG.bhop, 'Bunnyhop (HOLD SPACE)', false)}
+                ${togRow('jumppower', CFG.jumppower, 'Jump Power', true)}
+                <div class="fx-slider-row">
+                    <div class="fx-slider-label"><span>Multiplicador</span><span class="fx-slider-value" id="jumppower_mult-val">${CFG.jumppower_mult.toFixed(1)}</span></div>
+                    <input type="range" id="jumppower_mult" class="fx-slider" min="1" max="4" step="0.1" value="${CFG.jumppower_mult}">
+                </div>
+            </div>
+            <div class="fx-section">
+                <div class="fx-section-title">Camera</div>
+                ${togRow('thirdperson', CFG.thirdperson, 'Third Person', true)}
+                <div class="fx-slider-row">
+                    <div class="fx-slider-label"><span>Distancia</span><span class="fx-slider-value" id="thirdperson_distance-val">${CFG.thirdperson_distance}</span></div>
+                    <input type="range" id="thirdperson_distance" class="fx-slider" min="2" max="8" step="0.5" value="${CFG.thirdperson_distance}">
+                </div>
+            </div>
+            <div class="fx-section">
+                <div class="fx-section-title">Ambient Light</div>
+                <div class="fx-section-hint">Cambia el color/intensidad de la luz ambiente GLOBAL de la escena (no la del jugador).</div>
+                ${togRow('ambient_color', CFG.ambient_color, 'Ambient Color', true)}
+                <input type="color" id="ambient_color_value" class="fx-color-input" value="${CFG.ambient_color_value}">
+                <div class="fx-slider-row">
+                    <div class="fx-slider-label"><span>Intensidad</span><span class="fx-slider-value" id="ambient_intensity-val">${CFG.ambient_intensity}</span></div>
+                    <input type="range" id="ambient_intensity" class="fx-slider" min="0.5" max="5" step="0.1" value="${CFG.ambient_intensity}">
+                </div>
+            </div>
+            <div class="fx-section">
+                <div class="fx-section-title">Feedback</div>
+                ${togRow('hitmarker', CFG.hitmarker, 'Hit Marker', false)}
+                ${togRow('hitsound', CFG.hitsound, 'Hit Sound', false)}
+            </div>
+            <div class="fx-section">
+                <div class="fx-section-title">Dinero de partida (en vivo)</div>
+                <div class="fx-section-hint">Modifica el dinero actual de la partida (P.money) — solo funciona mientras estás jugando.</div>
+                <div class="fx-money-row">
+                    <input type="number" id="ingame-money-amount" class="fx-input" placeholder="Cantidad" value="5000">
+                    <button class="fx-btn" id="give-ingame-money">Add</button>
+                </div>
+            </div>
+            <div class="fx-section">
+                <div class="fx-section-title">Coins de tienda (localStorage)</div>
+                <div class="fx-section-hint">Modifica las coins guardadas para comprar cajas/skins (persisten entre partidas).</div>
+                <div class="fx-money-row">
+                    <input type="number" id="money-amount" class="fx-input" placeholder="Cantidad" value="16000">
+                    <button class="fx-btn" id="give-money">Add</button>
+                </div>
+            </div>
+        `,
+        config: () => `
+            <div class="fx-section">
+                <div class="fx-section-title">Menú</div>
+                <div class="fx-section-hint">Tecla para abrir / cerrar el menú. Pulsa Esc mientras escuchas para cancelar.</div>
+                <button class="bind-btn" id="menu-key-bind">${keyLabel(CFG.menu_key || 'Insert')}</button>
+            </div>
+            <div class="fx-section">
+                <div class="fx-section-title">Tema</div>
+                <span class="fx-color-label">Color del menú</span>
+                <input type="color" id="menu_color" class="fx-color-input" value="${CFG.menu_color}">
+            </div>
+            <div class="fx-section">
+                <div class="fx-section-title">Tamaño del menú</div>
+                <div class="fx-slider-row">
+                    <div class="fx-slider-label"><span>Escala</span><span class="fx-slider-value" id="menu_scale-val">${CFG.menu_scale}%</span></div>
+                    <input type="range" id="menu_scale" class="fx-slider" min="30" max="300" step="5" value="${CFG.menu_scale}">
+                </div>
+            </div>
+            <div class="fx-section">
+                <div class="fx-section-title">Configuración</div>
+                <button class="fx-btn" id="export-cfg">Export Config</button>
+                <button class="fx-btn" id="import-cfg">Import Config</button>
+            </div>
+            <div class="fx-section">
+                <div class="fx-section-title">UI</div>
+                ${togRow('particles', CFG.particles, 'Partículas (solo con menú abierto)', false)}
+            </div>
+            <div class="fx-section">
+                <div class="fx-section-title">Hotkeys</div>
+                <div style="font-size: 11px; color: #888; line-height: 1.8;">
+                    <div><b style="color:var(--fx-accent)">${keyLabel(CFG.menu_key || 'Insert')}</b> — Abrir / cerrar menú</div>
+                    <div><b style="color:var(--fx-accent)">SPACE</b> — Bunnyhop</div>
+                    <div style="margin-top:6px; color:#666;">Cada feature con &#9881; tiene su propio Always/Hold/Toggle</div>
+                </div>
+            </div>
+            <div class="fx-section">
+                <div class="fx-section-title">Info</div>
+                <div style="font-size: 10px; color: #555; line-height: 1.8;">FATALITY v8.4.1 — Clutcher.io</div>
+            </div>
+        `
+    };
+
+    // ============ MENU OPEN / CLOSE ============
+    let menuEl = null;
+    const menuState = { left: 12, top: 60, minimized: false, tab: 'aimbot' };
+    let bindingMenuKey = false, lastStatus = 'menu ready', dragState = null;
+
+    function openMenu() {
+        if (menuEl || !introDone) return;
+        const menu = document.createElement('div');
+        menu.id = 'fatality-menu';
+        menu.style.left = menuState.left + 'px'; menu.style.top = menuState.top + 'px';
+        if (menuState.minimized) menu.classList.add('minimized');
+        menu.innerHTML = `
+            <div class="fx-header">
+                <div class="fx-title">FATALITY</div>
+                <div class="fx-header-btns">
+                    <div class="fx-hbtn fx-min" id="fx-min" title="Minimizar">&#8722;</div>
+                    <div class="fx-hbtn fx-close" id="fx-close" title="Cerrar">&#10005;</div>
+                </div>
+            </div>
+            <div class="fx-body">
+                <div class="fx-sidebar">
+                    <div class="fx-tab" data-tab="aimbot">Aimbot</div>
+                    <div class="fx-tab" data-tab="ragebot">Ragebot</div>
+                    <div class="fx-tab" data-tab="esp">ESP</div>
+                    <div class="fx-tab" data-tab="skins">Skins</div>
+                    <div class="fx-tab" data-tab="misc">Misc</div>
+                    <div class="fx-tab" data-tab="config">Config</div>
+                    <div class="fx-status" id="fx-status">status: ${lastStatus}</div>
+                </div>
+                <div class="fx-content" id="fx-content"></div>
+            </div>
+        `;
+        document.documentElement.appendChild(menu);
+        menuEl = menu;
+        menu.querySelectorAll('.fx-tab').forEach(tab => { tab.addEventListener('click', () => switchTab(tab.dataset.tab)); });
+        menu.querySelector('.fx-header').addEventListener('mousedown', (e) => { if (e.target.closest('.fx-hbtn')) return; dragState = { sx: e.clientX, sy: e.clientY, ox: menu.offsetLeft, oy: menu.offsetTop }; });
+        document.getElementById('fx-min').addEventListener('click', () => { menuState.minimized = !menuState.minimized; menu.classList.toggle('minimized', menuState.minimized); document.getElementById('fx-popover')?.classList.remove('open'); });
+        document.getElementById('fx-close').addEventListener('click', closeMenu);
+        switchTab(menuState.tab);
+        requestAnimationFrame(() => requestAnimationFrame(() => menu.classList.add('active')));
+    }
+
+    function closeMenu() { if (!menuEl) return; document.getElementById('fx-popover')?.classList.remove('open'); menuEl.remove(); menuEl = null; dragState = null; }
+    function toggleMenu() { if (menuEl) closeMenu(); else openMenu(); }
+
+    function switchTab(tabName) {
+        if (!menuEl) return;
+        menuState.tab = tabName;
+        document.getElementById('fx-popover')?.classList.remove('open');
+        menuEl.querySelectorAll('.fx-tab').forEach(t => t.classList.remove('active'));
+        menuEl.querySelector(`[data-tab="${tabName}"]`)?.classList.add('active');
+        const content = document.getElementById('fx-content');
+        content.innerHTML = TAB_CONTENT[tabName]?.() || '';
+        attachEvents();
+        if (tabName === 'skins') initSkinsTab();
+    }
+
+    function openPopover(id, gearEl) {
+        const pop = document.getElementById('fx-popover');
+        pop.classList.remove('skin-pop');
+        const m = getFeatureMode(id);
+        pop.innerHTML = `
+            <div class="fx-popover-title">Activación</div>
+            <div class="fx-radio-group">
+                <button class="fx-radio ${m.mode === 'always' ? 'active' : ''}" data-pmode="always">Always</button>
+                <button class="fx-radio ${m.mode === 'hold' ? 'active' : ''}" data-pmode="hold">Hold</button>
+                <button class="fx-radio ${m.mode === 'toggle' ? 'active' : ''}" data-pmode="toggle">Toggle</button>
+            </div>
+            <button class="bind-btn" id="pop-bind">${m.key ? keyLabel(m.key) : 'Asignar tecla'}</button>
+        `;
+        const rect = gearEl.getBoundingClientRect();
+        pop.style.left = Math.max(8, Math.min(rect.left - 100, window.innerWidth - 190)) + 'px';
+        pop.style.top = (rect.bottom + 6) + 'px';
+        pop.classList.add('open');
+        pop.dataset.currentId = id;
+        pop.querySelectorAll('[data-pmode]').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                pop.querySelectorAll('[data-pmode]').forEach(b => b.classList.remove('active'));
+                e.target.classList.add('active'); getFeatureMode(id).mode = e.target.dataset.pmode; toggleStates[id] = false; saveCfg();
+                const gear = document.querySelector(`[data-gear="${id}"]`); if (gear) gear.classList.toggle('has-mode', e.target.dataset.pmode !== 'always');
+            });
+        });
+        document.getElementById('pop-bind').addEventListener('click', (e) => {
+            const btn = e.target; btn.classList.add('listening'); btn.textContent = 'Presiona algo...';
+            const finish = (code) => { getFeatureMode(id).key = code; saveCfg(); document.removeEventListener('keydown', onKey, true); document.removeEventListener('mousedown', onMouse, true); btn.classList.remove('listening'); btn.textContent = keyLabel(code); };
+            const onKey = (ev) => { ev.preventDefault(); ev.stopPropagation(); finish(ev.code); };
+            const onMouse = (ev) => { ev.preventDefault(); ev.stopPropagation(); finish('Mouse' + ev.button); };
+            document.addEventListener('keydown', onKey, true); document.addEventListener('mousedown', onMouse, true);
+        });
+    }
+
+    function openSkinPopover(id, gearEl) {
+        const pop = document.getElementById('fx-popover'), o = getSkinOpts(id);
+        pop.classList.add('skin-pop');
+        pop.innerHTML = `
+            <div class="fx-popover-title">${escHtml(id)}</div>
+            <span class="fx-color-label">Wear (0 – 1)</span>
+            <input type="number" id="skin-opt-wear" class="fx-input" min="0" max="1" step="0.001" placeholder="Aleatorio" value="${o.wear != null ? o.wear : ''}">
+            <span class="fx-color-label">Seed (0 – 1000)</span>
+            <input type="number" id="skin-opt-seed" class="fx-input" min="0" max="1000" step="1" placeholder="Aleatorio" value="${o.seed != null ? o.seed : ''}">
+            <button class="fx-btn" id="skin-opt-reset">Volver a aleatorio</button>
+            <div class="fx-section-hint" style="margin:6px 0 0">Vacío = aleatorio al añadir. Si ya la tienes, se actualiza en el inventario (refresca el juego).</div>
+        `;
+        const rect = gearEl.getBoundingClientRect();
+        pop.style.left = Math.max(8, Math.min(rect.left - 110, window.innerWidth - 235)) + 'px';
+        pop.style.top = (rect.bottom + 6) + 'px'; pop.classList.add('open');
+        const wEl = document.getElementById('skin-opt-wear'), sEl = document.getElementById('skin-opt-seed');
+        const save = () => {
+            const w = wEl.value === '' ? NaN : Math.min(1, Math.max(0, parseFloat(wEl.value))), s = sEl.value === '' ? NaN : Math.min(1000, Math.max(0, parseInt(sEl.value, 10)));
+            const entry = {}; if (!isNaN(w)) entry.wear = w; if (!isNaN(s)) entry.seed = s;
+            if (!CFG.skinOpts) CFG.skinOpts = {};
+            if (Object.keys(entry).length) CFG.skinOpts[id] = entry; else delete CFG.skinOpts[id];
+            saveCfg(); updateOwnedSkin(id, entry); gearEl.classList.toggle('has-mode', Object.keys(entry).length > 0);
+        };
+        wEl.addEventListener('input', save); sEl.addEventListener('input', save);
+        document.getElementById('skin-opt-reset').addEventListener('click', () => { wEl.value = ''; sEl.value = ''; save(); });
+    }
+
+    function attachEvents() {
+        document.querySelectorAll('.fx-switch input, input[type="checkbox"]').forEach(cb => { cb.addEventListener('change', (e) => { CFG[e.target.id] = e.target.checked; saveCfg(); }); });
+        document.querySelectorAll('.fx-slider').forEach(slider => {
+            slider.addEventListener('input', (e) => {
+                const id = e.target.id, val = parseFloat(e.target.value); CFG[id] = val;
+                if (id === 'menu_scale') applyMenuScale(val);
+                const valEl = document.getElementById(id + '-val'); if (valEl) { if (id === 'menu_scale') valEl.textContent = val + '%'; else valEl.textContent = (Number.isInteger(val) ? val : val.toFixed(1)); }
+                saveCfg();
+            });
+        });
+        document.querySelectorAll('.fx-color-input').forEach(ci => { ci.addEventListener('change', (e) => { CFG[e.target.id] = e.target.value; if (e.target.id === 'menu_color') applyThemeColor(e.target.value); saveCfg(); }); });
+        document.querySelectorAll('[data-target]').forEach(btn => { btn.addEventListener('click', (e) => { document.querySelectorAll('[data-target]').forEach(b => b.classList.remove('active')); e.target.classList.add('active'); CFG.aimbot_target = e.target.dataset.target; saveCfg(); }); });
+        document.querySelectorAll('.fx-gear').forEach(g => { g.addEventListener('click', (e) => { e.stopPropagation(); openPopover(g.dataset.gear, g); }); });
+        document.getElementById('menu-key-bind')?.addEventListener('click', (e) => {
+            const btn = e.currentTarget; btn.classList.add('listening'); btn.textContent = 'Presiona una tecla...'; bindingMenuKey = true;
+            const onKey = (ev) => { ev.preventDefault(); ev.stopPropagation(); document.removeEventListener('keydown', onKey, true); bindingMenuKey = false; if (ev.code !== 'Escape') { CFG.menu_key = ev.code; saveCfg(); setStatus('menu key: ' + keyLabel(ev.code)); } switchTab('config'); };
+            document.addEventListener('keydown', onKey, true);
+        });
+        document.getElementById('export-cfg')?.addEventListener('click', () => { const blob = new Blob([JSON.stringify(CFG, null, 2)], { type: 'application/json' }); const url = URL.createObjectURL(blob); const a = document.createElement('a'); a.href = url; a.download = 'fatality_config.json'; a.click(); URL.revokeObjectURL(url); });
+        document.getElementById('import-cfg')?.addEventListener('click', () => { const input = document.createElement('input'); input.type = 'file'; input.accept = '.json'; input.onchange = (e) => { const file = e.target.files[0]; if (!file) return; const reader = new FileReader(); reader.onload = (ev) => { try { const imported = JSON.parse(ev.target.result); Object.assign(CFG, imported); if (!CFG.modes) CFG.modes = {}; if (!CFG.skinOpts) CFG.skinOpts = {}; saveCfg(); applyThemeColor(CFG.menu_color || '#ffffff'); applyMenuScale(CFG.menu_scale); switchTab(menuState.tab); setStatus('Config imported'); } catch (err) { setStatus('Import failed'); } }; reader.readAsText(file); }; input.click(); });
+        document.getElementById('give-ingame-money')?.addEventListener('click', () => { try { const amount = parseInt(document.getElementById('ingame-money-amount')?.value, 10) || 5000; const P = player(); if (!P || !playing()) { setStatus('Debes estar en partida'); return; } P.money = (P.money || 0) + amount; setStatus('+' + amount + ' dinero de partida'); } catch (e) { setStatus('Error'); } });
+        document.getElementById('give-money')?.addEventListener('click', () => { try { const amount = parseInt(document.getElementById('money-amount')?.value, 10) || 16000; const raw = localStorage.getItem('clutcher_inv_v1'); if (!raw) { setStatus('Open game menu first'); return; } const d = JSON.parse(raw); d.coins = (d.coins || 0) + amount; localStorage.setItem('clutcher_inv_v1', JSON.stringify(d)); setStatus('+' + amount + ' coins de tienda'); } catch (e) { setStatus('Error'); } });
+    }
+
+    function setStatus(msg) { lastStatus = msg; const statusEl = document.getElementById('fx-status'); if (statusEl) statusEl.textContent = 'status: ' + msg; }
+
+    // ============ HOTKEYS ============
+    document.addEventListener('keydown', (e) => {
+        if (bindingMenuKey) return;
+        var t = e.target, typing = !!(t && (t.tagName === 'TEXTAREA' || t.isContentEditable || (t.tagName === 'INPUT' && !['range', 'color', 'checkbox', 'button'].includes(t.type))));
+        if (e.code === (CFG.menu_key || 'Insert') && !typing && !e.repeat) toggleMenu();
+        if (e.code === 'Space') bhopActive = CFG.bhop;
+    });
+    document.addEventListener('keyup', (e) => { if (e.code === 'Space') bhopActive = false; });
+    document.addEventListener('mousemove', (e) => { if (!dragState || !menuEl) return; menuState.left = dragState.ox + e.clientX - dragState.sx; menuState.top = dragState.oy + e.clientY - dragState.sy; menuEl.style.left = menuState.left + 'px'; menuEl.style.top = menuState.top + 'px'; });
+    document.addEventListener('mouseup', () => { dragState = null; });
+
+    // ============ DOM CREATION ============
+    function createUI() {
+        const styleEl = document.createElement('style');
+        styleEl.textContent = STYLES + `
+            @keyframes reveal { 0% { opacity: 0; transform: translateX(-40px); } 100% { opacity: 1; transform: translateX(0); } }
+            @keyframes fall { to { transform: translateY(100vh); opacity: 0; } }
+        `;
+        document.head.appendChild(styleEl);
+        applyThemeColor(CFG.menu_color || '#ffffff');
+        applyMenuScale(CFG.menu_scale);
+        const intro = document.createElement('div'); intro.id = 'fatality-intro'; intro.innerHTML = '<div id="fatality-text"></div>';
+        const particles = document.createElement('div'); particles.id = 'particles-container';
+        const popover = document.createElement('div'); popover.id = 'fx-popover';
+        document.documentElement.appendChild(intro);
+        document.documentElement.appendChild(particles);
+        document.documentElement.appendChild(popover);
+        document.addEventListener('click', (e) => { if (popover.classList.contains('open') && !popover.contains(e.target) && !e.target.classList.contains('fx-gear') && !e.target.classList.contains('skin-card-gear')) { popover.classList.remove('open'); } });
+    }
+
+    // ============ INIT ============
+    window.addEventListener('load', () => {
+        createUI();
+        ensureEsp();
+        playIntro();
+        setTimeout(() => { setStatus('menu ready'); gameLoop(); }, 3500);
+    }, { once: true });
+
+})();
