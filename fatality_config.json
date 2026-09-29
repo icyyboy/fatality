@@ -1,0 +1,191 @@
+{
+  "aimbot": true,
+  "aimbot_fov": 120,
+  "fov_visible": false,
+  "aimbot_smooth": 20,
+  "aimbot_autofire": true,
+  "aimbot_visibleOnly": true,
+  "aimbot_target": "head",
+  "ragebot_triggerbot": false,
+  "triggerbot_delay": 10,
+  "ragebot_damage_enabled": false,
+  "ragebot_damage": 10,
+  "ragebot_onetap": true,
+  "ragebot_rapid": false,
+  "ragebot_norecoil": false,
+  "ragebot_nospread": false,
+  "ragebot_aim": false,
+  "infammo": false,
+  "esp": true,
+  "esp_boxes": false,
+  "esp_health": true,
+  "esp_names": false,
+  "esp_chams": false,
+  "esp_headdot": false,
+  "esp_skeleton": true,
+  "esp_visible_color": "#4a4a4a",
+  "esp_hidden_color": "#ffffff",
+  "chams_advanced": true,
+  "chams_xray": true,
+  "chams_relative": true,
+  "chams_ct_color": "#ffffff",
+  "chams_t_color": "#ffffff",
+  "chams_ally_color": "#ffffff",
+  "chams_enemy_color": "#ffffff",
+  "chams_alpha": 0.3,
+  "chams_emissive": 0.45,
+  "hitmarker": false,
+  "hitsound": false,
+  "godmode": false,
+  "armor": false,
+  "antiflash": false,
+  "infmoney": false,
+  "speed": 2,
+  "bhop": true,
+  "jumppower": false,
+  "jumppower_mult": 1.5,
+  "thirdperson": false,
+  "thirdperson_distance": 3,
+  "thirdperson_height": 0.65,
+  "ambient_color": true,
+  "ambient_color_value": "#ffffff",
+  "ambient_intensity": 0.5,
+  "fake_scoped": false,
+  "fake_crouch": false,
+  "spinbot": false,
+  "spinbot_speed": 0.35,
+  "antiaim": false,
+  "antiaim_mode": "backwards",
+  "antiaim_yaw_offset": 180,
+  "custom_crosshair": false,
+  "crosshair_size": 8,
+  "crosshair_gap": 4,
+  "crosshair_thickness": 2,
+  "crosshair_color": "#00ff99",
+  "crosshair_dot": false,
+  "crosshair_alpha": 1,
+  "crosshair_style": "classic",
+  "fov_editor": false,
+  "fov_value": 90,
+  "tracers": true,
+  "tracers_bots": false,
+  "tracers_life": 0.5,
+  "tracers_width": 2.5,
+  "silent_aim": true,
+  "silent_aim_fov": 25,
+  "silent_aim_smooth": 0,
+  "fun_confetti": false,
+  "fun_rainbow": false,
+  "fun_wireframe": true,
+  "fun_confetti_count": 40,
+  "fun_rainbow_speed": 0.1,
+  "killfx": true,
+  "killfx_mode": "he",
+  "killfx_big": true,
+  "killfx_instant": true,
+  "killfx_delay": 0,
+  "killfx_multi": 3,
+  "particles": true,
+  "menu_color": "#ffffff",
+  "menu_scale": 135,
+  "menu_key": "Insert",
+  "modes": {
+    "aimbot": {
+      "mode": "always",
+      "key": null
+    },
+    "silent_aim": {
+      "mode": "always",
+      "key": null
+    },
+    "ragebot_triggerbot": {
+      "mode": "always",
+      "key": null
+    },
+    "esp": {
+      "mode": "always",
+      "key": null
+    },
+    "ragebot_aim": {
+      "mode": "always",
+      "key": null
+    },
+    "aimbot_autofire": {
+      "mode": "always",
+      "key": null
+    },
+    "ragebot_damage_enabled": {
+      "mode": "always",
+      "key": null
+    },
+    "ragebot_onetap": {
+      "mode": "always",
+      "key": null
+    },
+    "ragebot_rapid": {
+      "mode": "always",
+      "key": null
+    },
+    "ragebot_norecoil": {
+      "mode": "always",
+      "key": null
+    },
+    "ragebot_nospread": {
+      "mode": "always",
+      "key": null
+    },
+    "infammo": {
+      "mode": "always",
+      "key": null
+    },
+    "tracers": {
+      "mode": "always",
+      "key": null
+    },
+    "godmode": {
+      "mode": "always",
+      "key": null
+    },
+    "armor": {
+      "mode": "always",
+      "key": null
+    },
+    "antiflash": {
+      "mode": "always",
+      "key": null
+    },
+    "infmoney": {
+      "mode": "always",
+      "key": null
+    },
+    "jumppower": {
+      "mode": "always",
+      "key": null
+    },
+    "fake_scoped": {
+      "mode": "always",
+      "key": null
+    },
+    "fake_crouch": {
+      "mode": "always",
+      "key": null
+    },
+    "spinbot": {
+      "mode": "always",
+      "key": null
+    },
+    "antiaim": {
+      "mode": "always",
+      "key": null
+    },
+    "thirdperson": {
+      "mode": "always",
+      "key": null
+    },
+    "ambient_color": {
+      "mode": "always",
+      "key": null
+    }
+  },
+  "skinOpts": {}
+}
