@@ -1,0 +1,40 @@
+const CT_BOTS = 0;
+const T_BOTS = 8;
+(function () {
+  const g = window.game;
+  if (!g || !g.botMgr) {
+    console.error("[bot patch] window.game not found – open the game first");
+    return;
+  }
+  const mgr = g.botMgr;
+  const origSetup = mgr.setup.bind(mgr);
+  mgr.setup = function (total, difficulty, playerTeam) {
+    const need = CT_BOTS + T_BOTS;
+    origSetup(Math.max(need, 1), difficulty, playerTeam);
+    const Bot = this.bots[0] && this.bots[0].constructor;
+    if (!Bot) {
+      console.error("[bot patch] could not get Bot constructor");
+      return;
+    }
+    for (const b of this.bots) {
+      try {
+        g.scene.remove(b.mesh);
+        g.scene.remove(b.shadow);
+        if (b.cs2Agent) g.scene.remove(b.cs2Agent.root);
+      } catch (e) {}
+    }
+    this.bots.length = 0;
+    const names = (g._nextBotNames) || [];
+    let idx = 0;
+    const add = (team) => {
+      const name = names[idx % (names.length || 1)] || ("Bot" + idx);
+      const bot = new Bot(g, team, name, difficulty);
+      this.bots.push(bot);
+      idx++;
+    };
+    for (let i = 0; i < CT_BOTS; i++) add("CT");
+    for (let i = 0; i < T_BOTS; i++) add("T");
+    console.log(`[bot patch] CT=${CT_BOTS}  T=${T_BOTS}`);
+  };
+  console.log("[bot patch] installed. Start a NEW match (or re-join) for it to apply.");
+})();
