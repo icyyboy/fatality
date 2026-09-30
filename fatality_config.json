@@ -1,9 +1,9 @@
 {
-  "aimbot": true,
-  "aimbot_fov": 120,
+  "aimbot": false,
+  "aimbot_fov": 25,
   "fov_visible": false,
-  "aimbot_smooth": 20,
-  "aimbot_autofire": true,
+  "aimbot_smooth": 4,
+  "aimbot_autofire": false,
   "aimbot_visibleOnly": true,
   "aimbot_target": "head",
   "ragebot_triggerbot": false,
@@ -11,36 +11,56 @@
   "ragebot_damage_enabled": false,
   "ragebot_damage": 10,
   "ragebot_onetap": true,
-  "ragebot_rapid": false,
-  "ragebot_norecoil": false,
-  "ragebot_nospread": false,
+  "ragebot_rapid": true,
+  "ragebot_norecoil": true,
+  "ragebot_nospread": true,
   "ragebot_aim": false,
-  "infammo": false,
+  "ragebot_enabled": true,
+  "ragebot_fov": 180,
+  "ragebot_maxdist": 200,
+  "ragebot_wallbang": true,
+  "ragebot_penmargin": 1,
+  "ragebot_shootdelay": 0,
+  "ragebot_silent": true,
+  "ragebot_teamcheck": true,
+  "ragebot_aimbone": "head",
+  "ragebot_autofire2": true,
+  "ragebot_debug": false,
+  "infammo": true,
+  "infgrenades": true,
   "esp": true,
   "esp_boxes": false,
-  "esp_health": true,
+  "esp_health": false,
   "esp_names": false,
   "esp_chams": false,
   "esp_headdot": false,
   "esp_skeleton": true,
-  "esp_visible_color": "#4a4a4a",
+  "esp_visible_color": "#949494",
   "esp_hidden_color": "#ffffff",
+  "drops_esp": true,
+  "drops_esp_maxdist": 200,
+  "drops_esp_color": "#ffffff",
+  "drops_esp_fontsize": 9,
+  "vm_tint": true,
+  "vm_color": "#ffffff",
+  "vm_opacity": 0.85,
+  "vm_tint_strength": 0.55,
   "chams_advanced": true,
   "chams_xray": true,
   "chams_relative": true,
   "chams_ct_color": "#ffffff",
-  "chams_t_color": "#ffffff",
-  "chams_ally_color": "#ffffff",
+  "chams_t_color": "#ff5722",
+  "chams_ally_color": "#000000",
   "chams_enemy_color": "#ffffff",
-  "chams_alpha": 0.3,
-  "chams_emissive": 0.45,
+  "chams_alpha": 0.7,
+  "chams_emissive": 0.85,
   "hitmarker": false,
   "hitsound": false,
-  "godmode": false,
-  "armor": false,
-  "antiflash": false,
-  "infmoney": false,
-  "speed": 2,
+  "godmode": true,
+  "armor": true,
+  "antiflash": true,
+  "infmoney": true,
+  "speed": 1.4,
   "bhop": true,
   "jumppower": false,
   "jumppower_mult": 1.5,
@@ -49,7 +69,7 @@
   "thirdperson_height": 0.65,
   "ambient_color": true,
   "ambient_color_value": "#ffffff",
-  "ambient_intensity": 0.5,
+  "ambient_intensity": 5,
   "fake_scoped": false,
   "fake_crouch": false,
   "spinbot": false,
@@ -57,37 +77,48 @@
   "antiaim": false,
   "antiaim_mode": "backwards",
   "antiaim_yaw_offset": 180,
-  "custom_crosshair": false,
-  "crosshair_size": 8,
-  "crosshair_gap": 4,
+  "custom_crosshair": true,
+  "crosshair_size": 30,
+  "crosshair_gap": 1,
   "crosshair_thickness": 2,
-  "crosshair_color": "#00ff99",
-  "crosshair_dot": false,
+  "crosshair_color": "#ffffff",
+  "crosshair_dot": true,
   "crosshair_alpha": 1,
   "crosshair_style": "classic",
-  "fov_editor": false,
-  "fov_value": 90,
+  "fov_editor": true,
+  "fov_value": 112,
   "tracers": true,
-  "tracers_bots": false,
+  "tracers_bots": true,
   "tracers_life": 0.5,
   "tracers_width": 2.5,
-  "silent_aim": true,
+  "silent_aim": false,
   "silent_aim_fov": 25,
   "silent_aim_smooth": 0,
+  "fog_enabled": true,
+  "fog_color": "#ffffff",
+  "fog_near": 10.5,
+  "fog_far": 28,
+  "fog_density": 0.045,
+  "bot_ct": 0,
+  "bot_t": 7,
   "fun_confetti": false,
   "fun_rainbow": false,
-  "fun_wireframe": true,
-  "fun_confetti_count": 40,
-  "fun_rainbow_speed": 0.1,
+  "fun_wireframe": false,
+  "fun_confetti_count": 80,
+  "fun_rainbow_speed": 0.4,
   "killfx": true,
   "killfx_mode": "he",
   "killfx_big": true,
   "killfx_instant": true,
   "killfx_delay": 0,
-  "killfx_multi": 3,
+  "killfx_multi": 1,
+  "autowin": false,
+  "autowin_interval": 1,
+  "autokill": false,
+  "autokill_interval": 200,
   "particles": true,
   "menu_color": "#ffffff",
-  "menu_scale": 135,
+  "menu_scale": 145,
   "menu_key": "Insert",
   "modes": {
     "aimbot": {
@@ -102,43 +133,11 @@
       "mode": "always",
       "key": null
     },
-    "esp": {
+    "autokill": {
       "mode": "always",
       "key": null
     },
-    "ragebot_aim": {
-      "mode": "always",
-      "key": null
-    },
-    "aimbot_autofire": {
-      "mode": "always",
-      "key": null
-    },
-    "ragebot_damage_enabled": {
-      "mode": "always",
-      "key": null
-    },
-    "ragebot_onetap": {
-      "mode": "always",
-      "key": null
-    },
-    "ragebot_rapid": {
-      "mode": "always",
-      "key": null
-    },
-    "ragebot_norecoil": {
-      "mode": "always",
-      "key": null
-    },
-    "ragebot_nospread": {
-      "mode": "always",
-      "key": null
-    },
-    "infammo": {
-      "mode": "always",
-      "key": null
-    },
-    "tracers": {
+    "autowin": {
       "mode": "always",
       "key": null
     },
@@ -183,6 +182,62 @@
       "key": null
     },
     "ambient_color": {
+      "mode": "always",
+      "key": null
+    },
+    "esp": {
+      "mode": "always",
+      "key": null
+    },
+    "tracers": {
+      "mode": "always",
+      "key": null
+    },
+    "custom_crosshair": {
+      "mode": "always",
+      "key": null
+    },
+    "ragebot_enabled": {
+      "mode": "always",
+      "key": null
+    },
+    "ragebot_aim": {
+      "mode": "always",
+      "key": null
+    },
+    "aimbot_autofire": {
+      "mode": "always",
+      "key": null
+    },
+    "ragebot_damage_enabled": {
+      "mode": "always",
+      "key": null
+    },
+    "ragebot_onetap": {
+      "mode": "always",
+      "key": null
+    },
+    "ragebot_rapid": {
+      "mode": "always",
+      "key": null
+    },
+    "ragebot_norecoil": {
+      "mode": "always",
+      "key": null
+    },
+    "ragebot_nospread": {
+      "mode": "always",
+      "key": null
+    },
+    "infammo": {
+      "mode": "always",
+      "key": null
+    },
+    "infgrenades": {
+      "mode": "always",
+      "key": null
+    },
+    "fov_editor": {
       "mode": "always",
       "key": null
     }
