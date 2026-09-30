@@ -1,40 +1,313 @@
-const CT_BOTS = 0;
-const T_BOTS = 8;
+// === FAKE KILLFEED (safe – no rompe el arma) ===
 (function () {
   const g = window.game;
-  if (!g || !g.botMgr) {
-    console.error("[bot patch] window.game not found – open the game first");
+  if (!g || !g.hud || typeof g.hud.addKill !== "function") {
+    console.error("[kmod] not ready");
     return;
   }
-  const mgr = g.botMgr;
-  const origSetup = mgr.setup.bind(mgr);
-  mgr.setup = function (total, difficulty, playerTeam) {
-    const need = CT_BOTS + T_BOTS;
-    origSetup(Math.max(need, 1), difficulty, playerTeam);
-    const Bot = this.bots[0] && this.bots[0].constructor;
-    if (!Bot) {
-      console.error("[bot patch] could not get Bot constructor");
-      return;
-    }
-    for (const b of this.bots) {
-      try {
-        g.scene.remove(b.mesh);
-        g.scene.remove(b.shadow);
-        if (b.cs2Agent) g.scene.remove(b.cs2Agent.root);
-      } catch (e) {}
-    }
-    this.bots.length = 0;
-    const names = (g._nextBotNames) || [];
-    let idx = 0;
-    const add = (team) => {
-      const name = names[idx % (names.length || 1)] || ("Bot" + idx);
-      const bot = new Bot(g, team, name, difficulty);
-      this.bots.push(bot);
-      idx++;
-    };
-    for (let i = 0; i < CT_BOTS; i++) add("CT");
-    for (let i = 0; i < T_BOTS; i++) add("T");
-    console.log(`[bot patch] CT=${CT_BOTS}  T=${T_BOTS}`);
+
+  const CFG = {
+    weapon: "knife",   // "knife"|"zeus"|"he"|"flash"|"smoke"|"molotov"|"incend"|"decoy"|gun id|null
+    noscope: true,
+    air: true,
+    pierced: true,
+    smoke: true,
+    blind: true,
+    domination: false,
+    revenge: false,
+    headshot: "keep",
+    onlyMyKills: true,
+    randomChance: 0.8
   };
-  console.log("[bot patch] installed. Start a NEW match (or re-join) for it to apply.");
+
+  function resolve(val, real) {
+    if (val === "keep") return !!real;
+    if (val === "random") return Math.random() < CFG.randomChance;
+    return !!val;
+  }
+
+  function weaponClass(id) {
+    if (id === "knife") return "knife";
+    if (id === "zeus") return "zeus";
+    if (["he", "flash", "smoke", "molotov", "incend", "decoy"].includes(id)) return "grenade";
+    if (["awp", "ssg08", "scar20", "g3sg1"].includes(id)) return "sniper";
+    return "rifle";
+  }
+
+  // IMPORTANT: never mutate the real weapon def
+  function fakeWeaponCopy(id) {
+    if (!id) return null;
+    return {
+      id: id,
+      name: id,
+      class: weaponClass(id)
+    };
+  }
+
+  // --- addKill only (no killEntity mutate) ---
+  if (!g.hud._kmodSafe) {
+    g.hud._kmodSafe = true;
+    const origAdd = g.hud.addKill.bind(g.hud);
+
+    g.hud.addKill = function (killer, weapon, victim, headshot, flags) {
+      flags = flags || {};
+      const cfg = window.__KMOD || CFG;
+      const isMe = killer && (killer.isPlayer || killer === g.player);
+
+      if (!cfg.onlyMyKills || isMe) {
+        const fw = fakeWeaponCopy(cfg.weapon);
+        if (fw) weapon = fw; // replace arg only – don't touch original object
+
+        flags = Object.assign({}, flags, {
+          noscope: resolve(cfg.noscope, flags.noscope),
+          air: resolve(cfg.air, flags.air),
+          pierced: resolve(cfg.pierced, flags.pierced),
+          smoke: resolve(cfg.smoke, flags.smoke),
+          blind: resolve(cfg.blind, flags.blind),
+          domination: resolve(cfg.domination, flags.domination),
+          revenge: resolve(cfg.revenge, flags.revenge)
+        });
+
+        if (cfg.headshot === true) headshot = true;
+        else if (cfg.headshot === false) headshot = false;
+      }
+
+      return origAdd(killer, weapon, victim, headshot, flags);
+    };
+  }
+
+  // if old bad killEntity hook exists, try to neutralize weapon mutation
+  // (best fix is still F5 refresh once)
+
+  window.__KMOD = CFG;
+
+  window.__kmodGun = (id) => {
+    CFG.weapon = id || null;
+    console.log("[kmod] weapon →", CFG.weapon);
+  };
+
+  window.__kmodOff = () => {
+    CFG.weapon = null;
+    ["noscope", "air", "pierced", "smoke", "blind", "domination", "revenge"].forEach(k => CFG[k] = false);
+    CFG.headshot = "keep";
+    console.log("[kmod] off");
+  };
+
+  window.__kmodTest = (id) => {
+    const gun = id || CFG.weapon || "knife";
+    const me = g.player;
+    const bots = (g.botMgr && g.botMgr.bots) || [];
+    const victim = bots.find(b => b && b.team !== me.team) || bots[0] || me;
+    g.hud.addKill(me, fakeWeaponCopy(gun), victim, true, {
+      noscope: true, air: true, pierced: true, smoke: true, blind: true
+    });
+    console.log("[kmod] test", gun);
+  };
+
+  // unlock gun if previous script broke it
+  try {
+    g.weapons.reloading = false;
+    g.weapons.nextFire = 0;
+    const st = g.weapons.state && g.weapons.state();
+    const def = g.weapons.def && g.weapons.def();
+    // if class was corrupted on shared def, user must refresh
+    if (def && (def.class === "knife" || def.class === "grenade") && g.weapons.current !== "knife" && !(def.class === "knife" && g.weapons.current === "knife")) {
+      console.warn("[kmod] weapon def still corrupted – press F5 once, then paste this script only");
+    }
+    if (st && st.ammo === 0 && st.reserve > 0 && def && def.mag) {
+      const n = Math.min(def.mag, st.reserve);
+      st.ammo = n;
+      st.reserve -= n;
+    }
+  } catch {}
+
+  console.log("[kmod] SAFE patch – does not mutate real gun");
+  console.log('__kmodGun("zeus")  __kmodGun("he")  __kmodTest("knife")');
+})();
+
+
+
+
+
+
+
+
+
+
+
+
+
+// === SHOOT THROUGH ANY WALL (force hits) ===
+(function () {
+  const g = window.game;
+  if (!g || !g.player || !g.weapons) {
+    console.error("[wallhack-shot] game not ready");
+    return;
+  }
+
+  const CFG = {
+    enabled: true,
+    maxDist: 300,
+    // aim cone in degrees (bigger = more forgiving)
+    fov: 8,
+    head: true,          // prefer head damage
+    dmg: 9999,           // force kill
+    teamCheck: true,
+    keyToggle: "F6"
+  };
+
+  const DEG2RAD = Math.PI / 180;
+
+  function angBetween(ax, ay, az, bx, by, bz) {
+    const la = Math.hypot(ax, ay, az) || 1;
+    const lb = Math.hypot(bx, by, bz) || 1;
+    const dot = (ax * bx + ay * by + az * bz) / (la * lb);
+    return Math.acos(Math.max(-1, Math.min(1, dot)));
+  }
+
+  function getEye() {
+    const p = g.player;
+    return {
+      x: p.x,
+      y: p.y + (p.eyeH || 1.6) - (p._stepLift || 0),
+      z: p.z
+    };
+  }
+
+  function getDir() {
+    const p = g.player;
+    const w = g.weapons;
+    // include punch like the game
+    const pitch = p.pitch + ((w && w.punchP) || 0) * 0.022;
+    const yaw = p.yaw + ((w && w.punchY) || 0) * 0.022;
+    const cp = Math.cos(pitch);
+    return {
+      x: -Math.sin(yaw) * cp,
+      y: Math.sin(pitch),
+      z: -Math.cos(yaw) * cp
+    };
+  }
+
+  function hitThroughWalls() {
+    if (!CFG.enabled) return;
+    const p = g.player;
+    if (!p || !p.alive) return;
+
+    const eye = getEye();
+    const dir = getDir();
+    const maxAng = CFG.fov * DEG2RAD;
+    const list = g.allEntities ? g.allEntities() : (g.botMgr && g.botMgr.bots) || [];
+
+    let best = null;
+    let bestAng = maxAng;
+
+    for (const e of list) {
+      if (!e || e === p || !e.alive) continue;
+      if (CFG.teamCheck && e.team === p.team) continue;
+      if (e.isPlayer && e.spawnProt > 0) continue;
+
+      const y = e._visY != null ? e._visY : e.y;
+      const tx = e.x - eye.x;
+      const ty = (y + (CFG.head ? (e.eyeH || 1.55) : (e.height || 1.8) * 0.55)) - eye.y;
+      const tz = e.z - eye.z;
+      const dist = Math.hypot(tx, ty, tz);
+      if (dist < 0.5 || dist > CFG.maxDist) continue;
+
+      const ang = angBetween(dir.x, dir.y, dir.z, tx, ty, tz);
+      if (ang > bestAng) continue;
+      bestAng = ang;
+      best = { e, dist, tx, ty, tz };
+    }
+
+    if (!best) return;
+
+    const victim = best.e;
+    const def = (g.weapons.def && g.weapons.def()) || { dmg: 36, class: "rifle", hs: 4 };
+
+    // force penetration fields (helps any leftover game logic)
+    try {
+      def.penetration = 99999;
+      def.pen = 99999;
+    } catch {}
+
+    // DIRECT DAMAGE – ignores all walls
+    try {
+      if (typeof g.dealDamage === "function") {
+        g.dealDamage(
+          victim,
+          CFG.dmg,
+          p,
+          !!CFG.head,   // headshot flag
+          def,
+          CFG.head ? "head" : "chest",
+          0,
+          true          // penetrated-style flag if used
+        );
+      } else {
+        victim.health = 0;
+        victim.alive = false;
+      }
+    } catch (err) {
+      try {
+        victim.health = 0;
+        if (typeof g.killEntity === "function") {
+          g.killEntity(victim, p, def, !!CFG.head);
+        } else {
+          victim.alive = false;
+        }
+      } catch {}
+    }
+
+    // feedback
+    try {
+      if (g.hud && g.hud.hitmarker) g.hud.hitmarker(!!CFG.head);
+      if (g.effects && g.effects.blood) {
+        g.effects.blood(
+          victim.x,
+          (victim._visY != null ? victim._visY : victim.y) + 1.2,
+          victim.z
+        );
+      }
+      if (g.audio) g.audio.play(CFG.head ? "hit_head" : "hit_body_fb");
+    } catch {}
+
+    console.log("[wallhack-shot] hit", victim.name || victim.team, "dist=" + best.dist.toFixed(1));
+  }
+
+  // Hook weapon fire
+  const w = g.weapons;
+  if (!w._wallShotPatched) {
+    w._wallShotPatched = true;
+
+    if (typeof w.fire === "function") {
+      const origFire = w.fire.bind(w);
+      w.fire = function () {
+        const r = origFire();
+        try { hitThroughWalls(); } catch (e) { console.warn(e); }
+        return r;
+      };
+    }
+
+    // also hook playerShoot if fire path uses it only
+    if (typeof g.playerShoot === "function" && !g._wallShotPS) {
+      g._wallShotPS = true;
+      const origPS = g.playerShoot.bind(g);
+      g.playerShoot = function (def, sx, sy) {
+        const r = origPS(def, sx, sy);
+        try { hitThroughWalls(); } catch {}
+        return r;
+      };
+    }
+  }
+
+  window.addEventListener("keydown", (ev) => {
+    if (ev.code === CFG.keyToggle || ev.key === "F6") {
+      CFG.enabled = !CFG.enabled;
+      console.log("[wallhack-shot]", CFG.enabled ? "ON" : "OFF");
+    }
+  });
+
+  window.__WALLSHOT = CFG;
+  console.log("[wallhack-shot] ON – shoot anyone in crosshair through ANY wall | F6 toggle");
+  console.log("tweak: __WALLSHOT.fov = 15, __WALLSHOT.dmg = 500");
 })();
